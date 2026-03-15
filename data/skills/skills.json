@@ -1,0 +1,275 @@
+[
+  {
+    "id": "states",
+    "title": "U.S. States",
+    "sessionLabel": "U.S. State",
+    "itemLabel": "state",
+    "description": "Learn all 50 U.S. states with capitals, regions, nicknames, abbreviations, and school-style geography clues.",
+    "theme": {
+      "accent": "blue",
+      "surface": "sky"
+    },
+    "supportedModes": ["flashcards", "quiz"],
+    "contentFile": "states/states.json",
+    "status": "active",
+    "fields": [
+      { "key": "capital", "label": "Capital" },
+      { "key": "region", "label": "Region" },
+      { "key": "nickname", "label": "Nickname" },
+      { "key": "abbreviation", "label": "Abbreviation" }
+    ],
+    "badgeFieldKey": "abbreviation",
+    "detailFieldKeys": ["capital", "region", "nickname", "abbreviation"],
+    "lesson": {
+      "descriptionTemplate": "{name} is one of the 50 states in the United States. Students often learn its capital, region, abbreviation, and nickname in elementary geography.",
+      "learningFactTemplates": [
+        "{capital} is the capital of {name}.",
+        "{name} is in the {region} region of the country.",
+        "{nickname} is the nickname of {name}.",
+        "{abbreviation} is the postal abbreviation for {name}.",
+        "On a U.S. map, {name} is found in the {region}.",
+        "A state capital is the city where the state government meets.",
+        "When a quiz asks for the capital of {name}, remember {capital}.",
+        "Many school map lessons ask students to connect {name} with the {region} region."
+      ],
+      "funFactTemplates": [
+        "The two-letter code for {name} is {abbreviation}.",
+        "{nickname} is a fun name to connect with {name}.",
+        "{capital} is an important city to remember for {name}."
+      ],
+      "clueTemplates": [
+        "This place is a U.S. state in the {region} region.",
+        "Its capital city is {capital}.",
+        "Its two-letter abbreviation is {abbreviation}.",
+        "Its nickname is {nickname}."
+      ]
+    },
+    "questionTemplates": [
+      {
+        "id": "capital",
+        "kind": "field-value",
+        "prompt": "Which capital belongs to {name}?",
+        "promptHint": "Pick the capital city for this U.S. state.",
+        "correctFieldKey": "capital",
+        "optionFieldKey": "capital"
+      },
+      {
+        "id": "region",
+        "kind": "field-value",
+        "prompt": "{name} belongs to which U.S. region?",
+        "promptHint": "Think about the part of the country where this state is located.",
+        "correctFieldKey": "region",
+        "optionValues": ["West", "Midwest", "South", "Northeast"]
+      },
+      {
+        "id": "nickname",
+        "kind": "field-value",
+        "prompt": "Which nickname belongs to {name}?",
+        "promptHint": "Choose the state nickname from the lesson card.",
+        "correctFieldKey": "nickname",
+        "optionFieldKey": "nickname"
+      },
+      {
+        "id": "abbreviation",
+        "kind": "field-value",
+        "prompt": "What is the postal abbreviation for {name}?",
+        "promptHint": "Pick the two-letter abbreviation for this state.",
+        "correctFieldKey": "abbreviation",
+        "optionFieldKey": "abbreviation"
+      },
+      {
+        "id": "identify",
+        "kind": "identify-item",
+        "prompt": "Which state matches this clue: \"{clue}\"?",
+        "promptHint": "Use the clue to pick the correct U.S. state.",
+        "clueSource": "clues"
+      }
+    ]
+  },
+  {
+    "id": "continents",
+    "title": "Continents",
+    "sessionLabel": "Continent",
+    "itemLabel": "continent",
+    "description": "Explore the seven continents with major geography facts, land clues, and map-based questions.",
+    "theme": {
+      "accent": "green",
+      "surface": "mint"
+    },
+    "supportedModes": ["flashcards", "quiz"],
+    "contentFile": "continents/continents.json",
+    "status": "active",
+    "fields": [
+      { "key": "hemisphere", "label": "Hemisphere" },
+      { "key": "countryCount", "label": "Countries" },
+      { "key": "largestCountry", "label": "Largest Country" },
+      { "key": "largestCity", "label": "Largest City" }
+    ],
+    "detailFieldKeys": ["hemisphere", "countryCount", "largestCountry", "largestCity"],
+    "lesson": {
+      "descriptionTemplate": "{name} is one of the seven continents. Geography lessons use continents to organize countries, climates, landforms, and map locations on Earth.",
+      "learningFactTemplates": [
+        "{name} is mostly in the {hemisphere} hemisphere.",
+        "{name} has about {countryCount} countries.",
+        "{largestCountry} is the largest country in {name} by area.",
+        "{largestCity} is one of the biggest cities linked with {name}.",
+        "On a world map, continents help students group countries into larger regions.",
+        "Landforms, climates, and people can be different across one continent.",
+        "When students study globes, {name} is one of the main land areas they learn to find.",
+        "{name} helps us understand where countries are located on Earth."
+      ],
+      "funFactTemplates": [
+        "{name} has many places to explore, from busy cities to natural wonders.",
+        "{largestCountry} and {largestCity} are both important names to remember in {name}.",
+        "Map games often ask students to point to {name} on a globe."
+      ],
+      "clueTemplates": [
+        "This continent is mostly in the {hemisphere} hemisphere.",
+        "It has about {countryCount} countries.",
+        "Its largest country is {largestCountry}.",
+        "A major city linked with it is {largestCity}."
+      ]
+    },
+    "questionTemplates": [
+      {
+        "id": "country-count",
+        "kind": "field-value",
+        "prompt": "About how many countries are in {name}?",
+        "promptHint": "Pick the closest school-friendly estimate.",
+        "correctFieldKey": "countryCount",
+        "optionFieldKey": "countryCount"
+      },
+      {
+        "id": "largest-country",
+        "kind": "field-value",
+        "prompt": "Which large country is found in {name}?",
+        "promptHint": "Choose the country linked to this continent in the lesson card.",
+        "correctFieldKey": "largestCountry",
+        "optionFieldKey": "largestCountry"
+      },
+      {
+        "id": "largest-city",
+        "kind": "field-value",
+        "prompt": "Which major city is linked with {name}?",
+        "promptHint": "Pick the city tied to this continent in the lesson.",
+        "correctFieldKey": "largestCity",
+        "optionFieldKey": "largestCity"
+      },
+      {
+        "id": "hemisphere",
+        "kind": "field-value",
+        "prompt": "{name} is mostly in which hemisphere?",
+        "promptHint": "Think about where this continent sits on the globe.",
+        "correctFieldKey": "hemisphere",
+        "optionFieldKey": "hemisphere"
+      },
+      {
+        "id": "identify",
+        "kind": "identify-item",
+        "prompt": "Which continent matches this clue: \"{clue}\"?",
+        "promptHint": "Use the clue to choose the correct continent.",
+        "clueSource": "clues"
+      }
+    ]
+  },
+  {
+    "id": "countries",
+    "title": "Countries",
+    "sessionLabel": "Country",
+    "itemLabel": "country",
+    "description": "Practice world countries with flags, capitals, continents, languages, currencies, and geography clues.",
+    "theme": {
+      "accent": "amber",
+      "surface": "sand"
+    },
+    "supportedModes": ["flashcards", "quiz"],
+    "contentFile": "countries/countries.json",
+    "status": "active",
+    "fields": [
+      { "key": "flag", "label": "Flag" },
+      { "key": "capital", "label": "Capital" },
+      { "key": "continent", "label": "Continent" },
+      { "key": "subregion", "label": "Subregion" },
+      { "key": "officialLanguage", "label": "Official Language" },
+      { "key": "currency", "label": "Currency" },
+      { "key": "countryCode", "label": "Country Code" },
+      { "key": "landlocked", "label": "Landlocked" }
+    ],
+    "badgeFieldKey": "flag",
+    "detailFieldKeys": ["flag", "capital", "continent", "officialLanguage", "currency", "countryCode"],
+    "lesson": {
+      "descriptionTemplate": "{name} is a country in {continent}. Students often learn its capital, flag, language, currency, and world-map location in school geography.",
+      "learningFactTemplates": [
+        "{capital} is the capital city of {name}.",
+        "{officialLanguage} is an official language linked with {name}.",
+        "{currency} is used as money in {name}.",
+        "{countryCode} is the short country code for {name}.",
+        "{name} is in the {subregion} part of {continent}.",
+        "{flag} is the flag emoji shown for {name}.",
+        "On a world map, students place {name} in {continent}.",
+        "Capital cities are important because governments work there.",
+        "{landlocked} tells us whether {name} has a coastline."
+      ],
+      "funFactTemplates": [
+        "The flag for {name} is {flag}.",
+        "{countryCode} is a quick code people may see for {name}.",
+        "{capital} is one of the first cities students connect with {name}."
+      ],
+      "clueTemplates": [
+        "This country is in {continent}.",
+        "Its capital city is {capital}.",
+        "One official language is {officialLanguage}.",
+        "Its flag emoji is {flag}."
+      ]
+    },
+    "questionTemplates": [
+      {
+        "id": "capital",
+        "kind": "field-value",
+        "prompt": "What is the capital of {name}?",
+        "promptHint": "Choose the capital city for this country.",
+        "correctFieldKey": "capital",
+        "optionFieldKey": "capital"
+      },
+      {
+        "id": "continent",
+        "kind": "field-value",
+        "prompt": "{name} is in which continent?",
+        "promptHint": "Pick the continent where this country belongs.",
+        "correctFieldKey": "continent",
+        "optionFieldKey": "continent"
+      },
+      {
+        "id": "language",
+        "kind": "field-value",
+        "prompt": "Which official language is linked with {name}?",
+        "promptHint": "Choose the language taught on the country card.",
+        "correctFieldKey": "officialLanguage",
+        "optionFieldKey": "officialLanguage"
+      },
+      {
+        "id": "currency",
+        "kind": "field-value",
+        "prompt": "Which currency is used in {name}?",
+        "promptHint": "Pick the money used in this country.",
+        "correctFieldKey": "currency",
+        "optionFieldKey": "currency"
+      },
+      {
+        "id": "flag",
+        "kind": "field-value",
+        "prompt": "Which flag belongs to {name}?",
+        "promptHint": "Choose the flag emoji for this country.",
+        "correctFieldKey": "flag",
+        "optionFieldKey": "flag"
+      },
+      {
+        "id": "identify",
+        "kind": "identify-item",
+        "prompt": "Which country matches this clue: \"{clue}\"?",
+        "promptHint": "Use the geography clue to choose the correct country.",
+        "clueSource": "clues"
+      }
+    ]
+  }
+]

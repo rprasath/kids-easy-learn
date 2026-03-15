@@ -1,0 +1,307 @@
+{
+  "skillId": "continents",
+  "version": 2,
+  "items": [
+    {
+      "id": "africa",
+      "skillId": "continents",
+      "name": "Africa",
+      "attributes": {
+        "hemisphere": "Mostly Northern and Southern",
+        "countryCount": "54",
+        "largestCountry": "Algeria",
+        "largestCity": "Lagos"
+      },
+      "facts": [
+        "Africa is the second-largest continent.",
+        "The Sahara Desert stretches across part of northern Africa.",
+        "Algeria is the largest country in Africa by area.",
+        "Lagos is a major city name students can connect with Africa."
+      ],
+      "funFacts": [
+        "Africa appears on world maps as one of the seven large land areas on Earth.",
+        "54 is the approximate number of countries students learn for Africa.",
+        "Algeria and Lagos are both useful names to remember in Africa."
+      ],
+      "clues": [
+        "This place is one of the seven continents.",
+        "It is mostly in the Mostly Northern and Southern hemisphere.",
+        "It has about 54 countries.",
+        "Its largest country is Algeria.",
+        "A major city linked with it is Lagos.",
+        "Geography lessons group many countries inside this continent.",
+        "On a globe, this answer is a major land area.",
+        "Students often connect it with Algeria.",
+        "The city Lagos helps identify this continent.",
+        "It is taught as a continent mostly in the Mostly Northern and Southern.",
+        "World maps show this continent with about 54 countries.",
+        "Algeria is a strong clue for this continent.",
+        "If the hemisphere clue is Mostly Northern and Southern, this could be the answer.",
+        "The city clue Lagos points toward this continent.",
+        "This answer is not a country or state; it is a continent."
+      ],
+      "tags": [
+        "desert",
+        "wildlife"
+      ]
+    },
+    {
+      "id": "antarctica",
+      "skillId": "continents",
+      "name": "Antarctica",
+      "attributes": {
+        "hemisphere": "Southern",
+        "countryCount": "0",
+        "largestCountry": "No countries",
+        "largestCity": "No permanent cities"
+      },
+      "facts": [
+        "Antarctica is the coldest continent on Earth.",
+        "It is covered mostly by thick ice.",
+        "No countries is the largest country in Antarctica by area.",
+        "No permanent cities is a major city name students can connect with Antarctica."
+      ],
+      "funFacts": [
+        "Antarctica appears on world maps as one of the seven large land areas on Earth.",
+        "0 is the approximate number of countries students learn for Antarctica.",
+        "No countries and No permanent cities are both useful names to remember in Antarctica."
+      ],
+      "clues": [
+        "This place is one of the seven continents.",
+        "It is mostly in the Southern hemisphere.",
+        "It has about 0 countries.",
+        "Its largest country is No countries.",
+        "A major city linked with it is No permanent cities.",
+        "Geography lessons group many countries inside this continent.",
+        "On a globe, this answer is a major land area.",
+        "Students often connect it with No countries.",
+        "The city No permanent cities helps identify this continent.",
+        "It is taught as a continent mostly in the Southern.",
+        "World maps show this continent with about 0 countries.",
+        "No countries is a strong clue for this continent.",
+        "If the hemisphere clue is Southern, this could be the answer.",
+        "The city clue No permanent cities points toward this continent.",
+        "This answer is not a country or state; it is a continent."
+      ],
+      "tags": [
+        "ice",
+        "cold"
+      ]
+    },
+    {
+      "id": "asia",
+      "skillId": "continents",
+      "name": "Asia",
+      "attributes": {
+        "hemisphere": "Mostly Northern",
+        "countryCount": "49",
+        "largestCountry": "China",
+        "largestCity": "Tokyo"
+      },
+      "facts": [
+        "Asia is the largest continent by area and population.",
+        "Mount Everest stands on the border of Nepal and China in Asia.",
+        "China is the largest country in Asia by area.",
+        "Tokyo is a major city name students can connect with Asia."
+      ],
+      "funFacts": [
+        "Asia appears on world maps as one of the seven large land areas on Earth.",
+        "49 is the approximate number of countries students learn for Asia.",
+        "China and Tokyo are both useful names to remember in Asia."
+      ],
+      "clues": [
+        "This place is one of the seven continents.",
+        "It is mostly in the Mostly Northern hemisphere.",
+        "It has about 49 countries.",
+        "Its largest country is China.",
+        "A major city linked with it is Tokyo.",
+        "Geography lessons group many countries inside this continent.",
+        "On a globe, this answer is a major land area.",
+        "Students often connect it with China.",
+        "The city Tokyo helps identify this continent.",
+        "It is taught as a continent mostly in the Mostly Northern.",
+        "World maps show this continent with about 49 countries.",
+        "China is a strong clue for this continent.",
+        "If the hemisphere clue is Mostly Northern, this could be the answer.",
+        "The city clue Tokyo points toward this continent.",
+        "This answer is not a country or state; it is a continent."
+      ],
+      "tags": [
+        "mountains",
+        "population"
+      ]
+    },
+    {
+      "id": "europe",
+      "skillId": "continents",
+      "name": "Europe",
+      "attributes": {
+        "hemisphere": "Northern",
+        "countryCount": "44",
+        "largestCountry": "Ukraine",
+        "largestCity": "Istanbul"
+      },
+      "facts": [
+        "Europe has many countries close together.",
+        "Many famous castles and old cities are in Europe.",
+        "Ukraine is the largest country in Europe by area.",
+        "Istanbul is a major city name students can connect with Europe."
+      ],
+      "funFacts": [
+        "Europe appears on world maps as one of the seven large land areas on Earth.",
+        "44 is the approximate number of countries students learn for Europe.",
+        "Ukraine and Istanbul are both useful names to remember in Europe."
+      ],
+      "clues": [
+        "This place is one of the seven continents.",
+        "It is mostly in the Northern hemisphere.",
+        "It has about 44 countries.",
+        "Its largest country is Ukraine.",
+        "A major city linked with it is Istanbul.",
+        "Geography lessons group many countries inside this continent.",
+        "On a globe, this answer is a major land area.",
+        "Students often connect it with Ukraine.",
+        "The city Istanbul helps identify this continent.",
+        "It is taught as a continent mostly in the Northern.",
+        "World maps show this continent with about 44 countries.",
+        "Ukraine is a strong clue for this continent.",
+        "If the hemisphere clue is Northern, this could be the answer.",
+        "The city clue Istanbul points toward this continent.",
+        "This answer is not a country or state; it is a continent."
+      ],
+      "tags": [
+        "history",
+        "cities"
+      ]
+    },
+    {
+      "id": "north-america",
+      "skillId": "continents",
+      "name": "North America",
+      "attributes": {
+        "hemisphere": "Northern",
+        "countryCount": "23",
+        "largestCountry": "Canada",
+        "largestCity": "Mexico City"
+      },
+      "facts": [
+        "North America includes Canada, the United States, and Mexico.",
+        "It has mountains, deserts, forests, and coastlines.",
+        "Canada is the largest country in North America by area.",
+        "Mexico City is a major city name students can connect with North America."
+      ],
+      "funFacts": [
+        "North America appears on world maps as one of the seven large land areas on Earth.",
+        "23 is the approximate number of countries students learn for North America.",
+        "Canada and Mexico City are both useful names to remember in North America."
+      ],
+      "clues": [
+        "This place is one of the seven continents.",
+        "It is mostly in the Northern hemisphere.",
+        "It has about 23 countries.",
+        "Its largest country is Canada.",
+        "A major city linked with it is Mexico City.",
+        "Geography lessons group many countries inside this continent.",
+        "On a globe, this answer is a major land area.",
+        "Students often connect it with Canada.",
+        "The city Mexico City helps identify this continent.",
+        "It is taught as a continent mostly in the Northern.",
+        "World maps show this continent with about 23 countries.",
+        "Canada is a strong clue for this continent.",
+        "If the hemisphere clue is Northern, this could be the answer.",
+        "The city clue Mexico City points toward this continent.",
+        "This answer is not a country or state; it is a continent."
+      ],
+      "tags": [
+        "varied",
+        "coast"
+      ]
+    },
+    {
+      "id": "south-america",
+      "skillId": "continents",
+      "name": "South America",
+      "attributes": {
+        "hemisphere": "Mostly Southern",
+        "countryCount": "12",
+        "largestCountry": "Brazil",
+        "largestCity": "Sao Paulo"
+      },
+      "facts": [
+        "The Amazon Rainforest covers part of South America.",
+        "The Andes are one of the longest mountain ranges in the world.",
+        "Brazil is the largest country in South America by area.",
+        "Sao Paulo is a major city name students can connect with South America."
+      ],
+      "funFacts": [
+        "South America appears on world maps as one of the seven large land areas on Earth.",
+        "12 is the approximate number of countries students learn for South America.",
+        "Brazil and Sao Paulo are both useful names to remember in South America."
+      ],
+      "clues": [
+        "This place is one of the seven continents.",
+        "It is mostly in the Mostly Southern hemisphere.",
+        "It has about 12 countries.",
+        "Its largest country is Brazil.",
+        "A major city linked with it is Sao Paulo.",
+        "Geography lessons group many countries inside this continent.",
+        "On a globe, this answer is a major land area.",
+        "Students often connect it with Brazil.",
+        "The city Sao Paulo helps identify this continent.",
+        "It is taught as a continent mostly in the Mostly Southern.",
+        "World maps show this continent with about 12 countries.",
+        "Brazil is a strong clue for this continent.",
+        "If the hemisphere clue is Mostly Southern, this could be the answer.",
+        "The city clue Sao Paulo points toward this continent.",
+        "This answer is not a country or state; it is a continent."
+      ],
+      "tags": [
+        "rainforest",
+        "mountains"
+      ]
+    },
+    {
+      "id": "australia",
+      "skillId": "continents",
+      "name": "Australia",
+      "attributes": {
+        "hemisphere": "Southern",
+        "countryCount": "14",
+        "largestCountry": "Australia",
+        "largestCity": "Sydney"
+      },
+      "facts": [
+        "Australia is the smallest continent.",
+        "It is famous for unique animals like kangaroos and koalas.",
+        "Australia is the largest country in Australia by area.",
+        "Sydney is a major city name students can connect with Australia."
+      ],
+      "funFacts": [
+        "Australia appears on world maps as one of the seven large land areas on Earth.",
+        "14 is the approximate number of countries students learn for Australia.",
+        "Australia and Sydney are both useful names to remember in Australia."
+      ],
+      "clues": [
+        "This place is one of the seven continents.",
+        "It is mostly in the Southern hemisphere.",
+        "It has about 14 countries.",
+        "Its largest country is Australia.",
+        "A major city linked with it is Sydney.",
+        "Geography lessons group many countries inside this continent.",
+        "On a globe, this answer is a major land area.",
+        "Students often connect it with Australia.",
+        "The city Sydney helps identify this continent.",
+        "It is taught as a continent mostly in the Southern.",
+        "World maps show this continent with about 14 countries.",
+        "Australia is a strong clue for this continent.",
+        "If the hemisphere clue is Southern, this could be the answer.",
+        "The city clue Sydney points toward this continent.",
+        "This answer is not a country or state; it is a continent."
+      ],
+      "tags": [
+        "animals",
+        "islands"
+      ]
+    }
+  ]
+}

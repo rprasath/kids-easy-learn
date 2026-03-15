@@ -1,0 +1,2156 @@
+{
+  "skillId": "states",
+  "version": 2,
+  "items": [
+    {
+      "id": "alabama",
+      "skillId": "states",
+      "name": "Alabama",
+      "attributes": {
+        "capital": "Montgomery",
+        "region": "South",
+        "nickname": "Yellowhammer State",
+        "abbreviation": "AL"
+      },
+      "facts": [
+        "Alabama was the 22nd state to join the United States.",
+        "Rocket science work in Huntsville helped space missions.",
+        "Montgomery is the state capital that students match with Alabama.",
+        "Yellowhammer State is a nickname that helps learners remember Alabama."
+      ],
+      "funFacts": [
+        "AL is the two-letter mail code for Alabama.",
+        "Montgomery is an important map city to remember in Alabama.",
+        "Alabama is often grouped with other south states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Montgomery.",
+        "It belongs to the South region.",
+        "Its nickname is Yellowhammer State.",
+        "Its two-letter abbreviation is AL.",
+        "On a U.S. map, it is grouped with the South.",
+        "The state government meets in Montgomery.",
+        "Mail can be labeled with the code AL.",
+        "School quizzes often pair this state with Montgomery.",
+        "This clue card points to a state in the South.",
+        "The nickname Yellowhammer State belongs to this state.",
+        "Students often memorize AL as this state's short code.",
+        "If the answer is a state from the South, this one fits.",
+        "One strong clue for this state is the capital Montgomery.",
+        "The correct answer uses the abbreviation AL."
+      ],
+      "tags": [
+        "south",
+        "capital"
+      ]
+    },
+    {
+      "id": "alaska",
+      "skillId": "states",
+      "name": "Alaska",
+      "attributes": {
+        "capital": "Juneau",
+        "region": "West",
+        "nickname": "The Last Frontier",
+        "abbreviation": "AK"
+      },
+      "facts": [
+        "Alaska is the largest U.S. state by area.",
+        "It has very long summer days in some places.",
+        "Juneau is the state capital that students match with Alaska.",
+        "The Last Frontier is a nickname that helps learners remember Alaska."
+      ],
+      "funFacts": [
+        "AK is the two-letter mail code for Alaska.",
+        "Juneau is an important map city to remember in Alaska.",
+        "Alaska is often grouped with other west states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Juneau.",
+        "It belongs to the West region.",
+        "Its nickname is The Last Frontier.",
+        "Its two-letter abbreviation is AK.",
+        "On a U.S. map, it is grouped with the West.",
+        "The state government meets in Juneau.",
+        "Mail can be labeled with the code AK.",
+        "School quizzes often pair this state with Juneau.",
+        "This clue card points to a state in the West.",
+        "The nickname The Last Frontier belongs to this state.",
+        "Students often memorize AK as this state's short code.",
+        "If the answer is a state from the West, this one fits.",
+        "One strong clue for this state is the capital Juneau.",
+        "The correct answer uses the abbreviation AK."
+      ],
+      "tags": [
+        "west",
+        "nature"
+      ]
+    },
+    {
+      "id": "arizona",
+      "skillId": "states",
+      "name": "Arizona",
+      "attributes": {
+        "capital": "Phoenix",
+        "region": "West",
+        "nickname": "Grand Canyon State",
+        "abbreviation": "AZ"
+      },
+      "facts": [
+        "The Grand Canyon is one of Arizona's famous landmarks.",
+        "Much of Arizona has a dry desert climate.",
+        "Phoenix is the state capital that students match with Arizona.",
+        "Grand Canyon State is a nickname that helps learners remember Arizona."
+      ],
+      "funFacts": [
+        "AZ is the two-letter mail code for Arizona.",
+        "Phoenix is an important map city to remember in Arizona.",
+        "Arizona is often grouped with other west states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Phoenix.",
+        "It belongs to the West region.",
+        "Its nickname is Grand Canyon State.",
+        "Its two-letter abbreviation is AZ.",
+        "On a U.S. map, it is grouped with the West.",
+        "The state government meets in Phoenix.",
+        "Mail can be labeled with the code AZ.",
+        "School quizzes often pair this state with Phoenix.",
+        "This clue card points to a state in the West.",
+        "The nickname Grand Canyon State belongs to this state.",
+        "Students often memorize AZ as this state's short code.",
+        "If the answer is a state from the West, this one fits.",
+        "One strong clue for this state is the capital Phoenix.",
+        "The correct answer uses the abbreviation AZ."
+      ],
+      "tags": [
+        "west",
+        "desert"
+      ]
+    },
+    {
+      "id": "arkansas",
+      "skillId": "states",
+      "name": "Arkansas",
+      "attributes": {
+        "capital": "Little Rock",
+        "region": "South",
+        "nickname": "The Natural State",
+        "abbreviation": "AR"
+      },
+      "facts": [
+        "Arkansas has mountains, rivers, and hot springs.",
+        "Little Rock is its capital city.",
+        "Little Rock is the state capital that students match with Arkansas.",
+        "The Natural State is a nickname that helps learners remember Arkansas."
+      ],
+      "funFacts": [
+        "AR is the two-letter mail code for Arkansas.",
+        "Little Rock is an important map city to remember in Arkansas.",
+        "Arkansas is often grouped with other south states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Little Rock.",
+        "It belongs to the South region.",
+        "Its nickname is The Natural State.",
+        "Its two-letter abbreviation is AR.",
+        "On a U.S. map, it is grouped with the South.",
+        "The state government meets in Little Rock.",
+        "Mail can be labeled with the code AR.",
+        "School quizzes often pair this state with Little Rock.",
+        "This clue card points to a state in the South.",
+        "The nickname The Natural State belongs to this state.",
+        "Students often memorize AR as this state's short code.",
+        "If the answer is a state from the South, this one fits.",
+        "One strong clue for this state is the capital Little Rock.",
+        "The correct answer uses the abbreviation AR."
+      ],
+      "tags": [
+        "south",
+        "nature"
+      ]
+    },
+    {
+      "id": "california",
+      "skillId": "states",
+      "name": "California",
+      "attributes": {
+        "capital": "Sacramento",
+        "region": "West",
+        "nickname": "The Golden State",
+        "abbreviation": "CA"
+      },
+      "facts": [
+        "California is the most populated U.S. state.",
+        "It is home to both beaches and giant redwood trees.",
+        "Sacramento is the state capital that students match with California.",
+        "The Golden State is a nickname that helps learners remember California."
+      ],
+      "funFacts": [
+        "CA is the two-letter mail code for California.",
+        "Sacramento is an important map city to remember in California.",
+        "California is often grouped with other west states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Sacramento.",
+        "It belongs to the West region.",
+        "Its nickname is The Golden State.",
+        "Its two-letter abbreviation is CA.",
+        "On a U.S. map, it is grouped with the West.",
+        "The state government meets in Sacramento.",
+        "Mail can be labeled with the code CA.",
+        "School quizzes often pair this state with Sacramento.",
+        "This clue card points to a state in the West.",
+        "The nickname The Golden State belongs to this state.",
+        "Students often memorize CA as this state's short code.",
+        "If the answer is a state from the West, this one fits.",
+        "One strong clue for this state is the capital Sacramento.",
+        "The correct answer uses the abbreviation CA."
+      ],
+      "tags": [
+        "west",
+        "population"
+      ]
+    },
+    {
+      "id": "colorado",
+      "skillId": "states",
+      "name": "Colorado",
+      "attributes": {
+        "capital": "Denver",
+        "region": "West",
+        "nickname": "Centennial State",
+        "abbreviation": "CO"
+      },
+      "facts": [
+        "Colorado is known for the Rocky Mountains.",
+        "Denver is called the Mile High City.",
+        "Denver is the state capital that students match with Colorado.",
+        "Centennial State is a nickname that helps learners remember Colorado."
+      ],
+      "funFacts": [
+        "CO is the two-letter mail code for Colorado.",
+        "Denver is an important map city to remember in Colorado.",
+        "Colorado is often grouped with other west states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Denver.",
+        "It belongs to the West region.",
+        "Its nickname is Centennial State.",
+        "Its two-letter abbreviation is CO.",
+        "On a U.S. map, it is grouped with the West.",
+        "The state government meets in Denver.",
+        "Mail can be labeled with the code CO.",
+        "School quizzes often pair this state with Denver.",
+        "This clue card points to a state in the West.",
+        "The nickname Centennial State belongs to this state.",
+        "Students often memorize CO as this state's short code.",
+        "If the answer is a state from the West, this one fits.",
+        "One strong clue for this state is the capital Denver.",
+        "The correct answer uses the abbreviation CO."
+      ],
+      "tags": [
+        "west",
+        "mountains"
+      ]
+    },
+    {
+      "id": "connecticut",
+      "skillId": "states",
+      "name": "Connecticut",
+      "attributes": {
+        "capital": "Hartford",
+        "region": "Northeast",
+        "nickname": "Constitution State",
+        "abbreviation": "CT"
+      },
+      "facts": [
+        "Connecticut is one of the original 13 colonies.",
+        "Hartford is one of the oldest U.S. cities.",
+        "Hartford is the state capital that students match with Connecticut.",
+        "Constitution State is a nickname that helps learners remember Connecticut."
+      ],
+      "funFacts": [
+        "CT is the two-letter mail code for Connecticut.",
+        "Hartford is an important map city to remember in Connecticut.",
+        "Connecticut is often grouped with other northeast states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Hartford.",
+        "It belongs to the Northeast region.",
+        "Its nickname is Constitution State.",
+        "Its two-letter abbreviation is CT.",
+        "On a U.S. map, it is grouped with the Northeast.",
+        "The state government meets in Hartford.",
+        "Mail can be labeled with the code CT.",
+        "School quizzes often pair this state with Hartford.",
+        "This clue card points to a state in the Northeast.",
+        "The nickname Constitution State belongs to this state.",
+        "Students often memorize CT as this state's short code.",
+        "If the answer is a state from the Northeast, this one fits.",
+        "One strong clue for this state is the capital Hartford.",
+        "The correct answer uses the abbreviation CT."
+      ],
+      "tags": [
+        "northeast",
+        "history"
+      ]
+    },
+    {
+      "id": "delaware",
+      "skillId": "states",
+      "name": "Delaware",
+      "attributes": {
+        "capital": "Dover",
+        "region": "South",
+        "nickname": "The First State",
+        "abbreviation": "DE"
+      },
+      "facts": [
+        "Delaware was the first state to ratify the U.S. Constitution.",
+        "It is one of the smallest U.S. states.",
+        "Dover is the state capital that students match with Delaware.",
+        "The First State is a nickname that helps learners remember Delaware."
+      ],
+      "funFacts": [
+        "DE is the two-letter mail code for Delaware.",
+        "Dover is an important map city to remember in Delaware.",
+        "Delaware is often grouped with other south states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Dover.",
+        "It belongs to the South region.",
+        "Its nickname is The First State.",
+        "Its two-letter abbreviation is DE.",
+        "On a U.S. map, it is grouped with the South.",
+        "The state government meets in Dover.",
+        "Mail can be labeled with the code DE.",
+        "School quizzes often pair this state with Dover.",
+        "This clue card points to a state in the South.",
+        "The nickname The First State belongs to this state.",
+        "Students often memorize DE as this state's short code.",
+        "If the answer is a state from the South, this one fits.",
+        "One strong clue for this state is the capital Dover.",
+        "The correct answer uses the abbreviation DE."
+      ],
+      "tags": [
+        "south",
+        "history"
+      ]
+    },
+    {
+      "id": "florida",
+      "skillId": "states",
+      "name": "Florida",
+      "attributes": {
+        "capital": "Tallahassee",
+        "region": "South",
+        "nickname": "Sunshine State",
+        "abbreviation": "FL"
+      },
+      "facts": [
+        "Florida is surrounded by water on three sides.",
+        "The Everglades are a famous wetland in Florida.",
+        "Tallahassee is the state capital that students match with Florida.",
+        "Sunshine State is a nickname that helps learners remember Florida."
+      ],
+      "funFacts": [
+        "FL is the two-letter mail code for Florida.",
+        "Tallahassee is an important map city to remember in Florida.",
+        "Florida is often grouped with other south states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Tallahassee.",
+        "It belongs to the South region.",
+        "Its nickname is Sunshine State.",
+        "Its two-letter abbreviation is FL.",
+        "On a U.S. map, it is grouped with the South.",
+        "The state government meets in Tallahassee.",
+        "Mail can be labeled with the code FL.",
+        "School quizzes often pair this state with Tallahassee.",
+        "This clue card points to a state in the South.",
+        "The nickname Sunshine State belongs to this state.",
+        "Students often memorize FL as this state's short code.",
+        "If the answer is a state from the South, this one fits.",
+        "One strong clue for this state is the capital Tallahassee.",
+        "The correct answer uses the abbreviation FL."
+      ],
+      "tags": [
+        "south",
+        "water"
+      ]
+    },
+    {
+      "id": "georgia",
+      "skillId": "states",
+      "name": "Georgia",
+      "attributes": {
+        "capital": "Atlanta",
+        "region": "South",
+        "nickname": "Peach State",
+        "abbreviation": "GA"
+      },
+      "facts": [
+        "Georgia is known for peaches and peanuts.",
+        "Atlanta is a major city in the Southeast.",
+        "Atlanta is the state capital that students match with Georgia.",
+        "Peach State is a nickname that helps learners remember Georgia."
+      ],
+      "funFacts": [
+        "GA is the two-letter mail code for Georgia.",
+        "Atlanta is an important map city to remember in Georgia.",
+        "Georgia is often grouped with other south states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Atlanta.",
+        "It belongs to the South region.",
+        "Its nickname is Peach State.",
+        "Its two-letter abbreviation is GA.",
+        "On a U.S. map, it is grouped with the South.",
+        "The state government meets in Atlanta.",
+        "Mail can be labeled with the code GA.",
+        "School quizzes often pair this state with Atlanta.",
+        "This clue card points to a state in the South.",
+        "The nickname Peach State belongs to this state.",
+        "Students often memorize GA as this state's short code.",
+        "If the answer is a state from the South, this one fits.",
+        "One strong clue for this state is the capital Atlanta.",
+        "The correct answer uses the abbreviation GA."
+      ],
+      "tags": [
+        "south",
+        "cities"
+      ]
+    },
+    {
+      "id": "hawaii",
+      "skillId": "states",
+      "name": "Hawaii",
+      "attributes": {
+        "capital": "Honolulu",
+        "region": "West",
+        "nickname": "Aloha State",
+        "abbreviation": "HI"
+      },
+      "facts": [
+        "Hawaii is the only U.S. state made entirely of islands.",
+        "Volcanoes helped form the Hawaiian islands.",
+        "Honolulu is the state capital that students match with Hawaii.",
+        "Aloha State is a nickname that helps learners remember Hawaii."
+      ],
+      "funFacts": [
+        "HI is the two-letter mail code for Hawaii.",
+        "Honolulu is an important map city to remember in Hawaii.",
+        "Hawaii is often grouped with other west states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Honolulu.",
+        "It belongs to the West region.",
+        "Its nickname is Aloha State.",
+        "Its two-letter abbreviation is HI.",
+        "On a U.S. map, it is grouped with the West.",
+        "The state government meets in Honolulu.",
+        "Mail can be labeled with the code HI.",
+        "School quizzes often pair this state with Honolulu.",
+        "This clue card points to a state in the West.",
+        "The nickname Aloha State belongs to this state.",
+        "Students often memorize HI as this state's short code.",
+        "If the answer is a state from the West, this one fits.",
+        "One strong clue for this state is the capital Honolulu.",
+        "The correct answer uses the abbreviation HI."
+      ],
+      "tags": [
+        "west",
+        "islands"
+      ]
+    },
+    {
+      "id": "idaho",
+      "skillId": "states",
+      "name": "Idaho",
+      "attributes": {
+        "capital": "Boise",
+        "region": "West",
+        "nickname": "Gem State",
+        "abbreviation": "ID"
+      },
+      "facts": [
+        "Idaho is famous for potatoes.",
+        "The state has mountains, forests, and rivers.",
+        "Boise is the state capital that students match with Idaho.",
+        "Gem State is a nickname that helps learners remember Idaho."
+      ],
+      "funFacts": [
+        "ID is the two-letter mail code for Idaho.",
+        "Boise is an important map city to remember in Idaho.",
+        "Idaho is often grouped with other west states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Boise.",
+        "It belongs to the West region.",
+        "Its nickname is Gem State.",
+        "Its two-letter abbreviation is ID.",
+        "On a U.S. map, it is grouped with the West.",
+        "The state government meets in Boise.",
+        "Mail can be labeled with the code ID.",
+        "School quizzes often pair this state with Boise.",
+        "This clue card points to a state in the West.",
+        "The nickname Gem State belongs to this state.",
+        "Students often memorize ID as this state's short code.",
+        "If the answer is a state from the West, this one fits.",
+        "One strong clue for this state is the capital Boise.",
+        "The correct answer uses the abbreviation ID."
+      ],
+      "tags": [
+        "west",
+        "agriculture"
+      ]
+    },
+    {
+      "id": "illinois",
+      "skillId": "states",
+      "name": "Illinois",
+      "attributes": {
+        "capital": "Springfield",
+        "region": "Midwest",
+        "nickname": "Prairie State",
+        "abbreviation": "IL"
+      },
+      "facts": [
+        "Illinois is home to Chicago, one of the biggest U.S. cities.",
+        "Abraham Lincoln spent many important years in Illinois.",
+        "Springfield is the state capital that students match with Illinois.",
+        "Prairie State is a nickname that helps learners remember Illinois."
+      ],
+      "funFacts": [
+        "IL is the two-letter mail code for Illinois.",
+        "Springfield is an important map city to remember in Illinois.",
+        "Illinois is often grouped with other midwest states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Springfield.",
+        "It belongs to the Midwest region.",
+        "Its nickname is Prairie State.",
+        "Its two-letter abbreviation is IL.",
+        "On a U.S. map, it is grouped with the Midwest.",
+        "The state government meets in Springfield.",
+        "Mail can be labeled with the code IL.",
+        "School quizzes often pair this state with Springfield.",
+        "This clue card points to a state in the Midwest.",
+        "The nickname Prairie State belongs to this state.",
+        "Students often memorize IL as this state's short code.",
+        "If the answer is a state from the Midwest, this one fits.",
+        "One strong clue for this state is the capital Springfield.",
+        "The correct answer uses the abbreviation IL."
+      ],
+      "tags": [
+        "midwest",
+        "history"
+      ]
+    },
+    {
+      "id": "indiana",
+      "skillId": "states",
+      "name": "Indiana",
+      "attributes": {
+        "capital": "Indianapolis",
+        "region": "Midwest",
+        "nickname": "Hoosier State",
+        "abbreviation": "IN"
+      },
+      "facts": [
+        "Indianapolis hosts the famous Indy 500 race.",
+        "Indiana has many farms and small towns.",
+        "Indianapolis is the state capital that students match with Indiana.",
+        "Hoosier State is a nickname that helps learners remember Indiana."
+      ],
+      "funFacts": [
+        "IN is the two-letter mail code for Indiana.",
+        "Indianapolis is an important map city to remember in Indiana.",
+        "Indiana is often grouped with other midwest states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Indianapolis.",
+        "It belongs to the Midwest region.",
+        "Its nickname is Hoosier State.",
+        "Its two-letter abbreviation is IN.",
+        "On a U.S. map, it is grouped with the Midwest.",
+        "The state government meets in Indianapolis.",
+        "Mail can be labeled with the code IN.",
+        "School quizzes often pair this state with Indianapolis.",
+        "This clue card points to a state in the Midwest.",
+        "The nickname Hoosier State belongs to this state.",
+        "Students often memorize IN as this state's short code.",
+        "If the answer is a state from the Midwest, this one fits.",
+        "One strong clue for this state is the capital Indianapolis.",
+        "The correct answer uses the abbreviation IN."
+      ],
+      "tags": [
+        "midwest",
+        "sports"
+      ]
+    },
+    {
+      "id": "iowa",
+      "skillId": "states",
+      "name": "Iowa",
+      "attributes": {
+        "capital": "Des Moines",
+        "region": "Midwest",
+        "nickname": "Hawkeye State",
+        "abbreviation": "IA"
+      },
+      "facts": [
+        "Iowa is known for corn and farmland.",
+        "Its rolling fields are part of the Midwest landscape.",
+        "Des Moines is the state capital that students match with Iowa.",
+        "Hawkeye State is a nickname that helps learners remember Iowa."
+      ],
+      "funFacts": [
+        "IA is the two-letter mail code for Iowa.",
+        "Des Moines is an important map city to remember in Iowa.",
+        "Iowa is often grouped with other midwest states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Des Moines.",
+        "It belongs to the Midwest region.",
+        "Its nickname is Hawkeye State.",
+        "Its two-letter abbreviation is IA.",
+        "On a U.S. map, it is grouped with the Midwest.",
+        "The state government meets in Des Moines.",
+        "Mail can be labeled with the code IA.",
+        "School quizzes often pair this state with Des Moines.",
+        "This clue card points to a state in the Midwest.",
+        "The nickname Hawkeye State belongs to this state.",
+        "Students often memorize IA as this state's short code.",
+        "If the answer is a state from the Midwest, this one fits.",
+        "One strong clue for this state is the capital Des Moines.",
+        "The correct answer uses the abbreviation IA."
+      ],
+      "tags": [
+        "midwest",
+        "agriculture"
+      ]
+    },
+    {
+      "id": "kansas",
+      "skillId": "states",
+      "name": "Kansas",
+      "attributes": {
+        "capital": "Topeka",
+        "region": "Midwest",
+        "nickname": "Sunflower State",
+        "abbreviation": "KS"
+      },
+      "facts": [
+        "Kansas has wide plains and prairie land.",
+        "Sunflowers are an important state symbol.",
+        "Topeka is the state capital that students match with Kansas.",
+        "Sunflower State is a nickname that helps learners remember Kansas."
+      ],
+      "funFacts": [
+        "KS is the two-letter mail code for Kansas.",
+        "Topeka is an important map city to remember in Kansas.",
+        "Kansas is often grouped with other midwest states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Topeka.",
+        "It belongs to the Midwest region.",
+        "Its nickname is Sunflower State.",
+        "Its two-letter abbreviation is KS.",
+        "On a U.S. map, it is grouped with the Midwest.",
+        "The state government meets in Topeka.",
+        "Mail can be labeled with the code KS.",
+        "School quizzes often pair this state with Topeka.",
+        "This clue card points to a state in the Midwest.",
+        "The nickname Sunflower State belongs to this state.",
+        "Students often memorize KS as this state's short code.",
+        "If the answer is a state from the Midwest, this one fits.",
+        "One strong clue for this state is the capital Topeka.",
+        "The correct answer uses the abbreviation KS."
+      ],
+      "tags": [
+        "midwest",
+        "prairie"
+      ]
+    },
+    {
+      "id": "kentucky",
+      "skillId": "states",
+      "name": "Kentucky",
+      "attributes": {
+        "capital": "Frankfort",
+        "region": "South",
+        "nickname": "Bluegrass State",
+        "abbreviation": "KY"
+      },
+      "facts": [
+        "Kentucky is known for bluegrass music and horse farms.",
+        "Mammoth Cave is one of the world's longest cave systems.",
+        "Frankfort is the state capital that students match with Kentucky.",
+        "Bluegrass State is a nickname that helps learners remember Kentucky."
+      ],
+      "funFacts": [
+        "KY is the two-letter mail code for Kentucky.",
+        "Frankfort is an important map city to remember in Kentucky.",
+        "Kentucky is often grouped with other south states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Frankfort.",
+        "It belongs to the South region.",
+        "Its nickname is Bluegrass State.",
+        "Its two-letter abbreviation is KY.",
+        "On a U.S. map, it is grouped with the South.",
+        "The state government meets in Frankfort.",
+        "Mail can be labeled with the code KY.",
+        "School quizzes often pair this state with Frankfort.",
+        "This clue card points to a state in the South.",
+        "The nickname Bluegrass State belongs to this state.",
+        "Students often memorize KY as this state's short code.",
+        "If the answer is a state from the South, this one fits.",
+        "One strong clue for this state is the capital Frankfort.",
+        "The correct answer uses the abbreviation KY."
+      ],
+      "tags": [
+        "south",
+        "music"
+      ]
+    },
+    {
+      "id": "louisiana",
+      "skillId": "states",
+      "name": "Louisiana",
+      "attributes": {
+        "capital": "Baton Rouge",
+        "region": "South",
+        "nickname": "Pelican State",
+        "abbreviation": "LA"
+      },
+      "facts": [
+        "Louisiana is famous for jazz and Mardi Gras traditions.",
+        "The Mississippi River flows through the state.",
+        "Baton Rouge is the state capital that students match with Louisiana.",
+        "Pelican State is a nickname that helps learners remember Louisiana."
+      ],
+      "funFacts": [
+        "LA is the two-letter mail code for Louisiana.",
+        "Baton Rouge is an important map city to remember in Louisiana.",
+        "Louisiana is often grouped with other south states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Baton Rouge.",
+        "It belongs to the South region.",
+        "Its nickname is Pelican State.",
+        "Its two-letter abbreviation is LA.",
+        "On a U.S. map, it is grouped with the South.",
+        "The state government meets in Baton Rouge.",
+        "Mail can be labeled with the code LA.",
+        "School quizzes often pair this state with Baton Rouge.",
+        "This clue card points to a state in the South.",
+        "The nickname Pelican State belongs to this state.",
+        "Students often memorize LA as this state's short code.",
+        "If the answer is a state from the South, this one fits.",
+        "One strong clue for this state is the capital Baton Rouge.",
+        "The correct answer uses the abbreviation LA."
+      ],
+      "tags": [
+        "south",
+        "culture"
+      ]
+    },
+    {
+      "id": "maine",
+      "skillId": "states",
+      "name": "Maine",
+      "attributes": {
+        "capital": "Augusta",
+        "region": "Northeast",
+        "nickname": "Pine Tree State",
+        "abbreviation": "ME"
+      },
+      "facts": [
+        "Maine is known for rocky coasts and lighthouses.",
+        "It is the easternmost state in the United States.",
+        "Augusta is the state capital that students match with Maine.",
+        "Pine Tree State is a nickname that helps learners remember Maine."
+      ],
+      "funFacts": [
+        "ME is the two-letter mail code for Maine.",
+        "Augusta is an important map city to remember in Maine.",
+        "Maine is often grouped with other northeast states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Augusta.",
+        "It belongs to the Northeast region.",
+        "Its nickname is Pine Tree State.",
+        "Its two-letter abbreviation is ME.",
+        "On a U.S. map, it is grouped with the Northeast.",
+        "The state government meets in Augusta.",
+        "Mail can be labeled with the code ME.",
+        "School quizzes often pair this state with Augusta.",
+        "This clue card points to a state in the Northeast.",
+        "The nickname Pine Tree State belongs to this state.",
+        "Students often memorize ME as this state's short code.",
+        "If the answer is a state from the Northeast, this one fits.",
+        "One strong clue for this state is the capital Augusta.",
+        "The correct answer uses the abbreviation ME."
+      ],
+      "tags": [
+        "northeast",
+        "coast"
+      ]
+    },
+    {
+      "id": "maryland",
+      "skillId": "states",
+      "name": "Maryland",
+      "attributes": {
+        "capital": "Annapolis",
+        "region": "South",
+        "nickname": "Old Line State",
+        "abbreviation": "MD"
+      },
+      "facts": [
+        "Maryland borders the Chesapeake Bay.",
+        "Blue crabs are a well-known food in Maryland.",
+        "Annapolis is the state capital that students match with Maryland.",
+        "Old Line State is a nickname that helps learners remember Maryland."
+      ],
+      "funFacts": [
+        "MD is the two-letter mail code for Maryland.",
+        "Annapolis is an important map city to remember in Maryland.",
+        "Maryland is often grouped with other south states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Annapolis.",
+        "It belongs to the South region.",
+        "Its nickname is Old Line State.",
+        "Its two-letter abbreviation is MD.",
+        "On a U.S. map, it is grouped with the South.",
+        "The state government meets in Annapolis.",
+        "Mail can be labeled with the code MD.",
+        "School quizzes often pair this state with Annapolis.",
+        "This clue card points to a state in the South.",
+        "The nickname Old Line State belongs to this state.",
+        "Students often memorize MD as this state's short code.",
+        "If the answer is a state from the South, this one fits.",
+        "One strong clue for this state is the capital Annapolis.",
+        "The correct answer uses the abbreviation MD."
+      ],
+      "tags": [
+        "south",
+        "water"
+      ]
+    },
+    {
+      "id": "massachusetts",
+      "skillId": "states",
+      "name": "Massachusetts",
+      "attributes": {
+        "capital": "Boston",
+        "region": "Northeast",
+        "nickname": "Bay State",
+        "abbreviation": "MA"
+      },
+      "facts": [
+        "Massachusetts played a big role in early American history.",
+        "Boston is one of the oldest major cities in the country.",
+        "Boston is the state capital that students match with Massachusetts.",
+        "Bay State is a nickname that helps learners remember Massachusetts."
+      ],
+      "funFacts": [
+        "MA is the two-letter mail code for Massachusetts.",
+        "Boston is an important map city to remember in Massachusetts.",
+        "Massachusetts is often grouped with other northeast states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Boston.",
+        "It belongs to the Northeast region.",
+        "Its nickname is Bay State.",
+        "Its two-letter abbreviation is MA.",
+        "On a U.S. map, it is grouped with the Northeast.",
+        "The state government meets in Boston.",
+        "Mail can be labeled with the code MA.",
+        "School quizzes often pair this state with Boston.",
+        "This clue card points to a state in the Northeast.",
+        "The nickname Bay State belongs to this state.",
+        "Students often memorize MA as this state's short code.",
+        "If the answer is a state from the Northeast, this one fits.",
+        "One strong clue for this state is the capital Boston.",
+        "The correct answer uses the abbreviation MA."
+      ],
+      "tags": [
+        "northeast",
+        "history"
+      ]
+    },
+    {
+      "id": "michigan",
+      "skillId": "states",
+      "name": "Michigan",
+      "attributes": {
+        "capital": "Lansing",
+        "region": "Midwest",
+        "nickname": "Great Lakes State",
+        "abbreviation": "MI"
+      },
+      "facts": [
+        "Michigan touches four of the five Great Lakes.",
+        "It has two main land areas called peninsulas.",
+        "Lansing is the state capital that students match with Michigan.",
+        "Great Lakes State is a nickname that helps learners remember Michigan."
+      ],
+      "funFacts": [
+        "MI is the two-letter mail code for Michigan.",
+        "Lansing is an important map city to remember in Michigan.",
+        "Michigan is often grouped with other midwest states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Lansing.",
+        "It belongs to the Midwest region.",
+        "Its nickname is Great Lakes State.",
+        "Its two-letter abbreviation is MI.",
+        "On a U.S. map, it is grouped with the Midwest.",
+        "The state government meets in Lansing.",
+        "Mail can be labeled with the code MI.",
+        "School quizzes often pair this state with Lansing.",
+        "This clue card points to a state in the Midwest.",
+        "The nickname Great Lakes State belongs to this state.",
+        "Students often memorize MI as this state's short code.",
+        "If the answer is a state from the Midwest, this one fits.",
+        "One strong clue for this state is the capital Lansing.",
+        "The correct answer uses the abbreviation MI."
+      ],
+      "tags": [
+        "midwest",
+        "water"
+      ]
+    },
+    {
+      "id": "minnesota",
+      "skillId": "states",
+      "name": "Minnesota",
+      "attributes": {
+        "capital": "Saint Paul",
+        "region": "Midwest",
+        "nickname": "North Star State",
+        "abbreviation": "MN"
+      },
+      "facts": [
+        "Minnesota is known as the Land of 10,000 Lakes.",
+        "It has cold winters and many forests.",
+        "Saint Paul is the state capital that students match with Minnesota.",
+        "North Star State is a nickname that helps learners remember Minnesota."
+      ],
+      "funFacts": [
+        "MN is the two-letter mail code for Minnesota.",
+        "Saint Paul is an important map city to remember in Minnesota.",
+        "Minnesota is often grouped with other midwest states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Saint Paul.",
+        "It belongs to the Midwest region.",
+        "Its nickname is North Star State.",
+        "Its two-letter abbreviation is MN.",
+        "On a U.S. map, it is grouped with the Midwest.",
+        "The state government meets in Saint Paul.",
+        "Mail can be labeled with the code MN.",
+        "School quizzes often pair this state with Saint Paul.",
+        "This clue card points to a state in the Midwest.",
+        "The nickname North Star State belongs to this state.",
+        "Students often memorize MN as this state's short code.",
+        "If the answer is a state from the Midwest, this one fits.",
+        "One strong clue for this state is the capital Saint Paul.",
+        "The correct answer uses the abbreviation MN."
+      ],
+      "tags": [
+        "midwest",
+        "lakes"
+      ]
+    },
+    {
+      "id": "mississippi",
+      "skillId": "states",
+      "name": "Mississippi",
+      "attributes": {
+        "capital": "Jackson",
+        "region": "South",
+        "nickname": "Magnolia State",
+        "abbreviation": "MS"
+      },
+      "facts": [
+        "The Mississippi River helps give the state its name.",
+        "Magnolia trees are an important state symbol.",
+        "Jackson is the state capital that students match with Mississippi.",
+        "Magnolia State is a nickname that helps learners remember Mississippi."
+      ],
+      "funFacts": [
+        "MS is the two-letter mail code for Mississippi.",
+        "Jackson is an important map city to remember in Mississippi.",
+        "Mississippi is often grouped with other south states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Jackson.",
+        "It belongs to the South region.",
+        "Its nickname is Magnolia State.",
+        "Its two-letter abbreviation is MS.",
+        "On a U.S. map, it is grouped with the South.",
+        "The state government meets in Jackson.",
+        "Mail can be labeled with the code MS.",
+        "School quizzes often pair this state with Jackson.",
+        "This clue card points to a state in the South.",
+        "The nickname Magnolia State belongs to this state.",
+        "Students often memorize MS as this state's short code.",
+        "If the answer is a state from the South, this one fits.",
+        "One strong clue for this state is the capital Jackson.",
+        "The correct answer uses the abbreviation MS."
+      ],
+      "tags": [
+        "south",
+        "river"
+      ]
+    },
+    {
+      "id": "missouri",
+      "skillId": "states",
+      "name": "Missouri",
+      "attributes": {
+        "capital": "Jefferson City",
+        "region": "Midwest",
+        "nickname": "Show Me State",
+        "abbreviation": "MO"
+      },
+      "facts": [
+        "Missouri is home to the Gateway Arch in St. Louis.",
+        "The Missouri and Mississippi rivers meet near the state.",
+        "Jefferson City is the state capital that students match with Missouri.",
+        "Show Me State is a nickname that helps learners remember Missouri."
+      ],
+      "funFacts": [
+        "MO is the two-letter mail code for Missouri.",
+        "Jefferson City is an important map city to remember in Missouri.",
+        "Missouri is often grouped with other midwest states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Jefferson City.",
+        "It belongs to the Midwest region.",
+        "Its nickname is Show Me State.",
+        "Its two-letter abbreviation is MO.",
+        "On a U.S. map, it is grouped with the Midwest.",
+        "The state government meets in Jefferson City.",
+        "Mail can be labeled with the code MO.",
+        "School quizzes often pair this state with Jefferson City.",
+        "This clue card points to a state in the Midwest.",
+        "The nickname Show Me State belongs to this state.",
+        "Students often memorize MO as this state's short code.",
+        "If the answer is a state from the Midwest, this one fits.",
+        "One strong clue for this state is the capital Jefferson City.",
+        "The correct answer uses the abbreviation MO."
+      ],
+      "tags": [
+        "midwest",
+        "river"
+      ]
+    },
+    {
+      "id": "montana",
+      "skillId": "states",
+      "name": "Montana",
+      "attributes": {
+        "capital": "Helena",
+        "region": "West",
+        "nickname": "Treasure State",
+        "abbreviation": "MT"
+      },
+      "facts": [
+        "Montana has wide-open spaces and mountain views.",
+        "Part of Yellowstone National Park reaches into Montana.",
+        "Helena is the state capital that students match with Montana.",
+        "Treasure State is a nickname that helps learners remember Montana."
+      ],
+      "funFacts": [
+        "MT is the two-letter mail code for Montana.",
+        "Helena is an important map city to remember in Montana.",
+        "Montana is often grouped with other west states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Helena.",
+        "It belongs to the West region.",
+        "Its nickname is Treasure State.",
+        "Its two-letter abbreviation is MT.",
+        "On a U.S. map, it is grouped with the West.",
+        "The state government meets in Helena.",
+        "Mail can be labeled with the code MT.",
+        "School quizzes often pair this state with Helena.",
+        "This clue card points to a state in the West.",
+        "The nickname Treasure State belongs to this state.",
+        "Students often memorize MT as this state's short code.",
+        "If the answer is a state from the West, this one fits.",
+        "One strong clue for this state is the capital Helena.",
+        "The correct answer uses the abbreviation MT."
+      ],
+      "tags": [
+        "west",
+        "mountains"
+      ]
+    },
+    {
+      "id": "nebraska",
+      "skillId": "states",
+      "name": "Nebraska",
+      "attributes": {
+        "capital": "Lincoln",
+        "region": "Midwest",
+        "nickname": "Cornhusker State",
+        "abbreviation": "NE"
+      },
+      "facts": [
+        "Nebraska has large plains and farmland.",
+        "It is an important state for corn and beef production.",
+        "Lincoln is the state capital that students match with Nebraska.",
+        "Cornhusker State is a nickname that helps learners remember Nebraska."
+      ],
+      "funFacts": [
+        "NE is the two-letter mail code for Nebraska.",
+        "Lincoln is an important map city to remember in Nebraska.",
+        "Nebraska is often grouped with other midwest states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Lincoln.",
+        "It belongs to the Midwest region.",
+        "Its nickname is Cornhusker State.",
+        "Its two-letter abbreviation is NE.",
+        "On a U.S. map, it is grouped with the Midwest.",
+        "The state government meets in Lincoln.",
+        "Mail can be labeled with the code NE.",
+        "School quizzes often pair this state with Lincoln.",
+        "This clue card points to a state in the Midwest.",
+        "The nickname Cornhusker State belongs to this state.",
+        "Students often memorize NE as this state's short code.",
+        "If the answer is a state from the Midwest, this one fits.",
+        "One strong clue for this state is the capital Lincoln.",
+        "The correct answer uses the abbreviation NE."
+      ],
+      "tags": [
+        "midwest",
+        "plains"
+      ]
+    },
+    {
+      "id": "nevada",
+      "skillId": "states",
+      "name": "Nevada",
+      "attributes": {
+        "capital": "Carson City",
+        "region": "West",
+        "nickname": "Silver State",
+        "abbreviation": "NV"
+      },
+      "facts": [
+        "Nevada has deserts, mountains, and bright city lights in Las Vegas.",
+        "The state is known for silver mining history.",
+        "Carson City is the state capital that students match with Nevada.",
+        "Silver State is a nickname that helps learners remember Nevada."
+      ],
+      "funFacts": [
+        "NV is the two-letter mail code for Nevada.",
+        "Carson City is an important map city to remember in Nevada.",
+        "Nevada is often grouped with other west states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Carson City.",
+        "It belongs to the West region.",
+        "Its nickname is Silver State.",
+        "Its two-letter abbreviation is NV.",
+        "On a U.S. map, it is grouped with the West.",
+        "The state government meets in Carson City.",
+        "Mail can be labeled with the code NV.",
+        "School quizzes often pair this state with Carson City.",
+        "This clue card points to a state in the West.",
+        "The nickname Silver State belongs to this state.",
+        "Students often memorize NV as this state's short code.",
+        "If the answer is a state from the West, this one fits.",
+        "One strong clue for this state is the capital Carson City.",
+        "The correct answer uses the abbreviation NV."
+      ],
+      "tags": [
+        "west",
+        "desert"
+      ]
+    },
+    {
+      "id": "new-hampshire",
+      "skillId": "states",
+      "name": "New Hampshire",
+      "attributes": {
+        "capital": "Concord",
+        "region": "Northeast",
+        "nickname": "Granite State",
+        "abbreviation": "NH"
+      },
+      "facts": [
+        "New Hampshire is known for mountains and forests.",
+        "It is one of the original 13 states.",
+        "Concord is the state capital that students match with New Hampshire.",
+        "Granite State is a nickname that helps learners remember New Hampshire."
+      ],
+      "funFacts": [
+        "NH is the two-letter mail code for New Hampshire.",
+        "Concord is an important map city to remember in New Hampshire.",
+        "New Hampshire is often grouped with other northeast states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Concord.",
+        "It belongs to the Northeast region.",
+        "Its nickname is Granite State.",
+        "Its two-letter abbreviation is NH.",
+        "On a U.S. map, it is grouped with the Northeast.",
+        "The state government meets in Concord.",
+        "Mail can be labeled with the code NH.",
+        "School quizzes often pair this state with Concord.",
+        "This clue card points to a state in the Northeast.",
+        "The nickname Granite State belongs to this state.",
+        "Students often memorize NH as this state's short code.",
+        "If the answer is a state from the Northeast, this one fits.",
+        "One strong clue for this state is the capital Concord.",
+        "The correct answer uses the abbreviation NH."
+      ],
+      "tags": [
+        "northeast",
+        "mountains"
+      ]
+    },
+    {
+      "id": "new-jersey",
+      "skillId": "states",
+      "name": "New Jersey",
+      "attributes": {
+        "capital": "Trenton",
+        "region": "Northeast",
+        "nickname": "Garden State",
+        "abbreviation": "NJ"
+      },
+      "facts": [
+        "New Jersey has beaches, farms, and busy cities.",
+        "It played an important part in the American Revolution.",
+        "Trenton is the state capital that students match with New Jersey.",
+        "Garden State is a nickname that helps learners remember New Jersey."
+      ],
+      "funFacts": [
+        "NJ is the two-letter mail code for New Jersey.",
+        "Trenton is an important map city to remember in New Jersey.",
+        "New Jersey is often grouped with other northeast states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Trenton.",
+        "It belongs to the Northeast region.",
+        "Its nickname is Garden State.",
+        "Its two-letter abbreviation is NJ.",
+        "On a U.S. map, it is grouped with the Northeast.",
+        "The state government meets in Trenton.",
+        "Mail can be labeled with the code NJ.",
+        "School quizzes often pair this state with Trenton.",
+        "This clue card points to a state in the Northeast.",
+        "The nickname Garden State belongs to this state.",
+        "Students often memorize NJ as this state's short code.",
+        "If the answer is a state from the Northeast, this one fits.",
+        "One strong clue for this state is the capital Trenton.",
+        "The correct answer uses the abbreviation NJ."
+      ],
+      "tags": [
+        "northeast",
+        "coast"
+      ]
+    },
+    {
+      "id": "new-mexico",
+      "skillId": "states",
+      "name": "New Mexico",
+      "attributes": {
+        "capital": "Santa Fe",
+        "region": "West",
+        "nickname": "Land of Enchantment",
+        "abbreviation": "NM"
+      },
+      "facts": [
+        "New Mexico has deserts, mesas, and colorful art traditions.",
+        "Santa Fe is one of the oldest capital cities in the U.S.",
+        "Santa Fe is the state capital that students match with New Mexico.",
+        "Land of Enchantment is a nickname that helps learners remember New Mexico."
+      ],
+      "funFacts": [
+        "NM is the two-letter mail code for New Mexico.",
+        "Santa Fe is an important map city to remember in New Mexico.",
+        "New Mexico is often grouped with other west states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Santa Fe.",
+        "It belongs to the West region.",
+        "Its nickname is Land of Enchantment.",
+        "Its two-letter abbreviation is NM.",
+        "On a U.S. map, it is grouped with the West.",
+        "The state government meets in Santa Fe.",
+        "Mail can be labeled with the code NM.",
+        "School quizzes often pair this state with Santa Fe.",
+        "This clue card points to a state in the West.",
+        "The nickname Land of Enchantment belongs to this state.",
+        "Students often memorize NM as this state's short code.",
+        "If the answer is a state from the West, this one fits.",
+        "One strong clue for this state is the capital Santa Fe.",
+        "The correct answer uses the abbreviation NM."
+      ],
+      "tags": [
+        "west",
+        "desert"
+      ]
+    },
+    {
+      "id": "new-york",
+      "skillId": "states",
+      "name": "New York",
+      "attributes": {
+        "capital": "Albany",
+        "region": "Northeast",
+        "nickname": "Empire State",
+        "abbreviation": "NY"
+      },
+      "facts": [
+        "New York City is the largest city in the United States.",
+        "Niagara Falls is one of the state's famous natural wonders.",
+        "Albany is the state capital that students match with New York.",
+        "Empire State is a nickname that helps learners remember New York."
+      ],
+      "funFacts": [
+        "NY is the two-letter mail code for New York.",
+        "Albany is an important map city to remember in New York.",
+        "New York is often grouped with other northeast states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Albany.",
+        "It belongs to the Northeast region.",
+        "Its nickname is Empire State.",
+        "Its two-letter abbreviation is NY.",
+        "On a U.S. map, it is grouped with the Northeast.",
+        "The state government meets in Albany.",
+        "Mail can be labeled with the code NY.",
+        "School quizzes often pair this state with Albany.",
+        "This clue card points to a state in the Northeast.",
+        "The nickname Empire State belongs to this state.",
+        "Students often memorize NY as this state's short code.",
+        "If the answer is a state from the Northeast, this one fits.",
+        "One strong clue for this state is the capital Albany.",
+        "The correct answer uses the abbreviation NY."
+      ],
+      "tags": [
+        "northeast",
+        "cities"
+      ]
+    },
+    {
+      "id": "north-carolina",
+      "skillId": "states",
+      "name": "North Carolina",
+      "attributes": {
+        "capital": "Raleigh",
+        "region": "South",
+        "nickname": "Tar Heel State",
+        "abbreviation": "NC"
+      },
+      "facts": [
+        "North Carolina has both mountains and Atlantic beaches.",
+        "The Wright brothers made early flight history at Kitty Hawk.",
+        "Raleigh is the state capital that students match with North Carolina.",
+        "Tar Heel State is a nickname that helps learners remember North Carolina."
+      ],
+      "funFacts": [
+        "NC is the two-letter mail code for North Carolina.",
+        "Raleigh is an important map city to remember in North Carolina.",
+        "North Carolina is often grouped with other south states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Raleigh.",
+        "It belongs to the South region.",
+        "Its nickname is Tar Heel State.",
+        "Its two-letter abbreviation is NC.",
+        "On a U.S. map, it is grouped with the South.",
+        "The state government meets in Raleigh.",
+        "Mail can be labeled with the code NC.",
+        "School quizzes often pair this state with Raleigh.",
+        "This clue card points to a state in the South.",
+        "The nickname Tar Heel State belongs to this state.",
+        "Students often memorize NC as this state's short code.",
+        "If the answer is a state from the South, this one fits.",
+        "One strong clue for this state is the capital Raleigh.",
+        "The correct answer uses the abbreviation NC."
+      ],
+      "tags": [
+        "south",
+        "history"
+      ]
+    },
+    {
+      "id": "north-dakota",
+      "skillId": "states",
+      "name": "North Dakota",
+      "attributes": {
+        "capital": "Bismarck",
+        "region": "Midwest",
+        "nickname": "Peace Garden State",
+        "abbreviation": "ND"
+      },
+      "facts": [
+        "North Dakota has prairies and grasslands.",
+        "It shares a border with Canada.",
+        "Bismarck is the state capital that students match with North Dakota.",
+        "Peace Garden State is a nickname that helps learners remember North Dakota."
+      ],
+      "funFacts": [
+        "ND is the two-letter mail code for North Dakota.",
+        "Bismarck is an important map city to remember in North Dakota.",
+        "North Dakota is often grouped with other midwest states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Bismarck.",
+        "It belongs to the Midwest region.",
+        "Its nickname is Peace Garden State.",
+        "Its two-letter abbreviation is ND.",
+        "On a U.S. map, it is grouped with the Midwest.",
+        "The state government meets in Bismarck.",
+        "Mail can be labeled with the code ND.",
+        "School quizzes often pair this state with Bismarck.",
+        "This clue card points to a state in the Midwest.",
+        "The nickname Peace Garden State belongs to this state.",
+        "Students often memorize ND as this state's short code.",
+        "If the answer is a state from the Midwest, this one fits.",
+        "One strong clue for this state is the capital Bismarck.",
+        "The correct answer uses the abbreviation ND."
+      ],
+      "tags": [
+        "midwest",
+        "prairie"
+      ]
+    },
+    {
+      "id": "ohio",
+      "skillId": "states",
+      "name": "Ohio",
+      "attributes": {
+        "capital": "Columbus",
+        "region": "Midwest",
+        "nickname": "Buckeye State",
+        "abbreviation": "OH"
+      },
+      "facts": [
+        "Ohio is known for buckeye trees and important inventions.",
+        "Several U.S. presidents were born in Ohio.",
+        "Columbus is the state capital that students match with Ohio.",
+        "Buckeye State is a nickname that helps learners remember Ohio."
+      ],
+      "funFacts": [
+        "OH is the two-letter mail code for Ohio.",
+        "Columbus is an important map city to remember in Ohio.",
+        "Ohio is often grouped with other midwest states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Columbus.",
+        "It belongs to the Midwest region.",
+        "Its nickname is Buckeye State.",
+        "Its two-letter abbreviation is OH.",
+        "On a U.S. map, it is grouped with the Midwest.",
+        "The state government meets in Columbus.",
+        "Mail can be labeled with the code OH.",
+        "School quizzes often pair this state with Columbus.",
+        "This clue card points to a state in the Midwest.",
+        "The nickname Buckeye State belongs to this state.",
+        "Students often memorize OH as this state's short code.",
+        "If the answer is a state from the Midwest, this one fits.",
+        "One strong clue for this state is the capital Columbus.",
+        "The correct answer uses the abbreviation OH."
+      ],
+      "tags": [
+        "midwest",
+        "history"
+      ]
+    },
+    {
+      "id": "oklahoma",
+      "skillId": "states",
+      "name": "Oklahoma",
+      "attributes": {
+        "capital": "Oklahoma City",
+        "region": "South",
+        "nickname": "Sooner State",
+        "abbreviation": "OK"
+      },
+      "facts": [
+        "Oklahoma has strong Native American history and culture.",
+        "It is part of a region known for big skies and plains.",
+        "Oklahoma City is the state capital that students match with Oklahoma.",
+        "Sooner State is a nickname that helps learners remember Oklahoma."
+      ],
+      "funFacts": [
+        "OK is the two-letter mail code for Oklahoma.",
+        "Oklahoma City is an important map city to remember in Oklahoma.",
+        "Oklahoma is often grouped with other south states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Oklahoma City.",
+        "It belongs to the South region.",
+        "Its nickname is Sooner State.",
+        "Its two-letter abbreviation is OK.",
+        "On a U.S. map, it is grouped with the South.",
+        "The state government meets in Oklahoma City.",
+        "Mail can be labeled with the code OK.",
+        "School quizzes often pair this state with Oklahoma City.",
+        "This clue card points to a state in the South.",
+        "The nickname Sooner State belongs to this state.",
+        "Students often memorize OK as this state's short code.",
+        "If the answer is a state from the South, this one fits.",
+        "One strong clue for this state is the capital Oklahoma City.",
+        "The correct answer uses the abbreviation OK."
+      ],
+      "tags": [
+        "south",
+        "plains"
+      ]
+    },
+    {
+      "id": "oregon",
+      "skillId": "states",
+      "name": "Oregon",
+      "attributes": {
+        "capital": "Salem",
+        "region": "West",
+        "nickname": "Beaver State",
+        "abbreviation": "OR"
+      },
+      "facts": [
+        "Oregon has forests, mountains, and Pacific coastline.",
+        "Crater Lake is one of the deepest lakes in the U.S.",
+        "Salem is the state capital that students match with Oregon.",
+        "Beaver State is a nickname that helps learners remember Oregon."
+      ],
+      "funFacts": [
+        "OR is the two-letter mail code for Oregon.",
+        "Salem is an important map city to remember in Oregon.",
+        "Oregon is often grouped with other west states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Salem.",
+        "It belongs to the West region.",
+        "Its nickname is Beaver State.",
+        "Its two-letter abbreviation is OR.",
+        "On a U.S. map, it is grouped with the West.",
+        "The state government meets in Salem.",
+        "Mail can be labeled with the code OR.",
+        "School quizzes often pair this state with Salem.",
+        "This clue card points to a state in the West.",
+        "The nickname Beaver State belongs to this state.",
+        "Students often memorize OR as this state's short code.",
+        "If the answer is a state from the West, this one fits.",
+        "One strong clue for this state is the capital Salem.",
+        "The correct answer uses the abbreviation OR."
+      ],
+      "tags": [
+        "west",
+        "coast"
+      ]
+    },
+    {
+      "id": "pennsylvania",
+      "skillId": "states",
+      "name": "Pennsylvania",
+      "attributes": {
+        "capital": "Harrisburg",
+        "region": "Northeast",
+        "nickname": "Keystone State",
+        "abbreviation": "PA"
+      },
+      "facts": [
+        "Pennsylvania is where the Liberty Bell is found.",
+        "Philadelphia played a major role in U.S. history.",
+        "Harrisburg is the state capital that students match with Pennsylvania.",
+        "Keystone State is a nickname that helps learners remember Pennsylvania."
+      ],
+      "funFacts": [
+        "PA is the two-letter mail code for Pennsylvania.",
+        "Harrisburg is an important map city to remember in Pennsylvania.",
+        "Pennsylvania is often grouped with other northeast states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Harrisburg.",
+        "It belongs to the Northeast region.",
+        "Its nickname is Keystone State.",
+        "Its two-letter abbreviation is PA.",
+        "On a U.S. map, it is grouped with the Northeast.",
+        "The state government meets in Harrisburg.",
+        "Mail can be labeled with the code PA.",
+        "School quizzes often pair this state with Harrisburg.",
+        "This clue card points to a state in the Northeast.",
+        "The nickname Keystone State belongs to this state.",
+        "Students often memorize PA as this state's short code.",
+        "If the answer is a state from the Northeast, this one fits.",
+        "One strong clue for this state is the capital Harrisburg.",
+        "The correct answer uses the abbreviation PA."
+      ],
+      "tags": [
+        "northeast",
+        "history"
+      ]
+    },
+    {
+      "id": "rhode-island",
+      "skillId": "states",
+      "name": "Rhode Island",
+      "attributes": {
+        "capital": "Providence",
+        "region": "Northeast",
+        "nickname": "Ocean State",
+        "abbreviation": "RI"
+      },
+      "facts": [
+        "Rhode Island is the smallest U.S. state.",
+        "It has many bays, harbors, and seaside towns.",
+        "Providence is the state capital that students match with Rhode Island.",
+        "Ocean State is a nickname that helps learners remember Rhode Island."
+      ],
+      "funFacts": [
+        "RI is the two-letter mail code for Rhode Island.",
+        "Providence is an important map city to remember in Rhode Island.",
+        "Rhode Island is often grouped with other northeast states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Providence.",
+        "It belongs to the Northeast region.",
+        "Its nickname is Ocean State.",
+        "Its two-letter abbreviation is RI.",
+        "On a U.S. map, it is grouped with the Northeast.",
+        "The state government meets in Providence.",
+        "Mail can be labeled with the code RI.",
+        "School quizzes often pair this state with Providence.",
+        "This clue card points to a state in the Northeast.",
+        "The nickname Ocean State belongs to this state.",
+        "Students often memorize RI as this state's short code.",
+        "If the answer is a state from the Northeast, this one fits.",
+        "One strong clue for this state is the capital Providence.",
+        "The correct answer uses the abbreviation RI."
+      ],
+      "tags": [
+        "northeast",
+        "ocean"
+      ]
+    },
+    {
+      "id": "south-carolina",
+      "skillId": "states",
+      "name": "South Carolina",
+      "attributes": {
+        "capital": "Columbia",
+        "region": "South",
+        "nickname": "Palmetto State",
+        "abbreviation": "SC"
+      },
+      "facts": [
+        "South Carolina has beaches, marshes, and historic cities.",
+        "Palmetto trees are an important state symbol.",
+        "Columbia is the state capital that students match with South Carolina.",
+        "Palmetto State is a nickname that helps learners remember South Carolina."
+      ],
+      "funFacts": [
+        "SC is the two-letter mail code for South Carolina.",
+        "Columbia is an important map city to remember in South Carolina.",
+        "South Carolina is often grouped with other south states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Columbia.",
+        "It belongs to the South region.",
+        "Its nickname is Palmetto State.",
+        "Its two-letter abbreviation is SC.",
+        "On a U.S. map, it is grouped with the South.",
+        "The state government meets in Columbia.",
+        "Mail can be labeled with the code SC.",
+        "School quizzes often pair this state with Columbia.",
+        "This clue card points to a state in the South.",
+        "The nickname Palmetto State belongs to this state.",
+        "Students often memorize SC as this state's short code.",
+        "If the answer is a state from the South, this one fits.",
+        "One strong clue for this state is the capital Columbia.",
+        "The correct answer uses the abbreviation SC."
+      ],
+      "tags": [
+        "south",
+        "coast"
+      ]
+    },
+    {
+      "id": "south-dakota",
+      "skillId": "states",
+      "name": "South Dakota",
+      "attributes": {
+        "capital": "Pierre",
+        "region": "Midwest",
+        "nickname": "Mount Rushmore State",
+        "abbreviation": "SD"
+      },
+      "facts": [
+        "Mount Rushmore is one of South Dakota's most famous landmarks.",
+        "The state has prairies and the Black Hills.",
+        "Pierre is the state capital that students match with South Dakota.",
+        "Mount Rushmore State is a nickname that helps learners remember South Dakota."
+      ],
+      "funFacts": [
+        "SD is the two-letter mail code for South Dakota.",
+        "Pierre is an important map city to remember in South Dakota.",
+        "South Dakota is often grouped with other midwest states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Pierre.",
+        "It belongs to the Midwest region.",
+        "Its nickname is Mount Rushmore State.",
+        "Its two-letter abbreviation is SD.",
+        "On a U.S. map, it is grouped with the Midwest.",
+        "The state government meets in Pierre.",
+        "Mail can be labeled with the code SD.",
+        "School quizzes often pair this state with Pierre.",
+        "This clue card points to a state in the Midwest.",
+        "The nickname Mount Rushmore State belongs to this state.",
+        "Students often memorize SD as this state's short code.",
+        "If the answer is a state from the Midwest, this one fits.",
+        "One strong clue for this state is the capital Pierre.",
+        "The correct answer uses the abbreviation SD."
+      ],
+      "tags": [
+        "midwest",
+        "landmarks"
+      ]
+    },
+    {
+      "id": "tennessee",
+      "skillId": "states",
+      "name": "Tennessee",
+      "attributes": {
+        "capital": "Nashville",
+        "region": "South",
+        "nickname": "Volunteer State",
+        "abbreviation": "TN"
+      },
+      "facts": [
+        "Tennessee is well known for country music in Nashville.",
+        "The Great Smoky Mountains are partly in Tennessee.",
+        "Nashville is the state capital that students match with Tennessee.",
+        "Volunteer State is a nickname that helps learners remember Tennessee."
+      ],
+      "funFacts": [
+        "TN is the two-letter mail code for Tennessee.",
+        "Nashville is an important map city to remember in Tennessee.",
+        "Tennessee is often grouped with other south states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Nashville.",
+        "It belongs to the South region.",
+        "Its nickname is Volunteer State.",
+        "Its two-letter abbreviation is TN.",
+        "On a U.S. map, it is grouped with the South.",
+        "The state government meets in Nashville.",
+        "Mail can be labeled with the code TN.",
+        "School quizzes often pair this state with Nashville.",
+        "This clue card points to a state in the South.",
+        "The nickname Volunteer State belongs to this state.",
+        "Students often memorize TN as this state's short code.",
+        "If the answer is a state from the South, this one fits.",
+        "One strong clue for this state is the capital Nashville.",
+        "The correct answer uses the abbreviation TN."
+      ],
+      "tags": [
+        "south",
+        "music"
+      ]
+    },
+    {
+      "id": "texas",
+      "skillId": "states",
+      "name": "Texas",
+      "attributes": {
+        "capital": "Austin",
+        "region": "South",
+        "nickname": "Lone Star State",
+        "abbreviation": "TX"
+      },
+      "facts": [
+        "Texas is the second-largest U.S. state by area.",
+        "It has deserts, forests, beaches, and big cities.",
+        "Austin is the state capital that students match with Texas.",
+        "Lone Star State is a nickname that helps learners remember Texas."
+      ],
+      "funFacts": [
+        "TX is the two-letter mail code for Texas.",
+        "Austin is an important map city to remember in Texas.",
+        "Texas is often grouped with other south states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Austin.",
+        "It belongs to the South region.",
+        "Its nickname is Lone Star State.",
+        "Its two-letter abbreviation is TX.",
+        "On a U.S. map, it is grouped with the South.",
+        "The state government meets in Austin.",
+        "Mail can be labeled with the code TX.",
+        "School quizzes often pair this state with Austin.",
+        "This clue card points to a state in the South.",
+        "The nickname Lone Star State belongs to this state.",
+        "Students often memorize TX as this state's short code.",
+        "If the answer is a state from the South, this one fits.",
+        "One strong clue for this state is the capital Austin.",
+        "The correct answer uses the abbreviation TX."
+      ],
+      "tags": [
+        "south",
+        "size"
+      ]
+    },
+    {
+      "id": "utah",
+      "skillId": "states",
+      "name": "Utah",
+      "attributes": {
+        "capital": "Salt Lake City",
+        "region": "West",
+        "nickname": "Beehive State",
+        "abbreviation": "UT"
+      },
+      "facts": [
+        "Utah is known for red rock landscapes and national parks.",
+        "The Great Salt Lake is one of its famous natural features.",
+        "Salt Lake City is the state capital that students match with Utah.",
+        "Beehive State is a nickname that helps learners remember Utah."
+      ],
+      "funFacts": [
+        "UT is the two-letter mail code for Utah.",
+        "Salt Lake City is an important map city to remember in Utah.",
+        "Utah is often grouped with other west states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Salt Lake City.",
+        "It belongs to the West region.",
+        "Its nickname is Beehive State.",
+        "Its two-letter abbreviation is UT.",
+        "On a U.S. map, it is grouped with the West.",
+        "The state government meets in Salt Lake City.",
+        "Mail can be labeled with the code UT.",
+        "School quizzes often pair this state with Salt Lake City.",
+        "This clue card points to a state in the West.",
+        "The nickname Beehive State belongs to this state.",
+        "Students often memorize UT as this state's short code.",
+        "If the answer is a state from the West, this one fits.",
+        "One strong clue for this state is the capital Salt Lake City.",
+        "The correct answer uses the abbreviation UT."
+      ],
+      "tags": [
+        "west",
+        "parks"
+      ]
+    },
+    {
+      "id": "vermont",
+      "skillId": "states",
+      "name": "Vermont",
+      "attributes": {
+        "capital": "Montpelier",
+        "region": "Northeast",
+        "nickname": "Green Mountain State",
+        "abbreviation": "VT"
+      },
+      "facts": [
+        "Vermont is known for maple syrup and green mountains.",
+        "Montpelier is the smallest U.S. state capital by population.",
+        "Montpelier is the state capital that students match with Vermont.",
+        "Green Mountain State is a nickname that helps learners remember Vermont."
+      ],
+      "funFacts": [
+        "VT is the two-letter mail code for Vermont.",
+        "Montpelier is an important map city to remember in Vermont.",
+        "Vermont is often grouped with other northeast states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Montpelier.",
+        "It belongs to the Northeast region.",
+        "Its nickname is Green Mountain State.",
+        "Its two-letter abbreviation is VT.",
+        "On a U.S. map, it is grouped with the Northeast.",
+        "The state government meets in Montpelier.",
+        "Mail can be labeled with the code VT.",
+        "School quizzes often pair this state with Montpelier.",
+        "This clue card points to a state in the Northeast.",
+        "The nickname Green Mountain State belongs to this state.",
+        "Students often memorize VT as this state's short code.",
+        "If the answer is a state from the Northeast, this one fits.",
+        "One strong clue for this state is the capital Montpelier.",
+        "The correct answer uses the abbreviation VT."
+      ],
+      "tags": [
+        "northeast",
+        "mountains"
+      ]
+    },
+    {
+      "id": "virginia",
+      "skillId": "states",
+      "name": "Virginia",
+      "attributes": {
+        "capital": "Richmond",
+        "region": "South",
+        "nickname": "Old Dominion",
+        "abbreviation": "VA"
+      },
+      "facts": [
+        "Virginia is one of the original 13 colonies.",
+        "It has beaches, mountains, and important historic sites.",
+        "Richmond is the state capital that students match with Virginia.",
+        "Old Dominion is a nickname that helps learners remember Virginia."
+      ],
+      "funFacts": [
+        "VA is the two-letter mail code for Virginia.",
+        "Richmond is an important map city to remember in Virginia.",
+        "Virginia is often grouped with other south states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Richmond.",
+        "It belongs to the South region.",
+        "Its nickname is Old Dominion.",
+        "Its two-letter abbreviation is VA.",
+        "On a U.S. map, it is grouped with the South.",
+        "The state government meets in Richmond.",
+        "Mail can be labeled with the code VA.",
+        "School quizzes often pair this state with Richmond.",
+        "This clue card points to a state in the South.",
+        "The nickname Old Dominion belongs to this state.",
+        "Students often memorize VA as this state's short code.",
+        "If the answer is a state from the South, this one fits.",
+        "One strong clue for this state is the capital Richmond.",
+        "The correct answer uses the abbreviation VA."
+      ],
+      "tags": [
+        "south",
+        "history"
+      ]
+    },
+    {
+      "id": "washington",
+      "skillId": "states",
+      "name": "Washington",
+      "attributes": {
+        "capital": "Olympia",
+        "region": "West",
+        "nickname": "Evergreen State",
+        "abbreviation": "WA"
+      },
+      "facts": [
+        "Washington is known for evergreen forests and rainy weather in some areas.",
+        "Seattle is one of its biggest cities.",
+        "Olympia is the state capital that students match with Washington.",
+        "Evergreen State is a nickname that helps learners remember Washington."
+      ],
+      "funFacts": [
+        "WA is the two-letter mail code for Washington.",
+        "Olympia is an important map city to remember in Washington.",
+        "Washington is often grouped with other west states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Olympia.",
+        "It belongs to the West region.",
+        "Its nickname is Evergreen State.",
+        "Its two-letter abbreviation is WA.",
+        "On a U.S. map, it is grouped with the West.",
+        "The state government meets in Olympia.",
+        "Mail can be labeled with the code WA.",
+        "School quizzes often pair this state with Olympia.",
+        "This clue card points to a state in the West.",
+        "The nickname Evergreen State belongs to this state.",
+        "Students often memorize WA as this state's short code.",
+        "If the answer is a state from the West, this one fits.",
+        "One strong clue for this state is the capital Olympia.",
+        "The correct answer uses the abbreviation WA."
+      ],
+      "tags": [
+        "west",
+        "forests"
+      ]
+    },
+    {
+      "id": "west-virginia",
+      "skillId": "states",
+      "name": "West Virginia",
+      "attributes": {
+        "capital": "Charleston",
+        "region": "South",
+        "nickname": "Mountain State",
+        "abbreviation": "WV"
+      },
+      "facts": [
+        "West Virginia is filled with mountains and forests.",
+        "Outdoor adventures like rafting are popular there.",
+        "Charleston is the state capital that students match with West Virginia.",
+        "Mountain State is a nickname that helps learners remember West Virginia."
+      ],
+      "funFacts": [
+        "WV is the two-letter mail code for West Virginia.",
+        "Charleston is an important map city to remember in West Virginia.",
+        "West Virginia is often grouped with other south states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Charleston.",
+        "It belongs to the South region.",
+        "Its nickname is Mountain State.",
+        "Its two-letter abbreviation is WV.",
+        "On a U.S. map, it is grouped with the South.",
+        "The state government meets in Charleston.",
+        "Mail can be labeled with the code WV.",
+        "School quizzes often pair this state with Charleston.",
+        "This clue card points to a state in the South.",
+        "The nickname Mountain State belongs to this state.",
+        "Students often memorize WV as this state's short code.",
+        "If the answer is a state from the South, this one fits.",
+        "One strong clue for this state is the capital Charleston.",
+        "The correct answer uses the abbreviation WV."
+      ],
+      "tags": [
+        "south",
+        "mountains"
+      ]
+    },
+    {
+      "id": "wisconsin",
+      "skillId": "states",
+      "name": "Wisconsin",
+      "attributes": {
+        "capital": "Madison",
+        "region": "Midwest",
+        "nickname": "Badger State",
+        "abbreviation": "WI"
+      },
+      "facts": [
+        "Wisconsin is famous for dairy farms and cheese.",
+        "It borders two Great Lakes.",
+        "Madison is the state capital that students match with Wisconsin.",
+        "Badger State is a nickname that helps learners remember Wisconsin."
+      ],
+      "funFacts": [
+        "WI is the two-letter mail code for Wisconsin.",
+        "Madison is an important map city to remember in Wisconsin.",
+        "Wisconsin is often grouped with other midwest states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Madison.",
+        "It belongs to the Midwest region.",
+        "Its nickname is Badger State.",
+        "Its two-letter abbreviation is WI.",
+        "On a U.S. map, it is grouped with the Midwest.",
+        "The state government meets in Madison.",
+        "Mail can be labeled with the code WI.",
+        "School quizzes often pair this state with Madison.",
+        "This clue card points to a state in the Midwest.",
+        "The nickname Badger State belongs to this state.",
+        "Students often memorize WI as this state's short code.",
+        "If the answer is a state from the Midwest, this one fits.",
+        "One strong clue for this state is the capital Madison.",
+        "The correct answer uses the abbreviation WI."
+      ],
+      "tags": [
+        "midwest",
+        "dairy"
+      ]
+    },
+    {
+      "id": "wyoming",
+      "skillId": "states",
+      "name": "Wyoming",
+      "attributes": {
+        "capital": "Cheyenne",
+        "region": "West",
+        "nickname": "Equality State",
+        "abbreviation": "WY"
+      },
+      "facts": [
+        "Wyoming was the first state to allow women to vote.",
+        "Much of Yellowstone National Park is in Wyoming.",
+        "Cheyenne is the state capital that students match with Wyoming.",
+        "Equality State is a nickname that helps learners remember Wyoming."
+      ],
+      "funFacts": [
+        "WY is the two-letter mail code for Wyoming.",
+        "Cheyenne is an important map city to remember in Wyoming.",
+        "Wyoming is often grouped with other west states in school map lessons."
+      ],
+      "clues": [
+        "This place is a U.S. state.",
+        "Its capital city is Cheyenne.",
+        "It belongs to the West region.",
+        "Its nickname is Equality State.",
+        "Its two-letter abbreviation is WY.",
+        "On a U.S. map, it is grouped with the West.",
+        "The state government meets in Cheyenne.",
+        "Mail can be labeled with the code WY.",
+        "School quizzes often pair this state with Cheyenne.",
+        "This clue card points to a state in the West.",
+        "The nickname Equality State belongs to this state.",
+        "Students often memorize WY as this state's short code.",
+        "If the answer is a state from the West, this one fits.",
+        "One strong clue for this state is the capital Cheyenne.",
+        "The correct answer uses the abbreviation WY."
+      ],
+      "tags": [
+        "west",
+        "history"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "skillId": "continents",
+  "version": 1,
+  "items": [
+    { "id": "africa", "skillId": "continents", "name": "Africa", "hemisphere": "Mostly Northern and Southern", "countryCount": 54, "largestCountry": "Algeria", "largestCity": "Lagos", "facts": ["Africa is the second-largest continent.", "The Sahara Desert stretches across part of northern Africa."], "tags": ["desert", "wildlife"] },
+    { "id": "antarctica", "skillId": "continents", "name": "Antarctica", "hemisphere": "Southern", "countryCount": 0, "largestCountry": "No countries", "largestCity": "No permanent cities", "facts": ["Antarctica is the coldest continent on Earth.", "It is covered mostly by thick ice."], "tags": ["ice", "cold"] },
+    { "id": "asia", "skillId": "continents", "name": "Asia", "hemisphere": "Mostly Northern", "countryCount": 49, "largestCountry": "China", "largestCity": "Tokyo", "facts": ["Asia is the largest continent by area and population.", "Mount Everest stands on the border of Nepal and China in Asia."], "tags": ["mountains", "population"] },
+    { "id": "europe", "skillId": "continents", "name": "Europe", "hemisphere": "Northern", "countryCount": 44, "largestCountry": "Ukraine", "largestCity": "Istanbul", "facts": ["Europe has many countries close together.", "Many famous castles and old cities are in Europe."], "tags": ["history", "cities"] },
+    { "id": "north-america", "skillId": "continents", "name": "North America", "hemisphere": "Northern", "countryCount": 23, "largestCountry": "Canada", "largestCity": "Mexico City", "facts": ["North America includes Canada, the United States, and Mexico.", "It has mountains, deserts, forests, and coastlines."], "tags": ["varied", "coast"] },
+    { "id": "south-america", "skillId": "continents", "name": "South America", "hemisphere": "Mostly Southern", "countryCount": 12, "largestCountry": "Brazil", "largestCity": "Sao Paulo", "facts": ["The Amazon Rainforest covers part of South America.", "The Andes are one of the longest mountain ranges in the world."], "tags": ["rainforest", "mountains"] },
+    { "id": "australia", "skillId": "continents", "name": "Australia", "hemisphere": "Southern", "countryCount": 14, "largestCountry": "Australia", "largestCity": "Sydney", "facts": ["Australia is the smallest continent.", "It is famous for unique animals like kangaroos and koalas."], "tags": ["animals", "islands"] }
+  ]
+}
