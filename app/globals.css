@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fff9ef;
-  --foreground: #19324a;
+  color-scheme: light;
+  --background: #f9f5ee;
+  --foreground: #183246;
   --card: #ffffff;
-  --card-muted: #eef7f7;
-  --accent: #ff8f3d;
-  --accent-soft: #ffe1b8;
-  --mint: #dff6ea;
-  --sky: #d7efff;
-  --berry: #ffcad8;
-  --ink-soft: #5c748a;
+  --card-muted: #f3f6f8;
+  --accent: #f28b45;
+  --accent-soft: #f8dfc9;
+  --mint: #dceee7;
+  --sky: #d9ebf7;
+  --berry: #f5d8df;
+  --ink-soft: #607486;
 }
 
 * {
@@ -19,10 +20,11 @@
 
 html {
   min-height: 100%;
+  color-scheme: light;
   background:
-    radial-gradient(circle at top left, rgba(255, 196, 120, 0.28), transparent 30%),
-    radial-gradient(circle at top right, rgba(106, 194, 255, 0.2), transparent 24%),
-    radial-gradient(circle at bottom center, rgba(223, 246, 234, 0.45), transparent 26%),
+    radial-gradient(circle at top left, rgba(242, 139, 69, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(107, 179, 220, 0.12), transparent 24%),
+    linear-gradient(180deg, #fbf7f1 0%, #f5f6f7 56%, #f0f4f7 100%),
     var(--background);
 }
 
@@ -46,8 +48,8 @@ input {
 
 .paper-shadow {
   box-shadow:
-    0 16px 40px rgba(25, 50, 74, 0.1),
-    0 5px 18px rgba(25, 50, 74, 0.07);
+    0 10px 26px rgba(25, 50, 74, 0.06),
+    0 2px 8px rgba(25, 50, 74, 0.04);
 }
 
 .text-balance {

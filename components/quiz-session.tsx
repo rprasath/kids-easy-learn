@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import { useCallback, useEffect, useMemo, useRef, useState, useTransition } from "react";
+import { useCallback, useEffect, useMemo, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 
+import { useStudyChrome } from "@/components/focus-shell";
 import { TimerProgress } from "@/components/timer-progress";
 import { saveQuizResult } from "@/lib/progress-store";
 import { buildQuizQuestions, skillLabel, skillTitle } from "@/lib/quiz";
@@ -17,18 +17,18 @@ type QuizSessionProps = {
   stepSeconds: number;
 };
 
-const TIMER_OPTIONS = [15, 30, 45, 60];
+const TIMER_OPTIONS = [15, 30, 45, 60, 120];
 
 export function QuizSession({ items, selectedSkillIds, questionCount, stepSeconds }: QuizSessionProps) {
   const router = useRouter();
-  const containerRef = useRef<HTMLDivElement>(null);
+  const { theme } = useStudyChrome();
   const [isPending, startTransition] = useTransition();
   const [sessionSeed] = useState(() => crypto.randomUUID());
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<QuizAnswer[]>([]);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState<number | null>(null);
   const [revealedAnswer, setRevealedAnswer] = useState<QuizAnswer | null>(null);
-  const [autoMode, setAutoMode] = useState(false);
+  const [autoMode, setAutoMode] = useState(true);
   const [secondsPerQuestion, setSecondsPerQuestion] = useState(stepSeconds);
   const [secondsLeft, setSecondsLeft] = useState(stepSeconds);
 
@@ -179,32 +179,6 @@ export function QuizSession({ items, selectedSkillIds, questionCount, stepSecond
     };
   }, [autoMode]);
 
-  useEffect(() => {
-    const target = containerRef.current;
-    if (!target || document.fullscreenElement === target) {
-      return;
-    }
-
-    const requestFullscreen = () => target.requestFullscreen?.().catch(() => undefined);
-    void requestFullscreen();
-
-    function tryAgain() {
-      if (!document.fullscreenElement) {
-        void requestFullscreen();
-      }
-      window.removeEventListener("pointerdown", tryAgain);
-      window.removeEventListener("keydown", tryAgain);
-    }
-
-    window.addEventListener("pointerdown", tryAgain, { once: true });
-    window.addEventListener("keydown", tryAgain, { once: true });
-
-    return () => {
-      window.removeEventListener("pointerdown", tryAgain);
-      window.removeEventListener("keydown", tryAgain);
-    };
-  }, []);
-
   if (!question) {
     return (
       <section className="rounded-[2rem] bg-white p-8 paper-shadow">
@@ -218,11 +192,11 @@ export function QuizSession({ items, selectedSkillIds, questionCount, stepSecond
   function optionClass(optionId: string, index: number): string {
     if (revealedAnswer) {
       if (optionId === question.correctOptionId) {
-        return "border-emerald-500 bg-emerald-100 text-emerald-950";
+        return "border-emerald-500 bg-emerald-50 text-emerald-950";
       }
 
       if (optionId === revealedAnswer.selectedOptionId && optionId !== question.correctOptionId) {
-        return "border-rose-500 bg-rose-100 text-rose-950";
+        return "border-rose-500 bg-rose-50 text-rose-950";
       }
     }
 
@@ -230,19 +204,26 @@ export function QuizSession({ items, selectedSkillIds, questionCount, stepSecond
       return "border-sky-500 bg-sky-50 text-slate-950";
     }
 
-    return "border-white/80 bg-white text-slate-900";
+    return theme === "dark"
+      ? "border-slate-600 bg-slate-900/75 text-slate-100"
+      : "border-slate-200 bg-white/70 text-slate-900";
   }
 
+  const isDark = theme === "dark";
+  const borderTone = isDark ? "border-slate-700" : "border-slate-300";
+  const ghostButton = isDark
+    ? "border-slate-600 bg-slate-900/80 text-slate-100"
+    : "border-slate-400 bg-white text-slate-900";
+  const mutedTone = isDark ? "text-slate-300" : "text-slate-600";
+  const subtleTone = isDark ? "text-slate-200" : "text-slate-700";
+  const accentTone = isDark ? "text-sky-300" : "text-sky-800";
+  const textTone = isDark ? "text-slate-100" : "text-slate-900";
+  const contentTone = isDark ? "text-slate-200" : "text-slate-800";
+
   return (
-    <div ref={containerRef} className="mx-auto flex min-h-[calc(100vh-6rem)] w-full max-w-7xl flex-col">
-      <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-[1.6rem] bg-white/70 px-4 py-3 paper-shadow backdrop-blur">
+    <div className="mx-auto flex min-h-[calc(100vh-6rem)] w-full max-w-6xl flex-col">
+      <div className={`mb-4 flex flex-wrap items-center justify-between gap-3 border-b px-1 pb-3 ${borderTone}`}>
         <div className="flex flex-wrap items-center gap-3">
-          <Link
-            href="/"
-            className="rounded-full bg-white px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-slate-900"
-          >
-            Home
-          </Link>
           <button
             type="button"
             onClick={() => router.push("/")}
@@ -250,13 +231,13 @@ export function QuizSession({ items, selectedSkillIds, questionCount, stepSecond
           >
             Exit Quiz
           </button>
-          <span className="rounded-full bg-slate-900 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-white">
+          <span className={`text-xs font-black uppercase tracking-[0.18em] ${mutedTone}`}>
             {selectedSkillIds.map(skillTitle).join(" + ")}
           </span>
         </div>
 
         <div className="flex flex-wrap items-center gap-3">
-          <label className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.15em] text-slate-700">
+          <label className={`flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-bold uppercase tracking-[0.15em] ${ghostButton}`}>
             Timer
             <select
               value={secondsPerQuestion}
@@ -265,7 +246,7 @@ export function QuizSession({ items, selectedSkillIds, questionCount, stepSecond
                 setSecondsPerQuestion(nextSeconds);
                 setSecondsLeft(nextSeconds);
               }}
-              className="bg-transparent text-sm font-black text-slate-900 outline-none"
+              className={`bg-transparent text-sm font-black outline-none ${isDark ? "text-slate-100" : "text-slate-900"}`}
             >
               {TIMER_OPTIONS.map((seconds) => (
                 <option key={seconds} value={seconds}>
@@ -283,7 +264,7 @@ export function QuizSession({ items, selectedSkillIds, questionCount, stepSecond
               setRevealedAnswer(null);
             }}
             className={`rounded-full px-4 py-2 text-xs font-black uppercase tracking-[0.18em] ${
-              autoMode ? "bg-orange-500 text-white" : "bg-white text-slate-900"
+              autoMode ? "bg-[var(--accent)] text-white" : ghostButton
             }`}
           >
             {autoMode ? "Auto On" : "Auto Mode"}
@@ -291,16 +272,16 @@ export function QuizSession({ items, selectedSkillIds, questionCount, stepSecond
         </div>
       </div>
 
-      <section className="mx-auto flex flex-1 w-full max-w-5xl flex-col items-center justify-center gap-4">
+      <section className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-5">
         <div className="flex w-full flex-wrap items-center justify-between gap-3 px-1">
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.22em] text-sky-700">Quiz Mode</p>
-            <h2 className="mt-1 text-3xl font-black text-slate-900">
+            <p className={`text-sm font-black uppercase tracking-[0.22em] ${accentTone}`}>Quiz Mode</p>
+            <h2 className={`mt-1 text-3xl font-black ${textTone}`}>
               Question {currentIndex + 1} of {questions.length}
             </h2>
           </div>
           <div className="flex items-center gap-3">
-            <div className="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow">
+            <div className={`text-sm font-bold ${subtleTone}`}>
               {autoMode ? `Answer reveals in ${secondsLeft}s` : "Use ← → to choose, Enter to answer"}
             </div>
           </div>
@@ -313,79 +294,79 @@ export function QuizSession({ items, selectedSkillIds, questionCount, stepSecond
           totalSeconds={secondsPerQuestion}
         />
 
-        <div className="w-full rounded-[2.8rem] bg-white/85 p-4 paper-shadow backdrop-blur sm:p-6">
-          <div className="mx-auto flex min-h-[72vh] w-full max-w-4xl flex-col rounded-[2.6rem] bg-[linear-gradient(160deg,#fffaf3_0%,#fff7ec_52%,#eef8ff_100%)] p-6 shadow-inner">
-            <div className="flex items-center justify-between">
-              <span className="rounded-full bg-slate-900 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-white">
-                {skillLabel(question.skillId)}
-              </span>
-              <span className="rounded-full bg-white/80 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-slate-600">
-                {currentIndex + 1}/{questions.length}
-              </span>
-            </div>
+        <div className="flex min-h-[72vh] flex-1 flex-col px-1 py-2">
+          <div className="flex items-center justify-between">
+            <span className={`text-xs font-black uppercase tracking-[0.2em] ${accentTone}`}>
+              {skillLabel(question.skillId)}
+            </span>
+            <span className={`text-sm font-black uppercase tracking-[0.12em] ${mutedTone}`}>
+              {currentIndex + 1}/{questions.length}
+            </span>
+          </div>
 
-            <div className="mt-8 text-center">
-              <h3 className="text-4xl font-black text-slate-900 sm:text-5xl">{question.prompt}</h3>
-              <p className="mx-auto mt-3 max-w-2xl text-lg leading-8 text-slate-600">
-                {question.promptHint}
-              </p>
-            </div>
+          <div className="mt-8 text-center">
+            <h3 className={`mx-auto max-w-4xl text-4xl font-black leading-tight sm:text-6xl ${textTone}`}>
+              {question.prompt}
+            </h3>
+            <p className={`mx-auto mt-4 max-w-3xl text-lg leading-8 sm:text-xl sm:leading-9 ${contentTone}`}>
+              {question.promptHint}
+            </p>
+          </div>
 
-            <div className="mt-10 grid flex-1 gap-4 sm:grid-cols-2">
-              {question.options.map((option, index) => (
-                <button
-                  key={option.id}
-                  type="button"
-                  onClick={() => answerQuestion(option.id)}
-                  disabled={isPending || Boolean(revealedAnswer)}
-                  className={`min-h-28 rounded-[2rem] border-2 px-6 py-6 text-left text-2xl font-black shadow-sm transition ${optionClass(option.id, index)} disabled:cursor-default`}
-                >
-                  <span className="mr-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-sm text-white">
-                    {String.fromCharCode(65 + index)}
-                  </span>
-                  {option.label}
-                </button>
-              ))}
-            </div>
-
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-10 grid flex-1 gap-4 sm:grid-cols-2">
+            {question.options.map((option, index) => (
               <button
+                key={option.id}
                 type="button"
-                onClick={() =>
-                  setSelectedOptionIndex((current) =>
-                    current === null ? question.options.length - 1 : (current - 1 + question.options.length) % question.options.length,
-                  )
+                onClick={() => answerQuestion(option.id)}
+                disabled={isPending || Boolean(revealedAnswer)}
+                className={`min-h-28 rounded-[1.6rem] border-2 px-6 py-6 text-left text-2xl font-black shadow-[0_6px_18px_rgba(25,50,74,0.05)] transition ${optionClass(option.id, index)} disabled:cursor-default`}
+              >
+                <span className="mr-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-sm text-white">
+                  {String.fromCharCode(65 + index)}
+                </span>
+                {option.label}
+              </button>
+            ))}
+          </div>
+
+          <div className={`mt-6 flex flex-wrap items-center justify-center gap-3 border-t pt-5 ${borderTone}`}>
+            <button
+              type="button"
+              onClick={() =>
+                setSelectedOptionIndex((current) =>
+                  current === null ? question.options.length - 1 : (current - 1 + question.options.length) % question.options.length,
+                )
+              }
+              className={`rounded-full border px-6 py-3 text-sm font-black uppercase tracking-[0.18em] ${ghostButton}`}
+            >
+              ← Left
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                if (selectedOptionIndex === null) {
+                  return;
                 }
-                className="rounded-full bg-slate-900 px-6 py-3 text-sm font-black uppercase tracking-[0.18em] text-white"
-              >
-                ← Left
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  if (selectedOptionIndex === null) {
-                    return;
-                  }
 
-                  answerQuestion(question.options[selectedOptionIndex].id);
-                }}
-                disabled={Boolean(revealedAnswer) || selectedOptionIndex === null}
-                className="rounded-full bg-orange-500 px-7 py-3 text-sm font-black uppercase tracking-[0.18em] text-white shadow-lg shadow-orange-500/30 disabled:opacity-60"
-              >
-                Check Answer
-              </button>
-              <button
-                type="button"
-                onClick={() =>
-                  setSelectedOptionIndex((current) =>
-                    current === null ? 0 : (current + 1) % question.options.length,
-                  )
-                }
-                className="rounded-full bg-slate-200 px-6 py-3 text-sm font-black uppercase tracking-[0.18em] text-slate-900"
-              >
-                Right →
-              </button>
-            </div>
+                answerQuestion(question.options[selectedOptionIndex].id);
+              }}
+              disabled={Boolean(revealedAnswer) || selectedOptionIndex === null}
+              className="rounded-full bg-[var(--accent)] px-7 py-3 text-sm font-black uppercase tracking-[0.18em] text-white disabled:opacity-60"
+            >
+              Check Answer
+            </button>
+            <button
+              type="button"
+              onClick={() =>
+                setSelectedOptionIndex((current) =>
+                  current === null ? 0 : (current + 1) % question.options.length,
+                )
+              }
+              className={`rounded-full border px-6 py-3 text-sm font-black uppercase tracking-[0.18em] ${ghostButton}`}
+            >
+              Right →
+            </button>
           </div>
         </div>
       </section>

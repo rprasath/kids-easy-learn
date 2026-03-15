@@ -4,7 +4,7 @@ import { LearningSessionConfig, SkillId } from "@/lib/types";
 const VALID_SKILLS: SkillId[] = getSkillIds();
 const DEFAULT_SKILLS: SkillId[] = [getDefaultSkillId()];
 const DEFAULT_COUNT = 10;
-const DEFAULT_STEP_SECONDS = 20;
+const DEFAULT_STEP_SECONDS = 60;
 
 export function parseSkillIds(input: string | string[] | undefined): SkillId[] {
   const joined = Array.isArray(input) ? input.join(",") : input ?? "";

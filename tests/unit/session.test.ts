@@ -18,7 +18,7 @@ describe("session helpers", () => {
       selectedSkillIds: ["states"],
       mode: "quiz",
       questionCount: 10,
-      stepSeconds: 20,
+      stepSeconds: 60,
       shuffle: true,
     });
   });

@@ -1,5 +1,7 @@
 "use client";
 
+import { useStudyChrome } from "@/components/focus-shell";
+
 type TimerProgressProps = {
   active: boolean;
   label: string;
@@ -8,6 +10,8 @@ type TimerProgressProps = {
 };
 
 export function TimerProgress({ active, label, secondsLeft, totalSeconds }: TimerProgressProps) {
+  const { theme } = useStudyChrome();
+
   if (!active) {
     return null;
   }
@@ -15,10 +19,12 @@ export function TimerProgress({ active, label, secondsLeft, totalSeconds }: Time
   const safeTotal = Math.max(totalSeconds, 1);
   const progress = Math.max(0, Math.min(secondsLeft / safeTotal, 1));
   const progressPercent = Math.round(progress * 100);
+  const textTone = theme === "dark" ? "text-slate-300" : "text-slate-500";
+  const trackTone = theme === "dark" ? "bg-slate-700/90" : "bg-slate-200/90";
 
   return (
-    <div className="w-full rounded-[1.35rem] bg-white/80 px-4 py-3 shadow-sm">
-      <div className="flex items-center justify-between gap-3 text-xs font-black uppercase tracking-[0.16em] text-slate-600">
+    <div className="w-full px-1 py-1">
+      <div className={`flex items-center justify-between gap-3 text-[11px] font-black uppercase tracking-[0.16em] ${textTone}`}>
         <span>{label}</span>
         <span>{secondsLeft}s left</span>
       </div>
@@ -28,10 +34,10 @@ export function TimerProgress({ active, label, secondsLeft, totalSeconds }: Time
         aria-valuemin={0}
         aria-valuemax={safeTotal}
         aria-valuenow={Math.max(0, Math.min(secondsLeft, safeTotal))}
-        className="mt-3 h-3 overflow-hidden rounded-full bg-slate-200"
+        className={`mt-2 h-2 overflow-hidden rounded-full ${trackTone}`}
       >
         <div
-          className="h-full rounded-full bg-gradient-to-r from-orange-500 via-amber-400 to-sky-400 transition-[width] duration-1000 ease-linear"
+          className="h-full rounded-full bg-gradient-to-r from-[var(--accent)] via-[#efb26e] to-[#86bad8] transition-[width] duration-1000 ease-linear"
           style={{ width: `${progressPercent}%` }}
         />
       </div>
