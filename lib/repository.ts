@@ -1,8 +1,6 @@
-import { readFileSync } from "node:fs";
-import path from "node:path";
-
 import { z } from "zod";
 
+import { generatedSkillPacks } from "@/lib/generated-skill-packs";
 import { getSkillDefinition, listSkillDefinitions } from "@/lib/skill-catalog";
 import { LearningCardItem, SkillContentPack, SkillDefinition, SkillId } from "@/lib/types";
 
@@ -72,18 +70,20 @@ function validatePack(skill: SkillDefinition, pack: SkillContentPack) {
   });
 }
 
-function readJsonFile<T>(filePath: string): T {
-  return JSON.parse(readFileSync(filePath, "utf8")) as T;
-}
-
 const skillDefinitions = listSkillDefinitions();
 validateSkillDefinitions(skillDefinitions);
 
 const contentBySkill = new Map<SkillId, LearningCardItem[]>();
 
 skillDefinitions.forEach((skill) => {
-  const packPath = path.join(process.cwd(), "data", "skills", skill.contentFile);
-  const parsedPack = packSchema.parse(readJsonFile<SkillContentPack>(packPath));
+  const sourcePack = generatedSkillPacks[skill.contentFile];
+
+  assert(
+    sourcePack !== undefined,
+    `No generated content pack was found for "${skill.contentFile}". Run npm run build:data.`,
+  );
+
+  const parsedPack = packSchema.parse(sourcePack as SkillContentPack);
   validatePack(skill, parsedPack);
   contentBySkill.set(skill.id, parsedPack.items);
 });

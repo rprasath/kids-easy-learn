@@ -1,24 +1,13 @@
-import { FlashcardSession } from "@/components/flashcard-session";
-import { FocusShell } from "@/components/focus-shell";
-import { skillRepository } from "@/lib/repository";
-import { buildSessionConfig } from "@/lib/session";
+import { Suspense } from "react";
 
-type LearnPageProps = {
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
-};
+import { LearnRoute } from "@/components/learn-route";
 
-export default async function LearnPage({ searchParams }: LearnPageProps) {
-  const resolvedSearchParams = await searchParams;
-  const session = buildSessionConfig(resolvedSearchParams, "flashcards");
-  const items = skillRepository.getItemsForSkills(session.selectedSkillIds);
+export const dynamic = "force-static";
 
+export default function LearnPage() {
   return (
-    <FocusShell mode="flashcards">
-      <FlashcardSession
-        items={items}
-        selectedSkillIds={session.selectedSkillIds}
-        stepSeconds={session.stepSeconds}
-      />
-    </FocusShell>
+    <Suspense fallback={null}>
+      <LearnRoute />
+    </Suspense>
   );
 }
