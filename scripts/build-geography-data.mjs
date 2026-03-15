@@ -40,128 +40,34 @@ function humanJoin(values) {
   return `${filtered.slice(0, -1).join(", ")}, and ${filtered.at(-1)}`;
 }
 
-function buildStateClues(item) {
-  return [
-    "This place is a U.S. state.",
-    `Its capital city is ${item.capital}.`,
-    `It belongs to the ${item.region} region.`,
-    `Its nickname is ${item.nickname}.`,
-    `Its two-letter abbreviation is ${item.abbreviation}.`,
-    `On a U.S. map, it is grouped with the ${item.region}.`,
-    `The state government meets in ${item.capital}.`,
-    `Mail can be labeled with the code ${item.abbreviation}.`,
-    `School quizzes often pair this state with ${item.capital}.`,
-    `This clue card points to a state in the ${item.region}.`,
-    `The nickname ${item.nickname} belongs to this state.`,
-    `Students often memorize ${item.abbreviation} as this state's short code.`,
-    `If the answer is a state from the ${item.region}, this one fits.`,
-    `One strong clue for this state is the capital ${item.capital}.`,
-    `The correct answer uses the abbreviation ${item.abbreviation}.`,
-  ];
+function uniqueLines(lines) {
+  return Array.from(
+    new Set(
+      lines
+        .map((line) => line.trim())
+        .filter(Boolean),
+    ),
+  );
 }
 
-function buildContinentClues(item) {
-  return [
-    "This place is one of the seven continents.",
-    `It is mostly in the ${item.hemisphere} hemisphere.`,
-    `It has about ${item.countryCount} countries.`,
-    `Its largest country is ${item.largestCountry}.`,
-    `A major city linked with it is ${item.largestCity}.`,
-    "Geography lessons group many countries inside this continent.",
-    "On a globe, this answer is a major land area.",
-    `Students often connect it with ${item.largestCountry}.`,
-    `The city ${item.largestCity} helps identify this continent.`,
-    `It is taught as a continent mostly in the ${item.hemisphere}.`,
-    `World maps show this continent with about ${item.countryCount} countries.`,
-    `${item.largestCountry} is a strong clue for this continent.`,
-    `If the hemisphere clue is ${item.hemisphere}, this could be the answer.`,
-    `The city clue ${item.largestCity} points toward this continent.`,
-    "This answer is not a country or state; it is a continent.",
-  ];
+function uniqueTags(tags) {
+  return [...new Set(tags.filter(Boolean))];
 }
 
-function buildCountryClues({ capital, continent, subregion, officialLanguage, currency, countryCode, flag, landlocked }) {
-  return [
-    "This place is a country.",
-    `It is in ${continent}.`,
-    `It is in the ${subregion} part of ${continent}.`,
-    `Its capital city is ${capital}.`,
-    `One official language is ${officialLanguage}.`,
-    `Its currency is ${currency}.`,
-    `Its two-letter country code is ${countryCode}.`,
-    `Its flag emoji is ${flag}.`,
-    `The government works from ${capital}.`,
-    `World map lessons place it in ${continent}.`,
-    `The language clue ${officialLanguage} is linked with this country.`,
-    `The code ${countryCode} belongs to this country.`,
-    `The landlocked clue says ${landlocked}.`,
-    `This country is found in ${subregion}.`,
-    `The flag clue for this country is ${flag}.`,
-  ];
+function readClueOverlay(relativePath) {
+  const overlay = readJson(relativePath);
+
+  return overlay.cluesByItemId ?? {};
 }
 
-function transformStates() {
-  const legacy = readJson("data/sources/states-legacy.json");
+function cluesForItem(skillId, itemId, clueMap) {
+  const clues = clueMap[itemId];
 
-  return {
-    skillId: "states",
-    version: 2,
-    items: legacy.items.map((item) => ({
-      id: item.id,
-      skillId: "states",
-      name: item.name,
-      attributes: {
-        capital: item.capital,
-        region: item.region,
-        nickname: item.nickname,
-        abbreviation: item.abbreviation,
-      },
-      facts: [
-        ...item.facts,
-        `${item.capital} is the state capital that students match with ${item.name}.`,
-        `${item.nickname} is a nickname that helps learners remember ${item.name}.`,
-      ],
-      funFacts: [
-        `${item.abbreviation} is the two-letter mail code for ${item.name}.`,
-        `${item.capital} is an important map city to remember in ${item.name}.`,
-        `${item.name} is often grouped with other ${item.region.toLowerCase()} states in school map lessons.`,
-      ],
-      clues: buildStateClues(item),
-      tags: item.tags ?? [],
-    })),
-  };
-}
+  if (!Array.isArray(clues) || clues.length < 10) {
+    throw new Error(`Missing at least 10 authored clues for ${skillId}:${itemId}.`);
+  }
 
-function transformContinents() {
-  const legacy = readJson("data/sources/continents-legacy.json");
-
-  return {
-    skillId: "continents",
-    version: 2,
-    items: legacy.items.map((item) => ({
-      id: item.id,
-      skillId: "continents",
-      name: item.name,
-      attributes: {
-        hemisphere: item.hemisphere,
-        countryCount: String(item.countryCount),
-        largestCountry: item.largestCountry,
-        largestCity: item.largestCity,
-      },
-      facts: [
-        ...item.facts,
-        `${item.largestCountry} is the largest country in ${item.name} by area.`,
-        `${item.largestCity} is a major city name students can connect with ${item.name}.`,
-      ],
-      funFacts: [
-        `${item.name} appears on world maps as one of the seven large land areas on Earth.`,
-        `${item.countryCount} is the approximate number of countries students learn for ${item.name}.`,
-        `${item.largestCountry} and ${item.largestCity} are both useful names to remember in ${item.name}.`,
-      ],
-      clues: buildContinentClues(item),
-      tags: item.tags ?? [],
-    })),
-  };
+  return uniqueLines(clues);
 }
 
 function normalizeContinent(region, subregion) {
@@ -200,34 +106,101 @@ function getDemonym(country) {
 
 function getWaterFact(country) {
   if (country.landlocked) {
-    return `${country.name.common} is landlocked, which means it does not have its own ocean coastline.`;
+    return "This country is landlocked, so it does not have its own ocean coastline.";
   }
 
   if ((country.borders ?? []).length === 0) {
-    return `${country.name.common} is made up of islands or island-like territory and is surrounded by water.`;
+    return "This country is surrounded by water or made up of islands.";
   }
 
-  return `${country.name.common} has a coastline or sea access, so students can spot it near water on many maps.`;
+  return "This country has a coastline or sea access that shows up on many maps.";
 }
 
 function getAreaFact(country, continentRank, continentTotal, continentName) {
   if (continentRank === 1) {
-    return `${country.name.common} is the largest country in ${continentName} by area.`;
+    return `It is the largest country in ${continentName} by area.`;
   }
 
   if (continentRank <= 3) {
-    return `${country.name.common} is one of the larger countries in ${continentName} by area.`;
+    return `It is one of the larger countries in ${continentName} by area.`;
   }
 
   if (continentRank >= continentTotal - 1) {
-    return `${country.name.common} is one of the smaller countries in ${continentName} by area.`;
+    return `It is one of the smaller countries in ${continentName} by area.`;
   }
 
-  return `${country.name.common} has its own size and shape that help students recognize it on a world map.`;
+  return "Its size and shape help students recognize it on a world map.";
+}
+
+function transformStates() {
+  const legacy = readJson("data/sources/states-legacy.json");
+  const clueMap = readClueOverlay("data/authoring/states-clues.json");
+
+  return {
+    skillId: "states",
+    version: 3,
+    items: legacy.items.map((item) => ({
+      id: item.id,
+      skillId: "states",
+      name: item.name,
+      attributes: {
+        capital: item.capital,
+        region: item.region,
+        nickname: item.nickname,
+        abbreviation: item.abbreviation,
+      },
+      facts: uniqueLines([
+        ...item.facts,
+        `${item.capital} is the state capital.`,
+        `${item.nickname} is the official nickname.`,
+      ]).slice(0, 5),
+      funFacts: uniqueLines([
+        `${item.abbreviation} is the two-letter postal code used for this state.`,
+        `${item.capital} is an important city to remember on a U.S. map.`,
+        `School geography lessons often group it with the ${item.region.toLowerCase()} states.`,
+      ]).slice(0, 3),
+      clues: cluesForItem("states", item.id, clueMap),
+      tags: item.tags ?? [],
+    })),
+  };
+}
+
+function transformContinents() {
+  const legacy = readJson("data/sources/continents-legacy.json");
+  const clueMap = readClueOverlay("data/authoring/continents-clues.json");
+
+  return {
+    skillId: "continents",
+    version: 3,
+    items: legacy.items.map((item) => ({
+      id: item.id,
+      skillId: "continents",
+      name: item.name,
+      attributes: {
+        hemisphere: item.hemisphere,
+        countryCount: String(item.countryCount),
+        largestCountry: item.largestCountry,
+        largestCity: item.largestCity,
+      },
+      facts: uniqueLines([
+        ...item.facts,
+        `${item.largestCountry} is the largest country there by area.`,
+        `${item.largestCity} is one major city often connected with it.`,
+      ]).slice(0, 5),
+      funFacts: uniqueLines([
+        "This is one of the seven large land areas on Earth.",
+        `${item.countryCount} is the approximate number of countries students usually learn for it.`,
+        `${item.largestCountry} and ${item.largestCity} are useful geography names to remember.`,
+      ]).slice(0, 3),
+      clues: cluesForItem("continents", item.id, clueMap),
+      tags: item.tags ?? [],
+    })),
+  };
 }
 
 function transformCountries() {
   const legacy = readJson("data/sources/countries-legacy.json");
+  const clueMap = readClueOverlay("data/authoring/countries-clues.json");
   const legacyFactsById = new Map(
     legacy.items.map((item) => [item.id, { facts: item.facts ?? [], tags: item.tags ?? [] }]),
   );
@@ -260,7 +233,7 @@ function transformCountries() {
 
   return {
     skillId: "countries",
-    version: 2,
+    version: 3,
     items: chosenCountries.map((country) => {
       const id = slugify(country.name.common);
       const continent = normalizeContinent(country.region, country.subregion);
@@ -274,31 +247,20 @@ function transformCountries() {
       const flag = country.flag || "";
       const landlocked = country.landlocked ? "Yes" : "No";
 
-      const facts = [
+      const facts = uniqueLines([
         ...(legacyContent?.facts ?? []),
-        `${country.name.common} is in ${subregion}, part of ${continent}.`,
-        `${capital} is the capital city of ${country.name.common}.`,
-        demonym ? `People from ${country.name.common} are called ${demonym}.` : "",
+        `The national government is based in ${capital}.`,
+        `It is in ${subregion}, part of ${continent}.`,
+        demonym ? `People from there are called ${demonym}.` : "",
         getWaterFact(country),
         ranking ? getAreaFact(country, ranking.rank, ranking.total, ranking.continent) : "",
-      ].filter(Boolean);
+      ]).slice(0, 5);
 
-      const funFacts = [
-        `The flag for ${country.name.common} is ${flag}.`,
-        `${country.cca2} is the two-letter code and ${country.cca3} is the three-letter code for ${country.name.common}.`,
-        `${capital} is a key city name to connect with ${country.name.common}.`,
-      ];
-
-      const clues = buildCountryClues({
-        capital,
-        continent,
-        subregion,
-        officialLanguage,
-        currency,
-        countryCode: country.cca2,
-        flag,
-        landlocked,
-      });
+      const funFacts = uniqueLines([
+        flag ? `Students may recognize it by the flag emoji ${flag}.` : "A flag emoji is not listed for it.",
+        `${country.cca2} is the two-letter country code and ${country.cca3} is the three-letter code.`,
+        `${capital} is a key city name that helps many learners remember this country.`,
+      ]).slice(0, 3);
 
       return {
         id,
@@ -315,9 +277,9 @@ function transformCountries() {
           countryCode: country.cca2,
           landlocked,
         },
-        facts: facts.slice(0, 5),
+        facts,
         funFacts,
-        clues,
+        clues: cluesForItem("countries", id, clueMap),
         tags: uniqueTags([
           slugify(continent),
           slugify(subregion),
@@ -327,10 +289,6 @@ function transformCountries() {
       };
     }),
   };
-}
-
-function uniqueTags(tags) {
-  return [...new Set(tags.filter(Boolean))];
 }
 
 writeJson("data/skills/states/states.json", transformStates());

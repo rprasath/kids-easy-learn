@@ -1,0 +1,90 @@
+{
+  "skillId": "continents",
+  "version": 1,
+  "cluesByItemId": {
+    "africa": [
+      "This answer is one of the seven continents.",
+      "It is mostly in the Mostly Northern and Southern hemisphere.",
+      "It has about 54 countries.",
+      "Its largest country by area is Algeria.",
+      "The country clue Algeria points here.",
+      "A major city often linked to it is Lagos.",
+      "World maps show it as a very large land area.",
+      "Geography lessons group many countries inside this continent.",
+      "The city clue Lagos points here.",
+      "Students often remember it using the Mostly Northern and Southern hemisphere clue."
+    ],
+    "antarctica": [
+      "This answer is one of the seven continents.",
+      "It is mostly in the Southern hemisphere.",
+      "It has about 0 countries.",
+      "Its largest country by area is No countries.",
+      "The country clue No countries points here.",
+      "A major city often linked to it is No permanent cities.",
+      "World maps show it as a very large land area.",
+      "Geography lessons group many countries inside this continent.",
+      "The city clue No permanent cities points here.",
+      "Students often remember it using the Southern hemisphere clue."
+    ],
+    "asia": [
+      "This answer is one of the seven continents.",
+      "It is mostly in the Mostly Northern hemisphere.",
+      "It has about 49 countries.",
+      "Its largest country by area is China.",
+      "The country clue China points here.",
+      "A major city often linked to it is Tokyo.",
+      "World maps show it as a very large land area.",
+      "Geography lessons group many countries inside this continent.",
+      "The city clue Tokyo points here.",
+      "Students often remember it using the Mostly Northern hemisphere clue."
+    ],
+    "europe": [
+      "This answer is one of the seven continents.",
+      "It is mostly in the Northern hemisphere.",
+      "It has about 44 countries.",
+      "Its largest country by area is Ukraine.",
+      "The country clue Ukraine points here.",
+      "A major city often linked to it is Istanbul.",
+      "World maps show it as a very large land area.",
+      "Geography lessons group many countries inside this continent.",
+      "The city clue Istanbul points here.",
+      "Students often remember it using the Northern hemisphere clue."
+    ],
+    "north-america": [
+      "This answer is one of the seven continents.",
+      "It is mostly in the Northern hemisphere.",
+      "It has about 23 countries.",
+      "Its largest country by area is Canada.",
+      "The country clue Canada points here.",
+      "A major city often linked to it is Mexico City.",
+      "World maps show it as a very large land area.",
+      "Geography lessons group many countries inside this continent.",
+      "The city clue Mexico City points here.",
+      "Students often remember it using the Northern hemisphere clue."
+    ],
+    "south-america": [
+      "This answer is one of the seven continents.",
+      "It is mostly in the Mostly Southern hemisphere.",
+      "It has about 12 countries.",
+      "Its largest country by area is Brazil.",
+      "The country clue Brazil points here.",
+      "A major city often linked to it is Sao Paulo.",
+      "World maps show it as a very large land area.",
+      "Geography lessons group many countries inside this continent.",
+      "The city clue Sao Paulo points here.",
+      "Students often remember it using the Mostly Southern hemisphere clue."
+    ],
+    "australia": [
+      "This answer is one of the seven continents.",
+      "It is mostly in the Southern hemisphere.",
+      "It has about 14 countries.",
+      "Its largest-country clue starts with the letter A.",
+      "Its largest-country clue matches the same first letter as the answer.",
+      "A major city often linked to it is Sydney.",
+      "World maps show it as a very large land area.",
+      "Geography lessons group many countries inside this continent.",
+      "The city clue Sydney points here.",
+      "Students often remember it using the Southern hemisphere clue."
+    ]
+  }
+}

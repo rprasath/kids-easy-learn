@@ -13,7 +13,7 @@ const itemSchema = z.object({
   attributes: z.record(z.string(), z.string()),
   facts: z.array(z.string().min(1)).min(2),
   funFacts: z.array(z.string().min(1)).optional(),
-  clues: z.array(z.string().min(1)).optional(),
+  clues: z.array(z.string().min(1)).min(10),
   tags: z.array(z.string().min(1)).optional(),
 });
 
@@ -27,6 +27,14 @@ function assert(condition: boolean, message: string): asserts condition {
   if (!condition) {
     throw new Error(message);
   }
+}
+
+function normalizeLine(line: string): string {
+  return line.trim().replace(/\s+/g, " ").toLowerCase();
+}
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function validateSkillDefinitions(definitions: SkillDefinition[]) {
@@ -56,8 +64,33 @@ function validatePack(skill: SkillDefinition, pack: SkillContentPack) {
     assert(item.skillId === skill.id, `Item ${item.id} does not match skill ${skill.id}.`);
     assert(!itemIds.has(item.id), `Duplicate id ${item.id} found in ${skill.id}.`);
     assert(item.facts.length >= 2, `Item ${item.id} in ${skill.id} must include at least 2 facts.`);
-    assert((item.funFacts?.length ?? 0) >= 2, `Item ${item.id} in ${skill.id} must include at least 2 fun facts.`);
-    assert((item.clues?.length ?? 0) >= 15, `Item ${item.id} in ${skill.id} must include at least 15 clues.`);
+    assert((item.clues?.length ?? 0) >= 10, `Item ${item.id} in ${skill.id} must include at least 10 clues.`);
+
+    const normalizedClues = item.clues.map(normalizeLine);
+    assert(
+      new Set(normalizedClues).size === normalizedClues.length,
+      `Item ${item.id} in ${skill.id} contains duplicate clues after normalization.`,
+    );
+
+    const answerMatcher = new RegExp(`\\b${escapeRegExp(item.name.toLowerCase())}\\b`, "i");
+    item.clues.forEach((clue) => {
+      assert(
+        !answerMatcher.test(clue),
+        `Item ${item.id} in ${skill.id} has a clue that contains the answer name.`,
+      );
+    });
+
+    const normalizedFactLines = new Set([
+      ...item.facts.map(normalizeLine),
+      ...(item.funFacts ?? []).map(normalizeLine),
+    ]);
+
+    item.clues.forEach((clue) => {
+      assert(
+        !normalizedFactLines.has(normalizeLine(clue)),
+        `Item ${item.id} in ${skill.id} has a clue duplicated from facts or fun facts.`,
+      );
+    });
 
     requiredFieldKeys.forEach((fieldKey) => {
       assert(

@@ -64,10 +64,7 @@ function buildIdentifyQuestion(
   template: Extract<QuizTemplate, { kind: "identify-item" }>,
   seed: string,
 ): QuizQuestion | null {
-  const clue =
-    template.clueSource === "facts"
-      ? shuffleBySeed(item.facts, `${seed}:facts`, (fact) => fact)[0] ?? ""
-      : pickQuizClue(item, `${seed}:clue`);
+  const clue = pickQuizClue(item, `${seed}:clue`);
 
   if (!clue) {
     return null;

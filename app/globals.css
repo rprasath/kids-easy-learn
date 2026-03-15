@@ -20,8 +20,9 @@
 html {
   min-height: 100%;
   background:
-    radial-gradient(circle at top left, rgba(255, 196, 120, 0.35), transparent 32%),
-    radial-gradient(circle at top right, rgba(106, 194, 255, 0.25), transparent 28%),
+    radial-gradient(circle at top left, rgba(255, 196, 120, 0.28), transparent 30%),
+    radial-gradient(circle at top right, rgba(106, 194, 255, 0.2), transparent 24%),
+    radial-gradient(circle at bottom center, rgba(223, 246, 234, 0.45), transparent 26%),
     var(--background);
 }
 
@@ -45,8 +46,8 @@ input {
 
 .paper-shadow {
   box-shadow:
-    0 20px 60px rgba(25, 50, 74, 0.12),
-    0 6px 20px rgba(25, 50, 74, 0.08);
+    0 16px 40px rgba(25, 50, 74, 0.1),
+    0 5px 18px rgba(25, 50, 74, 0.07);
 }
 
 .text-balance {

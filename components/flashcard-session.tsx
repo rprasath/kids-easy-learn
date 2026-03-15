@@ -4,7 +4,9 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 
+import { TimerProgress } from "@/components/timer-progress";
 import {
+  buildCluePool,
   buildDescription,
   buildFunFacts,
   buildLearningFacts,
@@ -24,6 +26,7 @@ type FlashcardSessionProps = {
 };
 
 const TIMER_OPTIONS = [10, 15, 20, 30, 45, 60];
+const DEFAULT_VISIBLE_CLUES = 3;
 
 export function FlashcardSession({ items, selectedSkillIds, stepSeconds }: FlashcardSessionProps) {
   const router = useRouter();
@@ -35,6 +38,7 @@ export function FlashcardSession({ items, selectedSkillIds, stepSeconds }: Flash
   const [autoMode, setAutoMode] = useState(false);
   const [secondsPerStep, setSecondsPerStep] = useState(stepSeconds);
   const [secondsLeft, setSecondsLeft] = useState(stepSeconds);
+  const [expandedItemKey, setExpandedItemKey] = useState<string | null>(null);
   const [favoriteIds, setFavoriteIds] = useState<string[]>(() => {
     const progress = readProgress();
     return selectedSkillIds.flatMap((skillId) =>
@@ -50,13 +54,19 @@ export function FlashcardSession({ items, selectedSkillIds, stepSeconds }: Flash
   const isFavorite = itemKey ? favoriteIds.includes(itemKey) : false;
   const lessonFacts = item ? buildLearningFacts(item) : [];
   const funFacts = item ? buildFunFacts(item) : [];
-  const clues = item ? pickStudyClues(item, 3, `${sessionSeed}:${itemKey}:${index}`) : [];
+  const showAllClues = itemKey !== "" && expandedItemKey === itemKey;
+  const allClues = item
+    ? pickStudyClues(item, buildCluePool(item).length, `${sessionSeed}:${itemKey}:${index}`)
+    : [];
+  const clues = showAllClues ? allClues : allClues.slice(0, DEFAULT_VISIBLE_CLUES);
   const description = item ? buildDescription(item) : "";
   const displayFields = item ? getDisplayFieldLines(item).slice(0, 6) : [];
+  const remainingClues = Math.max(allClues.length - DEFAULT_VISIBLE_CLUES, 0);
 
   const cycle = useCallback(
     (direction: 1 | -1) => {
       setFlipped(false);
+      setExpandedItemKey(null);
       setSecondsLeft(secondsPerStep);
       setIndex((current) => (current + direction + sessionItems.length) % sessionItems.length);
     },
@@ -176,7 +186,7 @@ export function FlashcardSession({ items, selectedSkillIds, stepSeconds }: Flash
 
   const title = flipped ? item.name : "Who am I?";
   const subtitle = flipped ? "Reveal and remember" : "Guess from the clues";
-  const showCounter = `${index + 1} / ${items.length}`;
+  const showCounter = `${index + 1} / ${sessionItems.length}`;
 
   return (
     <div ref={containerRef} className="mx-auto flex min-h-[calc(100dvh-4.5rem)] w-full max-w-7xl flex-col">
@@ -267,6 +277,13 @@ export function FlashcardSession({ items, selectedSkillIds, stepSeconds }: Flash
               </button>
             </div>
           </div>
+
+          <TimerProgress
+            active={autoMode}
+            label="Flashcard timer"
+            secondsLeft={secondsLeft}
+            totalSeconds={secondsPerStep}
+          />
 
           <div className="w-full rounded-[2.6rem] bg-white/85 p-3 paper-shadow backdrop-blur sm:p-4">
             <div className="mx-auto flex h-[calc(100dvh-15rem)] w-full max-w-[74rem] flex-col overflow-hidden rounded-[2.4rem] bg-[linear-gradient(160deg,#f7fbff_0%,#eef8ff_52%,#fff6ec_100%)] p-4 shadow-inner sm:p-5">
@@ -359,7 +376,7 @@ export function FlashcardSession({ items, selectedSkillIds, stepSeconds }: Flash
                         Clue Card Challenge
                       </p>
                       <p className="mt-2 text-sm leading-6 text-slate-700 sm:text-base">
-                        Read each clue, guess the answer out loud, then flip the card to check.
+                        Read the first three clues, guess the answer out loud, then open more clues or flip the card to check.
                       </p>
                     </div>
 
@@ -374,6 +391,18 @@ export function FlashcardSession({ items, selectedSkillIds, stepSeconds }: Flash
                         {clue}
                       </div>
                     ))}
+
+                    {remainingClues > 0 ? (
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setExpandedItemKey((current) => (current === itemKey ? null : itemKey))
+                        }
+                        className="rounded-[1.4rem] bg-slate-900 px-5 py-3 text-sm font-black uppercase tracking-[0.16em] text-white shadow-sm"
+                      >
+                        {showAllClues ? "Show Fewer Clues" : `Show ${remainingClues} More Clues`}
+                      </button>
+                    ) : null}
                   </div>
                 )}
               </div>

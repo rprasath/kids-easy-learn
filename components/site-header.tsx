@@ -7,11 +7,16 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ rightSlot }: SiteHeaderProps) {
   return (
-    <header className="mx-auto mb-6 flex w-full max-w-7xl items-center justify-between rounded-[1.6rem] bg-white/88 px-5 py-4 paper-shadow backdrop-blur">
-      <Link href="/" className="text-lg font-black tracking-[0.18em] text-slate-900 sm:text-xl">
-        Zybe Zone - Kids learn
+    <header className="mx-auto mb-4 flex w-full max-w-6xl items-center justify-between border-b border-slate-200/80 px-1 py-3 sm:mb-5">
+      <Link href="/" className="flex flex-col text-slate-900">
+        <span className="text-[11px] font-black uppercase tracking-[0.22em] text-sky-700">Zybe Zone</span>
+        <span className="text-lg font-black sm:text-xl">Kids Learn</span>
       </Link>
-      {rightSlot ? <div>{rightSlot}</div> : <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">kidslearn.zybezone.com</div>}
+      {rightSlot ? (
+        <div>{rightSlot}</div>
+      ) : (
+        <div className="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Play and learn</div>
+      )}
     </header>
   );
 }

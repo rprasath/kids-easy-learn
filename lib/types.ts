@@ -11,13 +11,6 @@ export type SkillFieldDefinition = {
   label: string;
 };
 
-export type LessonTemplateConfig = {
-  descriptionTemplate: string;
-  learningFactTemplates: string[];
-  funFactTemplates: string[];
-  clueTemplates: string[];
-};
-
 export type FieldValueQuestionTemplate = {
   id: string;
   kind: "field-value";
@@ -33,7 +26,6 @@ export type IdentifyItemQuestionTemplate = {
   kind: "identify-item";
   prompt: string;
   promptHint: string;
-  clueSource: "clues" | "facts";
 };
 
 export type QuizTemplate = FieldValueQuestionTemplate | IdentifyItemQuestionTemplate;
@@ -51,7 +43,6 @@ export type SkillDefinition = {
   fields: SkillFieldDefinition[];
   badgeFieldKey?: string;
   detailFieldKeys: string[];
-  lesson: LessonTemplateConfig;
   questionTemplates: QuizTemplate[];
 };
 
@@ -64,7 +55,7 @@ export type LearningCardItem = {
   attributes: Record<string, string>;
   facts: string[];
   funFacts?: string[];
-  clues?: string[];
+  clues: string[];
   tags?: string[];
 };
 

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 
+import { TimerProgress } from "@/components/timer-progress";
 import { saveQuizResult } from "@/lib/progress-store";
 import { buildQuizQuestions, skillLabel, skillTitle } from "@/lib/quiz";
 import { stringifySkillIds } from "@/lib/session";
@@ -304,6 +305,13 @@ export function QuizSession({ items, selectedSkillIds, questionCount, stepSecond
             </div>
           </div>
         </div>
+
+        <TimerProgress
+          active={autoMode}
+          label="Quiz timer"
+          secondsLeft={secondsLeft}
+          totalSeconds={secondsPerQuestion}
+        />
 
         <div className="w-full rounded-[2.8rem] bg-white/85 p-4 paper-shadow backdrop-blur sm:p-6">
           <div className="mx-auto flex min-h-[72vh] w-full max-w-4xl flex-col rounded-[2.6rem] bg-[linear-gradient(160deg,#fffaf3_0%,#fff7ec_52%,#eef8ff_100%)] p-6 shadow-inner">
