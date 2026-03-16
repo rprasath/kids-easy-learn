@@ -1,6 +1,6 @@
 {
   "skillId": "continents",
-  "version": 4,
+  "version": 5,
   "items": [
     {
       "id": "africa",
@@ -11,6 +11,76 @@
         "countryCount": "54",
         "largestCountry": "Algeria",
         "largestCity": "Lagos"
+      },
+      "map": {
+        "kind": "continent",
+        "geometryId": "africa",
+        "featureIds": [
+          "012",
+          "024",
+          "204",
+          "072",
+          "854",
+          "108",
+          "120",
+          "132",
+          "140",
+          "148",
+          "174",
+          "262",
+          "180",
+          "818",
+          "226",
+          "232",
+          "748",
+          "231",
+          "266",
+          "270",
+          "288",
+          "324",
+          "624",
+          "384",
+          "404",
+          "426",
+          "430",
+          "434",
+          "450",
+          "454",
+          "466",
+          "478",
+          "480",
+          "504",
+          "508",
+          "516",
+          "562",
+          "566",
+          "178",
+          "646",
+          "678",
+          "686",
+          "690",
+          "694",
+          "706",
+          "710",
+          "728",
+          "729",
+          "834",
+          "768",
+          "788",
+          "800",
+          "894",
+          "716"
+        ],
+        "bounds": [
+          -25.3616,
+          -34.8341,
+          63.5033,
+          37.5597
+        ],
+        "centroid": [
+          17.2483962962963,
+          2.9030611111111106
+        ]
       },
       "facts": [
         "Africa is the second-largest continent.",
@@ -50,6 +120,23 @@
         "largestCountry": "No countries",
         "largestCity": "No permanent cities"
       },
+      "map": {
+        "kind": "continent",
+        "geometryId": "antarctica",
+        "featureIds": [
+          "010"
+        ],
+        "bounds": [
+          -180,
+          -90,
+          180,
+          -60
+        ],
+        "centroid": [
+          0,
+          -82
+        ]
+      },
       "facts": [
         "Antarctica is the coldest continent on Earth.",
         "It is covered mostly by thick ice.",
@@ -87,6 +174,69 @@
         "countryCount": "49",
         "largestCountry": "China",
         "largestCity": "Tokyo"
+      },
+      "map": {
+        "kind": "continent",
+        "geometryId": "asia",
+        "featureIds": [
+          "004",
+          "051",
+          "031",
+          "048",
+          "050",
+          "064",
+          "096",
+          "116",
+          "156",
+          "268",
+          "356",
+          "360",
+          "364",
+          "368",
+          "376",
+          "392",
+          "400",
+          "398",
+          "414",
+          "417",
+          "418",
+          "422",
+          "458",
+          "462",
+          "496",
+          "104",
+          "524",
+          "408",
+          "512",
+          "586",
+          "275",
+          "608",
+          "634",
+          "682",
+          "702",
+          "410",
+          "144",
+          "760",
+          "762",
+          "764",
+          "626",
+          "792",
+          "795",
+          "784",
+          "860",
+          "704",
+          "887"
+        ],
+        "bounds": [
+          25.6652,
+          -11.0097,
+          145.8175,
+          55.4454
+        ],
+        "centroid": [
+          76.06051702127661,
+          26.328885106382977
+        ]
       },
       "facts": [
         "Asia is the largest continent by area and population.",
@@ -126,6 +276,67 @@
         "largestCountry": "Ukraine",
         "largestCity": "Istanbul"
       },
+      "map": {
+        "kind": "continent",
+        "geometryId": "europe",
+        "featureIds": [
+          "008",
+          "020",
+          "040",
+          "112",
+          "056",
+          "070",
+          "100",
+          "191",
+          "196",
+          "203",
+          "208",
+          "233",
+          "246",
+          "250",
+          "276",
+          "300",
+          "348",
+          "352",
+          "372",
+          "380",
+          "428",
+          "438",
+          "440",
+          "442",
+          "470",
+          "498",
+          "492",
+          "499",
+          "528",
+          "807",
+          "578",
+          "616",
+          "620",
+          "642",
+          "643",
+          "674",
+          "688",
+          "703",
+          "705",
+          "724",
+          "752",
+          "756",
+          "804",
+          "826",
+          "336"
+        ],
+        "bounds": [
+          -180,
+          27.6378,
+          180,
+          81.8574
+        ],
+        "centroid": [
+          16.17202888888889,
+          48.79812222222221
+        ]
+      },
       "facts": [
         "Europe has many countries close together.",
         "Many famous castles and old cities are in Europe.",
@@ -163,6 +374,45 @@
         "countryCount": "23",
         "largestCountry": "Canada",
         "largestCity": "Mexico City"
+      },
+      "map": {
+        "kind": "continent",
+        "geometryId": "north-america",
+        "featureIds": [
+          "028",
+          "044",
+          "052",
+          "084",
+          "124",
+          "188",
+          "192",
+          "212",
+          "214",
+          "222",
+          "308",
+          "320",
+          "332",
+          "340",
+          "388",
+          "484",
+          "558",
+          "591",
+          "659",
+          "662",
+          "670",
+          "780",
+          "840"
+        ],
+        "bounds": [
+          -179.1448,
+          5.4991,
+          179.7749,
+          83.1368
+        ],
+        "centroid": [
+          -77.85965652173911,
+          18.670395652173912
+        ]
       },
       "facts": [
         "North America includes Canada, the United States, and Mexico.",
@@ -202,6 +452,34 @@
         "largestCountry": "Brazil",
         "largestCity": "Sao Paulo"
       },
+      "map": {
+        "kind": "continent",
+        "geometryId": "south-america",
+        "featureIds": [
+          "032",
+          "068",
+          "076",
+          "152",
+          "170",
+          "218",
+          "328",
+          "600",
+          "604",
+          "740",
+          "858",
+          "862"
+        ],
+        "bounds": [
+          -109.4498,
+          -55.982,
+          -28.8483,
+          13.3948
+        ],
+        "centroid": [
+          -64.34269166666667,
+          -12.990608333333334
+        ]
+      },
       "facts": [
         "The Amazon Rainforest covers part of South America.",
         "The Andes are one of the longest mountain ranges in the world.",
@@ -239,6 +517,36 @@
         "countryCount": "14",
         "largestCountry": "Australia",
         "largestCity": "Sydney"
+      },
+      "map": {
+        "kind": "continent",
+        "geometryId": "australia",
+        "featureIds": [
+          "036",
+          "242",
+          "296",
+          "584",
+          "583",
+          "520",
+          "554",
+          "585",
+          "598",
+          "882",
+          "090",
+          "776",
+          "798",
+          "548"
+        ],
+        "bounds": [
+          -180,
+          -54.778,
+          179.9999,
+          14.7232
+        ],
+        "centroid": [
+          89.91102857142857,
+          -9.860342857142857
+        ]
       },
       "facts": [
         "Australia is the smallest continent.",

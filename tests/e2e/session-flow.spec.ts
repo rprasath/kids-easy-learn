@@ -76,3 +76,41 @@ test("quiz shows a timer progress bar in auto mode", async ({ page }) => {
   await expect(page.getByRole("button", { name: /auto on/i })).toBeVisible();
   await expect(page.getByRole("progressbar", { name: /quiz timer/i })).toBeVisible();
 });
+
+test("map quiz is gated to supported skills and starts with a highlighted map", async ({ page }) => {
+  await page.goto("/");
+
+  const mapQuizButton = page.getByRole("button", { name: /start map quiz/i });
+  await expect(mapQuizButton).toBeDisabled();
+  await expect(page.getByText(/map quiz is ready for countries and continents/i)).toBeVisible();
+
+  await page.getByRole("button", { name: /u\.s\. states/i }).click();
+  await page.getByRole("button", { name: /select countries/i }).click();
+  await expect(mapQuizButton).toBeEnabled();
+
+  await mapQuizButton.click();
+
+  await expect(page).toHaveURL(/\/map-quiz\/\?/);
+  await expect(page.getByText(/visual geography/i)).toBeVisible();
+  await expect(page.getByRole("img", { name: /highlighted country map/i })).toBeVisible();
+  await expect(page.getByText(/hint:/i)).toBeVisible();
+  await expect(page.getByText(/1 \/ 10/i)).toBeVisible();
+
+  await page.getByRole("button", { name: /zoom in map/i }).click();
+  await expect(page.getByRole("button", { name: /continue/i })).toHaveCount(0);
+  await page
+    .locator("section")
+    .filter({ hasText: /visual geography/i })
+    .getByRole("button")
+    .nth(0)
+    .click();
+
+  const detailsDialog = page.getByRole("dialog", { name: /country details|continent details/i });
+  await expect(detailsDialog).toBeVisible();
+  await expect(detailsDialog.getByRole("button", { name: /continue/i })).toBeVisible();
+  await page.waitForTimeout(1800);
+  await expect(detailsDialog).toBeVisible();
+  await expect(page.getByText(/1 \/ 10/i)).toBeVisible();
+  await detailsDialog.getByRole("button", { name: /continue/i }).click();
+  await expect(detailsDialog).toHaveCount(0);
+});

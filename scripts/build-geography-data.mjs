@@ -36,6 +36,50 @@ const STATE_TAG_CLUES = {
   water: "Water is one of the geography clues often tied to it.",
 };
 
+const DEFAULT_MAP_WORLDVIEW = "US";
+const MAP_QUIZ_ALLOWED_DESCRIPTIONS = new Set([
+  "sovereign state",
+  "dependent territory",
+  "disputed state",
+]);
+const CONTINENT_MAP_FALLBACKS = {
+  africa: {
+    featureIds: [],
+    bounds: [-25, -35, 60, 38],
+    centroid: [20, 2],
+  },
+  antarctica: {
+    featureIds: ["010"],
+    bounds: [-180, -90, 180, -60],
+    centroid: [0, -82],
+  },
+  asia: {
+    featureIds: [],
+    bounds: [25, -10, 180, 80],
+    centroid: [95, 35],
+  },
+  australia: {
+    featureIds: [],
+    bounds: [95, -50, 180, 15],
+    centroid: [135, -25],
+  },
+  europe: {
+    featureIds: [],
+    bounds: [-31, 34, 60, 72],
+    centroid: [15, 53],
+  },
+  "north-america": {
+    featureIds: [],
+    bounds: [-170, 5, -10, 84],
+    centroid: [-102, 45],
+  },
+  "south-america": {
+    featureIds: [],
+    bounds: [-95, -60, -25, 15],
+    centroid: [-60, -17],
+  },
+};
+
 function readJson(relativePath) {
   return JSON.parse(readFileSync(path.join(rootDir, relativePath), "utf8"));
 }
@@ -100,6 +144,10 @@ function uniqueLines(lines) {
 
 function uniqueTags(tags) {
   return [...new Set(tags.filter(Boolean))];
+}
+
+function uniqueValues(values) {
+  return [...new Set(values.filter(Boolean))];
 }
 
 function hasAnswerLeak(line, answerName) {
@@ -171,6 +219,146 @@ function normalizeContinent(region, subregion) {
   }
 
   return region;
+}
+
+function parseMapCoordinate(value) {
+  const parsed = JSON.parse(value);
+
+  if (!Array.isArray(parsed) || parsed.length !== 2) {
+    throw new Error(`Expected a two-point coordinate pair, received ${value}`);
+  }
+
+  return [Number(parsed[0]), Number(parsed[1])];
+}
+
+function parseMapBounds(value) {
+  const parsed = JSON.parse(value);
+
+  if (!Array.isArray(parsed) || parsed.length !== 4) {
+    throw new Error(`Expected a four-point bounds array, received ${value}`);
+  }
+
+  return [Number(parsed[0]), Number(parsed[1]), Number(parsed[2]), Number(parsed[3])];
+}
+
+function combineBounds(boundsList) {
+  if (boundsList.length === 0) {
+    return undefined;
+  }
+
+  return boundsList.reduce(
+    (current, bounds) => [
+      Math.min(current[0], bounds[0]),
+      Math.min(current[1], bounds[1]),
+      Math.max(current[2], bounds[2]),
+      Math.max(current[3], bounds[3]),
+    ],
+  );
+}
+
+function averageCoordinates(coordinates) {
+  if (coordinates.length === 0) {
+    return undefined;
+  }
+
+  const totals = coordinates.reduce(
+    (current, coordinate) => [current[0] + coordinate[0], current[1] + coordinate[1]],
+    [0, 0],
+  );
+
+  return [totals[0] / coordinates.length, totals[1] / coordinates.length];
+}
+
+function getCountryFeatureId(country) {
+  return country.ccn3 ? String(country.ccn3).padStart(3, "0") : "";
+}
+
+function mapRowPriority(row) {
+  let score = 0;
+
+  if (row.worldview === DEFAULT_MAP_WORLDVIEW) {
+    score += 4;
+  }
+
+  if (row.worldview === "all") {
+    score += 2;
+  }
+
+  if (row.disputed !== "TRUE") {
+    score += 2;
+  }
+
+  if (row.description === "sovereign state") {
+    score += 1;
+  }
+
+  return score;
+}
+
+function buildMapQuizCountryLookup() {
+  const rows = readJson("data/sources/map-quiz/mapbox-countries-v1.json");
+  const lookup = new Map();
+
+  rows.forEach((row) => {
+    if (!row.iso_3166_1 || !MAP_QUIZ_ALLOWED_DESCRIPTIONS.has(row.description)) {
+      return;
+    }
+
+    if (row.worldview !== "all" && row.worldview !== DEFAULT_MAP_WORLDVIEW) {
+      return;
+    }
+
+    const current = lookup.get(row.iso_3166_1);
+
+    if (!current || mapRowPriority(row) > mapRowPriority(current)) {
+      lookup.set(row.iso_3166_1, row);
+    }
+  });
+
+  return lookup;
+}
+
+function listChosenCountries() {
+  return worldCountries
+    .filter((country) => country.unMember || country.name.common === "Palestine")
+    .sort((left, right) => left.name.common.localeCompare(right.name.common));
+}
+
+function buildContinentGroups(countries) {
+  const continentGroups = new Map();
+
+  countries.forEach((country) => {
+    const continent = normalizeContinent(country.region, country.subregion);
+    const group = continentGroups.get(continent) ?? [];
+    group.push(country);
+    continentGroups.set(continent, group);
+  });
+
+  return continentGroups;
+}
+
+function buildContinentMapById(countries, countryMapLookup) {
+  const continentMap = new Map();
+
+  countries.forEach((country) => {
+    const continentId = slugify(normalizeContinent(country.region, country.subregion));
+    const mapRow = countryMapLookup.get(country.cca2);
+    const featureId = getCountryFeatureId(country);
+
+    if (!mapRow || !featureId) {
+      return;
+    }
+
+    const current = continentMap.get(continentId) ?? [];
+    current.push({
+      featureId,
+      bounds: parseMapBounds(mapRow.bounds),
+      centroid: parseMapCoordinate(mapRow.centroid),
+    });
+    continentMap.set(continentId, current);
+  });
+
+  return continentMap;
 }
 
 function getCapital(country) {
@@ -466,61 +654,79 @@ function transformStates() {
 function transformContinents() {
   const legacy = readJson("data/sources/continents-legacy.json");
   const clueMap = readClueOverlay("data/authoring/continents-clues.json");
+  const chosenCountries = listChosenCountries();
+  const countryMapLookup = buildMapQuizCountryLookup();
+  const continentMapById = buildContinentMapById(chosenCountries, countryMapLookup);
 
   return {
     skillId: "continents",
-    version: 4,
-    items: legacy.items.map((item) => ({
-      id: item.id,
-      skillId: "continents",
-      name: item.name,
-      attributes: {
-        hemisphere: item.hemisphere,
-        countryCount: String(item.countryCount),
-        largestCountry: item.largestCountry,
-        largestCity: item.largestCity,
-      },
-      facts: uniqueLines([
-        ...item.facts,
-        item.largestCountry !== "No countries"
-          ? `${item.largestCountry} is the largest country on this continent by land area.`
-          : "No countries are located there.",
-        item.largestCity !== "No permanent cities"
-          ? `${item.largestCity} is one of the major cities learners often connect with this continent.`
-          : "It does not have permanent cities.",
-      ]).slice(0, 5),
-      funFacts: uniqueLines([
-        "This is one of the seven large land areas on Earth.",
-        item.countryCount === 0
-          ? "Scientists use research stations there instead of permanent cities."
-          : `${item.countryCount} is the approximate number of countries students usually learn for it.`,
-        item.tags?.[0] ? `A common clue linked to it is ${item.tags[0]}.` : "",
-      ]).slice(0, 3),
-      clues: finalizeClues("continents", item.id, item.name, buildContinentClues(item), clueMap),
-      tags: item.tags ?? [],
-    })),
+    version: 5,
+    items: legacy.items.map((item) => {
+      const continentMapEntries =
+        item.id === "antarctica"
+          ? [
+              {
+                featureId: "010",
+                bounds: CONTINENT_MAP_FALLBACKS.antarctica.bounds,
+                centroid: CONTINENT_MAP_FALLBACKS.antarctica.centroid,
+              },
+            ]
+          : continentMapById.get(item.id) ?? [];
+      const fallbackMap = CONTINENT_MAP_FALLBACKS[item.id] ?? CONTINENT_MAP_FALLBACKS.africa;
+
+      return {
+        id: item.id,
+        skillId: "continents",
+        name: item.name,
+        attributes: {
+          hemisphere: item.hemisphere,
+          countryCount: String(item.countryCount),
+          largestCountry: item.largestCountry,
+          largestCity: item.largestCity,
+        },
+        map: {
+          kind: "continent",
+          geometryId: item.id,
+          featureIds: uniqueValues([
+            ...fallbackMap.featureIds,
+            ...continentMapEntries.map((entry) => entry.featureId),
+          ]),
+          bounds: combineBounds(continentMapEntries.map((entry) => entry.bounds)) ?? fallbackMap.bounds,
+          centroid: averageCoordinates(continentMapEntries.map((entry) => entry.centroid)) ?? fallbackMap.centroid,
+        },
+        facts: uniqueLines([
+          ...item.facts,
+          item.largestCountry !== "No countries"
+            ? `${item.largestCountry} is the largest country on this continent by land area.`
+            : "No countries are located there.",
+          item.largestCity !== "No permanent cities"
+            ? `${item.largestCity} is one of the major cities learners often connect with this continent.`
+            : "It does not have permanent cities.",
+        ]).slice(0, 5),
+        funFacts: uniqueLines([
+          "This is one of the seven large land areas on Earth.",
+          item.countryCount === 0
+            ? "Scientists use research stations there instead of permanent cities."
+            : `${item.countryCount} is the approximate number of countries students usually learn for it.`,
+          item.tags?.[0] ? `A common clue linked to it is ${item.tags[0]}.` : "",
+        ]).slice(0, 3),
+        clues: finalizeClues("continents", item.id, item.name, buildContinentClues(item), clueMap),
+        tags: item.tags ?? [],
+      };
+    }),
   };
 }
 
 function transformCountries() {
   const legacy = readJson("data/sources/countries-legacy.json");
   const clueMap = readClueOverlay("data/authoring/countries-clues.json");
+  const countryMapLookup = buildMapQuizCountryLookup();
   const legacyFactsById = new Map(
     legacy.items.map((item) => [item.id, { facts: item.facts ?? [], tags: item.tags ?? [] }]),
   );
 
-  const chosenCountries = worldCountries
-    .filter((country) => country.unMember || country.name.common === "Palestine")
-    .sort((left, right) => left.name.common.localeCompare(right.name.common));
-
-  const continentGroups = new Map();
-
-  chosenCountries.forEach((country) => {
-    const continent = normalizeContinent(country.region, country.subregion);
-    const group = continentGroups.get(continent) ?? [];
-    group.push(country);
-    continentGroups.set(continent, group);
-  });
+  const chosenCountries = listChosenCountries();
+  const continentGroups = buildContinentGroups(chosenCountries);
 
   const ranksByCountryCode = new Map();
 
@@ -539,7 +745,7 @@ function transformCountries() {
 
   return {
     skillId: "countries",
-    version: 4,
+    version: 5,
     items: chosenCountries.map((country) => {
       const id = slugify(country.name.common);
       const continent = normalizeContinent(country.region, country.subregion);
@@ -555,6 +761,12 @@ function transformCountries() {
       const domain = getDomain(country);
       const borderFact = getBorderFact(country);
       const geographyLabel = country.region === "Oceania" ? "Oceania" : continent;
+      const mapRow = countryMapLookup.get(country.cca2);
+      const featureId = getCountryFeatureId(country);
+
+      if (!mapRow) {
+        throw new Error(`Missing map-quiz metadata for ${country.name.common} (${country.cca2}).`);
+      }
 
       const facts = uniqueLines([
         ...(legacyContent?.facts ?? []),
@@ -587,6 +799,18 @@ function transformCountries() {
           currency,
           countryCode: country.cca2,
           landlocked,
+        },
+        map: {
+          kind: "country",
+          featureId,
+          iso2: country.cca2,
+          iso3: country.cca3,
+          wikidataId: mapRow.wikidata_id,
+          bounds: parseMapBounds(mapRow.bounds),
+          centroid: parseMapCoordinate(mapRow.centroid),
+          worldview: mapRow.worldview,
+          region: mapRow.region,
+          subregion: mapRow.subregion,
         },
         facts,
         funFacts,

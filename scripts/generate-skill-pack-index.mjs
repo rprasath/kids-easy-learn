@@ -27,7 +27,7 @@ const fileContents = `import type { SkillContentPack } from "@/lib/types";
 ${imports.join("\n")}
 
 export const generatedSkillPacks: Record<string, SkillContentPack> = {
-${entries.join("\n")}
+${entries.map((entry) => entry.replace(/,$/, " as unknown as SkillContentPack," )).join("\n")}
 };
 `;
 

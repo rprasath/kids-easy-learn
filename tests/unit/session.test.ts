@@ -22,4 +22,14 @@ describe("session helpers", () => {
       shuffle: true,
     });
   });
+
+  it("supports map quiz mode with the same session defaults", () => {
+    expect(buildSessionConfig({}, "map-quiz")).toEqual({
+      selectedSkillIds: ["states"],
+      mode: "map-quiz",
+      questionCount: 10,
+      stepSeconds: 60,
+      shuffle: true,
+    });
+  });
 });

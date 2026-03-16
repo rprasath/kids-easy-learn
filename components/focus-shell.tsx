@@ -4,7 +4,7 @@ import Link from "next/link";
 import { createContext, PropsWithChildren, useContext, useEffect, useMemo, useRef, useState } from "react";
 
 type FocusShellProps = PropsWithChildren<{
-  mode: "flashcards" | "quiz";
+  mode: "flashcards" | "quiz" | "map-quiz";
 }>;
 
 type StudyTheme = "light" | "dark";
@@ -61,7 +61,7 @@ export function FocusShell({ children, mode }: FocusShellProps) {
   }, []);
 
   useEffect(() => {
-    if (mode !== "quiz") {
+    if (mode === "flashcards") {
       return;
     }
 

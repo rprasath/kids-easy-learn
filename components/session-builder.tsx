@@ -1,8 +1,10 @@
 "use client";
 
+import type { Route } from "next";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+import { supportsMapQuiz } from "@/lib/map-skills";
 import { readSessionSelection, saveSessionSelection } from "@/lib/progress-store";
 import { getDefaultSkillId } from "@/lib/skill-catalog";
 import { stringifySkillIds } from "@/lib/session";
@@ -29,6 +31,9 @@ export function SessionBuilder({ itemCounts, skills }: SessionBuilderProps) {
 
   const canStart = selectedSkillIds.length > 0;
   const skillQuery = stringifySkillIds(selectedSkillIds);
+  const hasMapSupportedSkill = selectedSkillIds.some((skillId) => supportsMapQuiz(skillId));
+  const hasMapUnsupportedSkill = selectedSkillIds.some((skillId) => !supportsMapQuiz(skillId));
+  const canStartMapQuiz = canStart && hasMapSupportedSkill && !hasMapUnsupportedSkill;
 
   function toggleSkill(skillId: SkillId) {
     setSelectedSkillIds((current) =>
@@ -36,12 +41,12 @@ export function SessionBuilder({ itemCounts, skills }: SessionBuilderProps) {
     );
   }
 
-  function remember(mode: "flashcards" | "quiz") {
+  function remember(mode: "flashcards" | "quiz" | "map-quiz") {
     saveSessionSelection(selectedSkillIds, mode);
   }
 
-  async function startMode(mode: "flashcards" | "quiz") {
-    if (!canStart) {
+  async function startMode(mode: "flashcards" | "quiz" | "map-quiz") {
+    if (!canStart || (mode === "map-quiz" && !canStartMapQuiz)) {
       return;
     }
 
@@ -53,12 +58,14 @@ export function SessionBuilder({ itemCounts, skills }: SessionBuilderProps) {
       // Some browsers may still deny the request; navigation should continue.
     }
 
-    if (mode === "flashcards") {
-      router.push(`/learn?skills=${skillQuery}&seconds=${stepSeconds}`);
-      return;
-    }
+    const href =
+      mode === "flashcards"
+        ? `/learn?skills=${skillQuery}&seconds=${stepSeconds}`
+        : mode === "quiz"
+          ? `/quiz?skills=${skillQuery}&count=10&seconds=${stepSeconds}`
+          : `/map-quiz?skills=${skillQuery}&count=10&seconds=${stepSeconds}`;
 
-    router.push(`/quiz?skills=${skillQuery}&count=10&seconds=${stepSeconds}`);
+    router.push(href as Route);
   }
 
   function skillLine(skill: SkillDefinition) {
@@ -144,7 +151,7 @@ export function SessionBuilder({ itemCounts, skills }: SessionBuilderProps) {
               </label>
             </div>
 
-            <div className="grid flex-1 gap-3 sm:grid-cols-2 lg:max-w-3xl">
+            <div className="grid flex-1 gap-3 sm:grid-cols-2 xl:grid-cols-3 lg:max-w-5xl">
               <button
                 type="button"
                 onClick={() => void startMode("flashcards")}
@@ -172,11 +179,27 @@ export function SessionBuilder({ itemCounts, skills }: SessionBuilderProps) {
                 <div className="text-xs font-black uppercase tracking-[0.18em] text-slate-500">Play</div>
                 <div className="mt-2 text-3xl font-black">Start Quiz</div>
               </button>
+
+              <button
+                type="button"
+                onClick={() => void startMode("map-quiz")}
+                disabled={!canStartMapQuiz}
+                className={`rounded-[1.55rem] px-6 py-5 text-left ${
+                  canStartMapQuiz
+                    ? "bg-[#dff4e8] text-slate-900 shadow-[0_10px_22px_rgba(77,154,111,0.16)]"
+                    : "pointer-events-none bg-white/70 text-slate-300 ring-1 ring-slate-200"
+                }`}
+              >
+                <div className="text-xs font-black uppercase tracking-[0.18em] text-slate-500">Explore</div>
+                <div className="mt-2 text-3xl font-black">Start Map Quiz</div>
+              </button>
             </div>
           </div>
 
           <div className="mt-4 text-sm font-semibold text-slate-600">
-            Both modes are ready whenever you are.
+            {hasMapUnsupportedSkill
+              ? "Map quiz is ready for Countries and Continents."
+              : "All three modes are ready whenever you are."}
           </div>
         </section>
       </div>

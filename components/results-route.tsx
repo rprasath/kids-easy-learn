@@ -20,7 +20,7 @@ export function ResultsRoute() {
     <AppShell>
       <ResultsPanel
         favorites={favorites}
-        mode={mode === "flashcards" ? "flashcards" : "quiz"}
+        mode={mode === "flashcards" ? "flashcards" : mode === "map-quiz" ? "map-quiz" : "quiz"}
         score={Number.isNaN(score) ? 0 : score}
         total={total}
         selectedSkillIds={selectedSkillIds.length > 0 ? selectedSkillIds : [getDefaultSkillId()]}

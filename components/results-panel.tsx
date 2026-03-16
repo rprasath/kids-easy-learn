@@ -1,5 +1,6 @@
 "use client";
 
+import type { Route } from "next";
 import Link from "next/link";
 import { useMemo } from "react";
 
@@ -10,7 +11,7 @@ import { SkillId } from "@/lib/types";
 
 type ResultsPanelProps = {
   favorites: number;
-  mode: "flashcards" | "quiz";
+  mode: "flashcards" | "quiz" | "map-quiz";
   selectedSkillIds: SkillId[];
   score: number;
   total: number;
@@ -31,12 +32,13 @@ export function ResultsPanel({
   const headline =
     percent >= 80 ? "Awesome work" : percent >= 60 ? "Nice progress" : "Keep going";
   const isFlashcardSummary = mode === "flashcards";
+  const isMapQuizSummary = mode === "map-quiz";
 
   return (
     <section className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
       <div className="rounded-[2rem] bg-white/90 p-6 paper-shadow backdrop-blur">
         <p className="text-sm font-bold uppercase tracking-[0.2em] text-sky-700">
-          {isFlashcardSummary ? "Flashcard Summary" : "Quiz Results"}
+          {isFlashcardSummary ? "Flashcard Summary" : isMapQuizSummary ? "Map Quiz Results" : "Quiz Results"}
         </p>
         <h2 className="mt-2 text-4xl font-black text-slate-900">
           {isFlashcardSummary ? "Nice study session" : headline}
@@ -106,7 +108,9 @@ export function ResultsPanel({
         <div className="mt-4 rounded-[1.5rem] bg-white/10 p-4 text-sm leading-6 text-white/85">
           {isFlashcardSummary
             ? "Now is a good time to jump into a quiz while the clues and facts are fresh."
-            : "Best results usually come from one quick card review after every quiz round."}
+            : isMapQuizSummary
+              ? "A quick card review helps lock in the shapes and locations you just practiced."
+              : "Best results usually come from one quick card review after every quiz round."}
         </div>
         <div className="mt-6 grid gap-3">
           {isFlashcardSummary ? (
@@ -118,10 +122,10 @@ export function ResultsPanel({
             </Link>
           ) : (
             <Link
-              href={`/quiz?skills=${stringifySkillIds(selectedSkillIds)}&count=${total}`}
+              href={`${isMapQuizSummary ? "/map-quiz" : "/quiz"}?skills=${stringifySkillIds(selectedSkillIds)}&count=${total}` as Route}
               className="rounded-[1.4rem] bg-orange-500 px-4 py-4 text-center text-sm font-black uppercase tracking-[0.15em] text-white shadow-lg shadow-orange-500/30"
             >
-              Play Again
+              {isMapQuizSummary ? "Play Map Quiz Again" : "Play Again"}
             </Link>
           )}
           <Link

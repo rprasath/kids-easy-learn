@@ -4,6 +4,21 @@ import { generatedSkillPacks } from "@/lib/generated-skill-packs";
 import { getSkillDefinition, listSkillDefinitions } from "@/lib/skill-catalog";
 import { LearningCardItem, SkillContentPack, SkillDefinition, SkillId } from "@/lib/types";
 
+const mapSchema = z.object({
+  kind: z.enum(["country", "continent"]),
+  featureId: z.string().min(1).optional(),
+  featureIds: z.array(z.string().min(1)).min(1).optional(),
+  geometryId: z.string().min(1).optional(),
+  iso2: z.string().min(1).optional(),
+  iso3: z.string().min(1).optional(),
+  wikidataId: z.string().min(1).optional(),
+  bounds: z.tuple([z.number(), z.number(), z.number(), z.number()]).optional(),
+  centroid: z.tuple([z.number(), z.number()]).optional(),
+  worldview: z.string().min(1).optional(),
+  region: z.string().min(1).optional(),
+  subregion: z.string().min(1).optional(),
+});
+
 const itemSchema = z.object({
   id: z.string().min(1),
   skillId: z.string().min(1),
@@ -11,6 +26,7 @@ const itemSchema = z.object({
   badge: z.string().min(1).optional(),
   description: z.string().min(1).optional(),
   attributes: z.record(z.string(), z.string()),
+  map: mapSchema.optional(),
   facts: z.array(z.string().min(1)).min(2),
   funFacts: z.array(z.string().min(1)).optional(),
   clues: z.array(z.string().min(1)).min(10),
@@ -121,6 +137,18 @@ function validatePack(skill: SkillDefinition, pack: SkillContentPack) {
         `Item ${item.id} in ${skill.id} is missing required field "${fieldKey}".`,
       );
     });
+
+    if (skill.supportedModes.includes("map-quiz")) {
+      assert(item.map !== undefined, `Item ${item.id} in ${skill.id} is missing map metadata.`);
+      assert(
+        Boolean(item.map.featureId) || (item.map.featureIds?.length ?? 0) > 0,
+        `Item ${item.id} in ${skill.id} needs at least one map feature reference.`,
+      );
+      assert(
+        item.map.bounds !== undefined && item.map.centroid !== undefined,
+        `Item ${item.id} in ${skill.id} is missing map bounds or centroid data.`,
+      );
+    }
 
     itemIds.add(item.id);
   });

@@ -1,5 +1,23 @@
 export type SkillId = string;
-export type SkillMode = "flashcards" | "quiz";
+export type SkillMode = "flashcards" | "quiz" | "map-quiz";
+
+export type MapCoordinate = number[];
+export type MapBounds = number[];
+
+export type MapRegionRef = {
+  kind: "country" | "continent";
+  featureId?: string;
+  featureIds?: string[];
+  geometryId?: string;
+  iso2?: string;
+  iso3?: string;
+  wikidataId?: string;
+  bounds?: MapBounds;
+  centroid?: MapCoordinate;
+  worldview?: string;
+  region?: string;
+  subregion?: string;
+};
 
 export type ThemeToken = {
   accent: string;
@@ -53,6 +71,7 @@ export type LearningCardItem = {
   badge?: string;
   description?: string;
   attributes: Record<string, string>;
+  map?: MapRegionRef;
   facts: string[];
   funFacts?: string[];
   clues: string[];
@@ -84,6 +103,19 @@ export type QuizQuestion = {
   correctOptionId: string;
 };
 
+export type MapQuizQuestion = {
+  id: string;
+  skillId: SkillId;
+  itemId: string;
+  prompt: string;
+  promptHint: string;
+  hint: string;
+  options: Array<{ id: string; label: string }>;
+  correctOptionId: string;
+  map: MapRegionRef;
+  revealFacts: string[];
+};
+
 export type QuizAnswer = {
   questionId: string;
   itemId: string;
@@ -94,6 +126,7 @@ export type QuizAnswer = {
 };
 
 export type QuizRoundResult = {
+  mode?: "quiz" | "map-quiz";
   selectedSkillIds: SkillId[];
   score: number;
   total: number;

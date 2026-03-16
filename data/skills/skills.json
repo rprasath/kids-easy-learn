@@ -98,7 +98,8 @@
     },
     "supportedModes": [
       "flashcards",
-      "quiz"
+      "quiz",
+      "map-quiz"
     ],
     "contentFile": "continents/continents.json",
     "status": "active",
@@ -179,7 +180,8 @@
     },
     "supportedModes": [
       "flashcards",
-      "quiz"
+      "quiz",
+      "map-quiz"
     ],
     "contentFile": "countries/countries.json",
     "status": "active",

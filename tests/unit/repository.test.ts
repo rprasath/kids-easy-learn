@@ -35,6 +35,17 @@ describe("skill repository", () => {
     });
   });
 
+  it("adds map metadata to every map-quiz skill item", () => {
+    ["countries", "continents"].forEach((skillId) => {
+      skillRepository.getItems(skillId).forEach((item) => {
+        expect(item.map).toBeDefined();
+        expect(item.map?.bounds?.length).toBe(4);
+        expect(item.map?.centroid?.length).toBe(2);
+        expect((item.map?.featureIds?.length ?? 0) > 0 || Boolean(item.map?.featureId)).toBe(true);
+      });
+    });
+  });
+
   it("keeps clues free from answer leaks and template boilerplate", () => {
     const bannedPhrases = [
       "this answer is",
