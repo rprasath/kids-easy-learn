@@ -29,4 +29,28 @@ describe("quiz builder", () => {
     expect(sourceItem?.clues.some((clue) => identifyQuestion?.prompt.includes(clue))).toBe(true);
     expect(sourceItem?.facts.some((fact) => identifyQuestion?.prompt.includes(fact))).toBe(false);
   });
+
+  it("prefers geographically related distractors for country questions", () => {
+    const items = skillRepository.getItems("countries");
+    const questions = buildQuizQuestions(items, 60, "related-country-options");
+    const capitalQuestion = questions.find(
+      (question) => question.skillId === "countries" && question.templateId === "capital",
+    );
+
+    expect(capitalQuestion).toBeDefined();
+
+    const sourceItem = items.find((item) => item.id === capitalQuestion?.itemId);
+    expect(sourceItem).toBeDefined();
+
+    const distractorCountries = capitalQuestion!.options
+      .filter((option) => option.id !== capitalQuestion!.correctOptionId)
+      .map((option) => items.find((item) => item.attributes.capital === option.label))
+      .filter((item): item is (typeof items)[number] => item !== undefined);
+
+    expect(
+      distractorCountries.some(
+        (item) => item.attributes.continent === sourceItem!.attributes.continent,
+      ),
+    ).toBe(true);
+  });
 });

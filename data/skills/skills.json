@@ -138,16 +138,16 @@
       {
         "id": "largest-country",
         "kind": "field-value",
-        "prompt": "Which large country is found in {name}?",
-        "promptHint": "Choose the country linked to this continent in the lesson card.",
+        "prompt": "Which country is the largest by area in {name}?",
+        "promptHint": "Choose the largest country linked with this continent.",
         "correctFieldKey": "largestCountry",
         "optionFieldKey": "largestCountry"
       },
       {
         "id": "largest-city",
         "kind": "field-value",
-        "prompt": "Which major city is linked with {name}?",
-        "promptHint": "Pick the city tied to this continent in the lesson.",
+        "prompt": "Which major city is listed for {name}?",
+        "promptHint": "Pick the city used as a study clue for this continent.",
         "correctFieldKey": "largestCity",
         "optionFieldKey": "largestCity"
       },
@@ -246,8 +246,8 @@
       {
         "id": "language",
         "kind": "field-value",
-        "prompt": "Which official language is linked with {name}?",
-        "promptHint": "Choose the language taught on the country card.",
+        "prompt": "Which official language is listed for {name}?",
+        "promptHint": "Choose the language clue shown on the country card.",
         "correctFieldKey": "officialLanguage",
         "optionFieldKey": "officialLanguage"
       },

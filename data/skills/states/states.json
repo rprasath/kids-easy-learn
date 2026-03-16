@@ -1,6 +1,6 @@
 {
   "skillId": "states",
-  "version": 3,
+  "version": 4,
   "items": [
     {
       "id": "alabama",
@@ -20,20 +20,24 @@
       ],
       "funFacts": [
         "AL is the two-letter postal code used for this state.",
-        "Montgomery is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the south states."
+        "Montgomery is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Montgomery.",
-        "It belongs to the South region of the country.",
+        "It is in the south region of the United States.",
+        "Its official nickname is Yellowhammer State.",
         "Its postal abbreviation is AL.",
-        "Its nickname is Yellowhammer State.",
-        "Map lessons group it with the South states.",
-        "If a worksheet shows the code AL, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state was the 22nd state to join the United States.",
+        "A strong clue is that rocket science work in Huntsville helped space missions.",
+        "State-capital study sheets often include it.",
+        "Its capital begins with the letter M.",
+        "Its capital ends with the letter y.",
+        "Its postal abbreviation starts with A and ends with L.",
+        "Its postal abbreviation uses the letters A and L.",
+        "Its nickname begins with the letter Y.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the south part of the country."
       ],
       "tags": [
         "south",
@@ -58,20 +62,24 @@
       ],
       "funFacts": [
         "AK is the two-letter postal code used for this state.",
-        "Juneau is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the west states."
+        "Juneau is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Juneau.",
-        "It belongs to the West region of the country.",
+        "It is in the west region of the United States.",
+        "Its official nickname is The Last Frontier.",
         "Its postal abbreviation is AK.",
-        "Its nickname is The Last Frontier.",
-        "Map lessons group it with the West states.",
-        "If a worksheet shows the code AK, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is the largest U.S. state by area.",
+        "A strong clue is that it has very long summer days in some places.",
+        "Natural landscapes are one of its strongest clues.",
+        "Its capital begins with the letter J.",
+        "Its capital ends with the letter u.",
+        "Its postal abbreviation starts with A and ends with K.",
+        "Its postal abbreviation uses the letters A and K.",
+        "Its nickname begins with the letter L.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the west part of the country."
       ],
       "tags": [
         "west",
@@ -96,20 +104,24 @@
       ],
       "funFacts": [
         "AZ is the two-letter postal code used for this state.",
-        "Phoenix is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the west states."
+        "Phoenix is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Phoenix.",
-        "It belongs to the West region of the country.",
+        "It is in the west region of the United States.",
+        "Its official nickname is Grand Canyon State.",
         "Its postal abbreviation is AZ.",
-        "Its nickname is Grand Canyon State.",
-        "Map lessons group it with the West states.",
-        "If a worksheet shows the code AZ, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that the Grand Canyon is one of This state's famous landmarks.",
+        "A strong clue is that much of This state has a dry desert climate.",
+        "Dry desert land shapes much of its landscape.",
+        "Its capital begins with the letter P.",
+        "Its capital ends with the letter x.",
+        "Its postal abbreviation starts with A and ends with Z.",
+        "Its postal abbreviation uses the letters A and Z.",
+        "Its nickname begins with the letter G.",
+        "Its capital has 1 word.",
+        "Its nickname has 3 words.",
+        "Its region clue places it in the west part of the country."
       ],
       "tags": [
         "west",
@@ -134,20 +146,24 @@
       ],
       "funFacts": [
         "AR is the two-letter postal code used for this state.",
-        "Little Rock is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the south states."
+        "Little Rock is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Little Rock.",
-        "It belongs to the South region of the country.",
+        "It is in the south region of the United States.",
+        "Its official nickname is The Natural State.",
         "Its postal abbreviation is AR.",
-        "Its nickname is The Natural State.",
-        "Map lessons group it with the South states.",
-        "If a worksheet shows the code AR, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state has mountains, rivers, and hot springs.",
+        "A strong clue is that little Rock is its capital city.",
+        "Natural landscapes are one of its strongest clues.",
+        "Its capital begins with the letter L.",
+        "Its capital ends with the letter k.",
+        "Its postal abbreviation starts with A and ends with R.",
+        "Its postal abbreviation uses the letters A and R.",
+        "Its nickname begins with the letter N.",
+        "Its capital has 2 words.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the south part of the country."
       ],
       "tags": [
         "south",
@@ -172,20 +188,24 @@
       ],
       "funFacts": [
         "CA is the two-letter postal code used for this state.",
-        "Sacramento is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the west states."
+        "Sacramento is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Sacramento.",
-        "It belongs to the West region of the country.",
+        "It is in the west region of the United States.",
+        "Its official nickname is The Golden State.",
         "Its postal abbreviation is CA.",
-        "Its nickname is The Golden State.",
-        "Map lessons group it with the West states.",
-        "If a worksheet shows the code CA, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is the most populated U.S. state.",
+        "A strong clue is that it is home to both beaches and giant redwood trees.",
+        "It stands out for having a very large population.",
+        "Its capital begins with the letter S.",
+        "Its capital ends with the letter o.",
+        "Its postal abbreviation starts with C and ends with A.",
+        "Its postal abbreviation uses the letters C and A.",
+        "Its nickname begins with the letter G.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the west part of the country."
       ],
       "tags": [
         "west",
@@ -210,20 +230,24 @@
       ],
       "funFacts": [
         "CO is the two-letter postal code used for this state.",
-        "Denver is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the west states."
+        "Denver is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Denver.",
-        "It belongs to the West region of the country.",
+        "It is in the west region of the United States.",
+        "Its official nickname is Centennial State.",
         "Its postal abbreviation is CO.",
-        "Its nickname is Centennial State.",
-        "Map lessons group it with the West states.",
-        "If a worksheet shows the code CO, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is known for the Rocky Mountains.",
+        "A strong clue is that denver is called the Mile High City.",
+        "Mountain landscapes help identify it.",
+        "Its capital begins with the letter D.",
+        "Its capital ends with the letter r.",
+        "Its postal abbreviation starts with C and ends with O.",
+        "Its postal abbreviation uses the letters C and O.",
+        "Its nickname begins with the letter C.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the west part of the country."
       ],
       "tags": [
         "west",
@@ -248,20 +272,24 @@
       ],
       "funFacts": [
         "CT is the two-letter postal code used for this state.",
-        "Hartford is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the northeast states."
+        "Hartford is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Hartford.",
-        "It belongs to the Northeast region of the country.",
+        "It is in the northeast region of the United States.",
+        "Its official nickname is Constitution State.",
         "Its postal abbreviation is CT.",
-        "Its nickname is Constitution State.",
-        "Map lessons group it with the Northeast states.",
-        "If a worksheet shows the code CT, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is one of the original 13 colonies.",
+        "A strong clue is that hartford is one of the oldest U.S. cities.",
+        "It is often remembered for an important piece of U.S. history.",
+        "Its capital begins with the letter H.",
+        "Its capital ends with the letter d.",
+        "Its postal abbreviation starts with C and ends with T.",
+        "Its postal abbreviation uses the letters C and T.",
+        "Its nickname begins with the letter C.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the northeast part of the country."
       ],
       "tags": [
         "northeast",
@@ -286,20 +314,24 @@
       ],
       "funFacts": [
         "DE is the two-letter postal code used for this state.",
-        "Dover is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the south states."
+        "Dover is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Dover.",
-        "It belongs to the South region of the country.",
+        "It is in the south region of the United States.",
+        "Its official nickname is The First State.",
         "Its postal abbreviation is DE.",
-        "Its nickname is The First State.",
-        "Map lessons group it with the South states.",
-        "If a worksheet shows the code DE, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state was the first state to ratify the U.S. Constitution.",
+        "A strong clue is that it is one of the smallest U.S. states.",
+        "It is often remembered for an important piece of U.S. history.",
+        "Its capital begins with the letter D.",
+        "Its capital ends with the letter r.",
+        "Its postal abbreviation starts with D and ends with E.",
+        "Its postal abbreviation uses the letters D and E.",
+        "Its nickname begins with the letter F.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the south part of the country."
       ],
       "tags": [
         "south",
@@ -324,20 +356,24 @@
       ],
       "funFacts": [
         "FL is the two-letter postal code used for this state.",
-        "Tallahassee is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the south states."
+        "Tallahassee is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Tallahassee.",
-        "It belongs to the South region of the country.",
+        "It is in the south region of the United States.",
+        "Its official nickname is Sunshine State.",
         "Its postal abbreviation is FL.",
-        "Its nickname is Sunshine State.",
-        "Map lessons group it with the South states.",
-        "If a worksheet shows the code FL, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is surrounded by water on three sides.",
+        "A strong clue is that the Everglades are a famous wetland in This state.",
+        "Water is one of the geography clues often tied to it.",
+        "Its capital begins with the letter T.",
+        "Its capital ends with the letter e.",
+        "Its postal abbreviation starts with F and ends with L.",
+        "Its postal abbreviation uses the letters F and L.",
+        "Its nickname begins with the letter S.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the south part of the country."
       ],
       "tags": [
         "south",
@@ -362,20 +398,24 @@
       ],
       "funFacts": [
         "GA is the two-letter postal code used for this state.",
-        "Atlanta is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the south states."
+        "Atlanta is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Atlanta.",
-        "It belongs to the South region of the country.",
+        "It is in the south region of the United States.",
+        "Its official nickname is Peach State.",
         "Its postal abbreviation is GA.",
-        "Its nickname is Peach State.",
-        "Map lessons group it with the South states.",
-        "If a worksheet shows the code GA, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is known for peaches and peanuts.",
+        "A strong clue is that atlanta is a major city in the Southeast.",
+        "A major city there is often remembered in U.S. geography lessons.",
+        "Its capital begins with the letter A.",
+        "Its capital ends with the letter a.",
+        "Its postal abbreviation starts with G and ends with A.",
+        "Its postal abbreviation uses the letters G and A.",
+        "Its nickname begins with the letter P.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the south part of the country."
       ],
       "tags": [
         "south",
@@ -400,20 +440,23 @@
       ],
       "funFacts": [
         "HI is the two-letter postal code used for this state.",
-        "Honolulu is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the west states."
+        "Honolulu is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Honolulu.",
-        "It belongs to the West region of the country.",
+        "It is in the west region of the United States.",
+        "Its official nickname is Aloha State.",
         "Its postal abbreviation is HI.",
-        "Its nickname is Aloha State.",
-        "Map lessons group it with the West states.",
-        "If a worksheet shows the code HI, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is the only U.S. state made entirely of islands.",
+        "Islands help make its geography stand out.",
+        "Its capital begins with the letter H.",
+        "Its capital ends with the letter u.",
+        "Its postal abbreviation starts with H and ends with I.",
+        "Its postal abbreviation uses the letters H and I.",
+        "Its nickname begins with the letter A.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the west part of the country."
       ],
       "tags": [
         "west",
@@ -438,20 +481,24 @@
       ],
       "funFacts": [
         "ID is the two-letter postal code used for this state.",
-        "Boise is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the west states."
+        "Boise is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Boise.",
-        "It belongs to the West region of the country.",
+        "It is in the west region of the United States.",
+        "Its official nickname is Gem State.",
         "Its postal abbreviation is ID.",
-        "Its nickname is Gem State.",
-        "Map lessons group it with the West states.",
-        "If a worksheet shows the code ID, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is famous for potatoes.",
+        "A strong clue is that the state has mountains, forests, and rivers.",
+        "Farming is one of the clues many students connect with it.",
+        "Its capital begins with the letter B.",
+        "Its capital ends with the letter e.",
+        "Its postal abbreviation starts with I and ends with D.",
+        "Its postal abbreviation uses the letters I and D.",
+        "Its nickname begins with the letter G.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the west part of the country."
       ],
       "tags": [
         "west",
@@ -476,20 +523,24 @@
       ],
       "funFacts": [
         "IL is the two-letter postal code used for this state.",
-        "Springfield is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the midwest states."
+        "Springfield is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Springfield.",
-        "It belongs to the Midwest region of the country.",
+        "It is in the midwest region of the United States.",
+        "Its official nickname is Prairie State.",
         "Its postal abbreviation is IL.",
-        "Its nickname is Prairie State.",
-        "Map lessons group it with the Midwest states.",
-        "If a worksheet shows the code IL, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is home to Chicago, one of the biggest U.S. cities.",
+        "A strong clue is that abraham Lincoln spent many important years in This state.",
+        "It is often remembered for an important piece of U.S. history.",
+        "Its capital begins with the letter S.",
+        "Its capital ends with the letter d.",
+        "Its postal abbreviation starts with I and ends with L.",
+        "Its postal abbreviation uses the letters I and L.",
+        "Its nickname begins with the letter P.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the midwest part of the country."
       ],
       "tags": [
         "midwest",
@@ -514,20 +565,22 @@
       ],
       "funFacts": [
         "IN is the two-letter postal code used for this state.",
-        "Indianapolis is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the midwest states."
+        "Indianapolis is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
-        "Its capital city is Indianapolis.",
-        "It belongs to the Midwest region of the country.",
+        "It is in the midwest region of the United States.",
+        "Its official nickname is Hoosier State.",
         "Its postal abbreviation is IN.",
-        "Its nickname is Hoosier State.",
-        "Map lessons group it with the Midwest states.",
-        "If a worksheet shows the code IN, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state has many farms and small towns.",
+        "A famous sports tradition helps identify it.",
+        "Its capital begins with the letter I.",
+        "Its capital ends with the letter s.",
+        "Its postal abbreviation starts with I and ends with N.",
+        "Its postal abbreviation uses the letters I and N.",
+        "Its nickname begins with the letter H.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the midwest part of the country."
       ],
       "tags": [
         "midwest",
@@ -552,20 +605,24 @@
       ],
       "funFacts": [
         "IA is the two-letter postal code used for this state.",
-        "Des Moines is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the midwest states."
+        "Des Moines is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Des Moines.",
-        "It belongs to the Midwest region of the country.",
+        "It is in the midwest region of the United States.",
+        "Its official nickname is Hawkeye State.",
         "Its postal abbreviation is IA.",
-        "Its nickname is Hawkeye State.",
-        "Map lessons group it with the Midwest states.",
-        "If a worksheet shows the code IA, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is known for corn and farmland.",
+        "A strong clue is that its rolling fields are part of the Midwest landscape.",
+        "Farming is one of the clues many students connect with it.",
+        "Its capital begins with the letter D.",
+        "Its capital ends with the letter s.",
+        "Its postal abbreviation starts with I and ends with A.",
+        "Its postal abbreviation uses the letters I and A.",
+        "Its nickname begins with the letter H.",
+        "Its capital has 2 words.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the midwest part of the country."
       ],
       "tags": [
         "midwest",
@@ -590,20 +647,24 @@
       ],
       "funFacts": [
         "KS is the two-letter postal code used for this state.",
-        "Topeka is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the midwest states."
+        "Topeka is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Topeka.",
-        "It belongs to the Midwest region of the country.",
+        "It is in the midwest region of the United States.",
+        "Its official nickname is Sunflower State.",
         "Its postal abbreviation is KS.",
-        "Its nickname is Sunflower State.",
-        "Map lessons group it with the Midwest states.",
-        "If a worksheet shows the code KS, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state has wide plains and prairie land.",
+        "A strong clue is that sunflowers are an important state symbol.",
+        "Prairie grasslands are part of its geography.",
+        "Its capital begins with the letter T.",
+        "Its capital ends with the letter a.",
+        "Its postal abbreviation starts with K and ends with S.",
+        "Its postal abbreviation uses the letters K and S.",
+        "Its nickname begins with the letter S.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the midwest part of the country."
       ],
       "tags": [
         "midwest",
@@ -628,20 +689,24 @@
       ],
       "funFacts": [
         "KY is the two-letter postal code used for this state.",
-        "Frankfort is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the south states."
+        "Frankfort is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Frankfort.",
-        "It belongs to the South region of the country.",
+        "It is in the south region of the United States.",
+        "Its official nickname is Bluegrass State.",
         "Its postal abbreviation is KY.",
-        "Its nickname is Bluegrass State.",
-        "Map lessons group it with the South states.",
-        "If a worksheet shows the code KY, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is known for bluegrass music and horse farms.",
+        "A strong clue is that mammoth Cave is one of the world's longest cave systems.",
+        "Music history is one of the clues often tied to it.",
+        "Its capital begins with the letter F.",
+        "Its capital ends with the letter t.",
+        "Its postal abbreviation starts with K and ends with Y.",
+        "Its postal abbreviation uses the letters K and Y.",
+        "Its nickname begins with the letter B.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the south part of the country."
       ],
       "tags": [
         "south",
@@ -666,20 +731,24 @@
       ],
       "funFacts": [
         "LA is the two-letter postal code used for this state.",
-        "Baton Rouge is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the south states."
+        "Baton Rouge is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Baton Rouge.",
-        "It belongs to the South region of the country.",
+        "It is in the south region of the United States.",
+        "Its official nickname is Pelican State.",
         "Its postal abbreviation is LA.",
-        "Its nickname is Pelican State.",
-        "Map lessons group it with the South states.",
-        "If a worksheet shows the code LA, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is famous for jazz and Mardi Gras traditions.",
+        "A strong clue is that the Mississippi River flows through the state.",
+        "Food, music, or festival traditions help people remember it.",
+        "Its capital begins with the letter B.",
+        "Its capital ends with the letter e.",
+        "Its postal abbreviation starts with L and ends with A.",
+        "Its postal abbreviation uses the letters L and A.",
+        "Its nickname begins with the letter P.",
+        "Its capital has 2 words.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the south part of the country."
       ],
       "tags": [
         "south",
@@ -704,20 +773,24 @@
       ],
       "funFacts": [
         "ME is the two-letter postal code used for this state.",
-        "Augusta is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the northeast states."
+        "Augusta is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Augusta.",
-        "It belongs to the Northeast region of the country.",
+        "It is in the northeast region of the United States.",
+        "Its official nickname is Pine Tree State.",
         "Its postal abbreviation is ME.",
-        "Its nickname is Pine Tree State.",
-        "Map lessons group it with the Northeast states.",
-        "If a worksheet shows the code ME, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is known for rocky coasts and lighthouses.",
+        "A strong clue is that it is the easternmost state in the United States.",
+        "Coastline is part of its map story.",
+        "Its capital begins with the letter A.",
+        "Its capital ends with the letter a.",
+        "Its postal abbreviation starts with M and ends with E.",
+        "Its postal abbreviation uses the letters M and E.",
+        "Its nickname begins with the letter P.",
+        "Its capital has 1 word.",
+        "Its nickname has 3 words.",
+        "Its region clue places it in the northeast part of the country."
       ],
       "tags": [
         "northeast",
@@ -742,20 +815,24 @@
       ],
       "funFacts": [
         "MD is the two-letter postal code used for this state.",
-        "Annapolis is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the south states."
+        "Annapolis is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Annapolis.",
-        "It belongs to the South region of the country.",
+        "It is in the south region of the United States.",
+        "Its official nickname is Old Line State.",
         "Its postal abbreviation is MD.",
-        "Its nickname is Old Line State.",
-        "Map lessons group it with the South states.",
-        "If a worksheet shows the code MD, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state borders the Chesapeake Bay.",
+        "A strong clue is that blue crabs are a well-known food in This state.",
+        "Water is one of the geography clues often tied to it.",
+        "Its capital begins with the letter A.",
+        "Its capital ends with the letter s.",
+        "Its postal abbreviation starts with M and ends with D.",
+        "Its postal abbreviation uses the letters M and D.",
+        "Its nickname begins with the letter O.",
+        "Its capital has 1 word.",
+        "Its nickname has 3 words.",
+        "Its region clue places it in the south part of the country."
       ],
       "tags": [
         "south",
@@ -780,20 +857,24 @@
       ],
       "funFacts": [
         "MA is the two-letter postal code used for this state.",
-        "Boston is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the northeast states."
+        "Boston is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Boston.",
-        "It belongs to the Northeast region of the country.",
+        "It is in the northeast region of the United States.",
+        "Its official nickname is Bay State.",
         "Its postal abbreviation is MA.",
-        "Its nickname is Bay State.",
-        "Map lessons group it with the Northeast states.",
-        "If a worksheet shows the code MA, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state played a big role in early American history.",
+        "A strong clue is that boston is one of the oldest major cities in the country.",
+        "It is often remembered for an important piece of U.S. history.",
+        "Its capital begins with the letter B.",
+        "Its capital ends with the letter n.",
+        "Its postal abbreviation starts with M and ends with A.",
+        "Its postal abbreviation uses the letters M and A.",
+        "Its nickname begins with the letter B.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the northeast part of the country."
       ],
       "tags": [
         "northeast",
@@ -818,20 +899,24 @@
       ],
       "funFacts": [
         "MI is the two-letter postal code used for this state.",
-        "Lansing is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the midwest states."
+        "Lansing is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Lansing.",
-        "It belongs to the Midwest region of the country.",
+        "It is in the midwest region of the United States.",
+        "Its official nickname is Great Lakes State.",
         "Its postal abbreviation is MI.",
-        "Its nickname is Great Lakes State.",
-        "Map lessons group it with the Midwest states.",
-        "If a worksheet shows the code MI, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state touches four of the five Great Lakes.",
+        "A strong clue is that it has two main land areas called peninsulas.",
+        "Water is one of the geography clues often tied to it.",
+        "Its capital begins with the letter L.",
+        "Its capital ends with the letter g.",
+        "Its postal abbreviation starts with M and ends with I.",
+        "Its postal abbreviation uses the letters M and I.",
+        "Its nickname begins with the letter G.",
+        "Its capital has 1 word.",
+        "Its nickname has 3 words.",
+        "Its region clue places it in the midwest part of the country."
       ],
       "tags": [
         "midwest",
@@ -856,20 +941,24 @@
       ],
       "funFacts": [
         "MN is the two-letter postal code used for this state.",
-        "Saint Paul is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the midwest states."
+        "Saint Paul is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Saint Paul.",
-        "It belongs to the Midwest region of the country.",
+        "It is in the midwest region of the United States.",
+        "Its official nickname is North Star State.",
         "Its postal abbreviation is MN.",
-        "Its nickname is North Star State.",
-        "Map lessons group it with the Midwest states.",
-        "If a worksheet shows the code MN, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is known as the Land of 10,000 Lakes.",
+        "A strong clue is that it has cold winters and many forests.",
+        "Lakes are one of the map features tied to it.",
+        "Its capital begins with the letter S.",
+        "Its capital ends with the letter l.",
+        "Its postal abbreviation starts with M and ends with N.",
+        "Its postal abbreviation uses the letters M and N.",
+        "Its nickname begins with the letter N.",
+        "Its capital has 2 words.",
+        "Its nickname has 3 words.",
+        "Its region clue places it in the midwest part of the country."
       ],
       "tags": [
         "midwest",
@@ -894,20 +983,24 @@
       ],
       "funFacts": [
         "MS is the two-letter postal code used for this state.",
-        "Jackson is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the south states."
+        "Jackson is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Jackson.",
-        "It belongs to the South region of the country.",
+        "It is in the south region of the United States.",
+        "Its official nickname is Magnolia State.",
         "Its postal abbreviation is MS.",
-        "Its nickname is Magnolia State.",
-        "Map lessons group it with the South states.",
-        "If a worksheet shows the code MS, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state River helps give the state its name.",
+        "A strong clue is that magnolia trees are an important state symbol.",
+        "A major river is closely tied to it.",
+        "Its capital begins with the letter J.",
+        "Its capital ends with the letter n.",
+        "Its postal abbreviation starts with M and ends with S.",
+        "Its postal abbreviation uses the letters M and S.",
+        "Its nickname begins with the letter M.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the south part of the country."
       ],
       "tags": [
         "south",
@@ -932,20 +1025,24 @@
       ],
       "funFacts": [
         "MO is the two-letter postal code used for this state.",
-        "Jefferson City is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the midwest states."
+        "Jefferson City is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Jefferson City.",
-        "It belongs to the Midwest region of the country.",
+        "It is in the midwest region of the United States.",
+        "Its official nickname is Show Me State.",
         "Its postal abbreviation is MO.",
-        "Its nickname is Show Me State.",
-        "Map lessons group it with the Midwest states.",
-        "If a worksheet shows the code MO, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is home to the Gateway Arch in St. Louis.",
+        "A strong clue is that this state and Mississippi rivers meet near the state.",
+        "A major river is closely tied to it.",
+        "Its capital begins with the letter J.",
+        "Its capital ends with the letter y.",
+        "Its postal abbreviation starts with M and ends with O.",
+        "Its postal abbreviation uses the letters M and O.",
+        "Its nickname begins with the letter S.",
+        "Its capital has 2 words.",
+        "Its nickname has 3 words.",
+        "Its region clue places it in the midwest part of the country."
       ],
       "tags": [
         "midwest",
@@ -970,20 +1067,24 @@
       ],
       "funFacts": [
         "MT is the two-letter postal code used for this state.",
-        "Helena is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the west states."
+        "Helena is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Helena.",
-        "It belongs to the West region of the country.",
+        "It is in the west region of the United States.",
+        "Its official nickname is Treasure State.",
         "Its postal abbreviation is MT.",
-        "Its nickname is Treasure State.",
-        "Map lessons group it with the West states.",
-        "If a worksheet shows the code MT, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state has wide-open spaces and mountain views.",
+        "A strong clue is that part of Yellowstone National Park reaches into This state.",
+        "Mountain landscapes help identify it.",
+        "Its capital begins with the letter H.",
+        "Its capital ends with the letter a.",
+        "Its postal abbreviation starts with M and ends with T.",
+        "Its postal abbreviation uses the letters M and T.",
+        "Its nickname begins with the letter T.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the west part of the country."
       ],
       "tags": [
         "west",
@@ -1008,20 +1109,24 @@
       ],
       "funFacts": [
         "NE is the two-letter postal code used for this state.",
-        "Lincoln is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the midwest states."
+        "Lincoln is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Lincoln.",
-        "It belongs to the Midwest region of the country.",
+        "It is in the midwest region of the United States.",
+        "Its official nickname is Cornhusker State.",
         "Its postal abbreviation is NE.",
-        "Its nickname is Cornhusker State.",
-        "Map lessons group it with the Midwest states.",
-        "If a worksheet shows the code NE, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state has large plains and farmland.",
+        "A strong clue is that it is an important state for corn and beef production.",
+        "Wide plains are part of its landscape.",
+        "Its capital begins with the letter L.",
+        "Its capital ends with the letter n.",
+        "Its postal abbreviation starts with N and ends with E.",
+        "Its postal abbreviation uses the letters N and E.",
+        "Its nickname begins with the letter C.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the midwest part of the country."
       ],
       "tags": [
         "midwest",
@@ -1046,20 +1151,24 @@
       ],
       "funFacts": [
         "NV is the two-letter postal code used for this state.",
-        "Carson City is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the west states."
+        "Carson City is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Carson City.",
-        "It belongs to the West region of the country.",
+        "It is in the west region of the United States.",
+        "Its official nickname is Silver State.",
         "Its postal abbreviation is NV.",
-        "Its nickname is Silver State.",
-        "Map lessons group it with the West states.",
-        "If a worksheet shows the code NV, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state has deserts, mountains, and bright city lights in Las Vegas.",
+        "A strong clue is that the state is known for silver mining history.",
+        "Dry desert land shapes much of its landscape.",
+        "Its capital begins with the letter C.",
+        "Its capital ends with the letter y.",
+        "Its postal abbreviation starts with N and ends with V.",
+        "Its postal abbreviation uses the letters N and V.",
+        "Its nickname begins with the letter S.",
+        "Its capital has 2 words.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the west part of the country."
       ],
       "tags": [
         "west",
@@ -1084,20 +1193,24 @@
       ],
       "funFacts": [
         "NH is the two-letter postal code used for this state.",
-        "Concord is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the northeast states."
+        "Concord is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Concord.",
-        "It belongs to the Northeast region of the country.",
+        "It is in the northeast region of the United States.",
+        "Its official nickname is Granite State.",
         "Its postal abbreviation is NH.",
-        "Its nickname is Granite State.",
-        "Map lessons group it with the Northeast states.",
-        "If a worksheet shows the code NH, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is known for mountains and forests.",
+        "A strong clue is that it is one of the original 13 states.",
+        "Mountain landscapes help identify it.",
+        "Its capital begins with the letter C.",
+        "Its capital ends with the letter d.",
+        "Its postal abbreviation starts with N and ends with H.",
+        "Its postal abbreviation uses the letters N and H.",
+        "Its nickname begins with the letter G.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the northeast part of the country."
       ],
       "tags": [
         "northeast",
@@ -1122,20 +1235,24 @@
       ],
       "funFacts": [
         "NJ is the two-letter postal code used for this state.",
-        "Trenton is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the northeast states."
+        "Trenton is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Trenton.",
-        "It belongs to the Northeast region of the country.",
+        "It is in the northeast region of the United States.",
+        "Its official nickname is Garden State.",
         "Its postal abbreviation is NJ.",
-        "Its nickname is Garden State.",
-        "Map lessons group it with the Northeast states.",
-        "If a worksheet shows the code NJ, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state has beaches, farms, and busy cities.",
+        "A strong clue is that it played an important part in the American Revolution.",
+        "Coastline is part of its map story.",
+        "Its capital begins with the letter T.",
+        "Its capital ends with the letter n.",
+        "Its postal abbreviation starts with N and ends with J.",
+        "Its postal abbreviation uses the letters N and J.",
+        "Its nickname begins with the letter G.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the northeast part of the country."
       ],
       "tags": [
         "northeast",
@@ -1160,20 +1277,24 @@
       ],
       "funFacts": [
         "NM is the two-letter postal code used for this state.",
-        "Santa Fe is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the west states."
+        "Santa Fe is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Santa Fe.",
-        "It belongs to the West region of the country.",
+        "It is in the west region of the United States.",
+        "Its official nickname is Land of Enchantment.",
         "Its postal abbreviation is NM.",
-        "Its nickname is Land of Enchantment.",
-        "Map lessons group it with the West states.",
-        "If a worksheet shows the code NM, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state has deserts, mesas, and colorful art traditions.",
+        "A strong clue is that santa Fe is one of the oldest capital cities in the U.S.",
+        "Dry desert land shapes much of its landscape.",
+        "Its capital begins with the letter S.",
+        "Its capital ends with the letter e.",
+        "Its postal abbreviation starts with N and ends with M.",
+        "Its postal abbreviation uses the letters N and M.",
+        "Its nickname begins with the letter L.",
+        "Its capital has 2 words.",
+        "Its nickname has 3 words.",
+        "Its region clue places it in the west part of the country."
       ],
       "tags": [
         "west",
@@ -1198,20 +1319,24 @@
       ],
       "funFacts": [
         "NY is the two-letter postal code used for this state.",
-        "Albany is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the northeast states."
+        "Albany is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Albany.",
-        "It belongs to the Northeast region of the country.",
+        "It is in the northeast region of the United States.",
+        "Its official nickname is Empire State.",
         "Its postal abbreviation is NY.",
-        "Its nickname is Empire State.",
-        "Map lessons group it with the Northeast states.",
-        "If a worksheet shows the code NY, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state City is the largest city in the United States.",
+        "A strong clue is that niagara Falls is one of the state's famous natural wonders.",
+        "A major city there is often remembered in U.S. geography lessons.",
+        "Its capital begins with the letter A.",
+        "Its capital ends with the letter y.",
+        "Its postal abbreviation starts with N and ends with Y.",
+        "Its postal abbreviation uses the letters N and Y.",
+        "Its nickname begins with the letter E.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the northeast part of the country."
       ],
       "tags": [
         "northeast",
@@ -1236,20 +1361,24 @@
       ],
       "funFacts": [
         "NC is the two-letter postal code used for this state.",
-        "Raleigh is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the south states."
+        "Raleigh is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Raleigh.",
-        "It belongs to the South region of the country.",
+        "It is in the south region of the United States.",
+        "Its official nickname is Tar Heel State.",
         "Its postal abbreviation is NC.",
-        "Its nickname is Tar Heel State.",
-        "Map lessons group it with the South states.",
-        "If a worksheet shows the code NC, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state has both mountains and Atlantic beaches.",
+        "A strong clue is that the Wright brothers made early flight history at Kitty Hawk.",
+        "It is often remembered for an important piece of U.S. history.",
+        "Its capital begins with the letter R.",
+        "Its capital ends with the letter h.",
+        "Its postal abbreviation starts with N and ends with C.",
+        "Its postal abbreviation uses the letters N and C.",
+        "Its nickname begins with the letter T.",
+        "Its capital has 1 word.",
+        "Its nickname has 3 words.",
+        "Its region clue places it in the south part of the country."
       ],
       "tags": [
         "south",
@@ -1274,20 +1403,24 @@
       ],
       "funFacts": [
         "ND is the two-letter postal code used for this state.",
-        "Bismarck is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the midwest states."
+        "Bismarck is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Bismarck.",
-        "It belongs to the Midwest region of the country.",
+        "It is in the midwest region of the United States.",
+        "Its official nickname is Peace Garden State.",
         "Its postal abbreviation is ND.",
-        "Its nickname is Peace Garden State.",
-        "Map lessons group it with the Midwest states.",
-        "If a worksheet shows the code ND, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state has prairies and grasslands.",
+        "A strong clue is that it shares a border with Canada.",
+        "Prairie grasslands are part of its geography.",
+        "Its capital begins with the letter B.",
+        "Its capital ends with the letter k.",
+        "Its postal abbreviation starts with N and ends with D.",
+        "Its postal abbreviation uses the letters N and D.",
+        "Its nickname begins with the letter P.",
+        "Its capital has 1 word.",
+        "Its nickname has 3 words.",
+        "Its region clue places it in the midwest part of the country."
       ],
       "tags": [
         "midwest",
@@ -1312,20 +1445,24 @@
       ],
       "funFacts": [
         "OH is the two-letter postal code used for this state.",
-        "Columbus is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the midwest states."
+        "Columbus is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Columbus.",
-        "It belongs to the Midwest region of the country.",
+        "It is in the midwest region of the United States.",
+        "Its official nickname is Buckeye State.",
         "Its postal abbreviation is OH.",
-        "Its nickname is Buckeye State.",
-        "Map lessons group it with the Midwest states.",
-        "If a worksheet shows the code OH, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is known for buckeye trees and important inventions.",
+        "A strong clue is that several U.S. presidents were born in This state.",
+        "It is often remembered for an important piece of U.S. history.",
+        "Its capital begins with the letter C.",
+        "Its capital ends with the letter s.",
+        "Its postal abbreviation starts with O and ends with H.",
+        "Its postal abbreviation uses the letters O and H.",
+        "Its nickname begins with the letter B.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the midwest part of the country."
       ],
       "tags": [
         "midwest",
@@ -1350,20 +1487,23 @@
       ],
       "funFacts": [
         "OK is the two-letter postal code used for this state.",
-        "Oklahoma City is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the south states."
+        "Oklahoma City is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
-        "Its capital starts with the letter O.",
-        "Its capital city has 2 words.",
-        "It belongs to the South region of the country.",
+        "It is in the south region of the United States.",
+        "Its official nickname is Sooner State.",
         "Its postal abbreviation is OK.",
-        "Its nickname is Sooner State.",
-        "Map lessons group it with the South states.",
-        "If a worksheet shows the code OK, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code."
+        "A strong clue is that this state has strong Native American history and culture.",
+        "A strong clue is that it is part of a region known for big skies and plains.",
+        "Wide plains are part of its landscape.",
+        "Its capital begins with the letter O.",
+        "Its capital ends with the letter y.",
+        "Its postal abbreviation starts with O and ends with K.",
+        "Its postal abbreviation uses the letters O and K.",
+        "Its nickname begins with the letter S.",
+        "Its capital has 2 words.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the south part of the country."
       ],
       "tags": [
         "south",
@@ -1388,20 +1528,24 @@
       ],
       "funFacts": [
         "OR is the two-letter postal code used for this state.",
-        "Salem is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the west states."
+        "Salem is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Salem.",
-        "It belongs to the West region of the country.",
+        "It is in the west region of the United States.",
+        "Its official nickname is Beaver State.",
         "Its postal abbreviation is OR.",
-        "Its nickname is Beaver State.",
-        "Map lessons group it with the West states.",
-        "If a worksheet shows the code OR, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state has forests, mountains, and Pacific coastline.",
+        "A strong clue is that crater Lake is one of the deepest lakes in the U.S.",
+        "Coastline is part of its map story.",
+        "Its capital begins with the letter S.",
+        "Its capital ends with the letter m.",
+        "Its postal abbreviation starts with O and ends with R.",
+        "Its postal abbreviation uses the letters O and R.",
+        "Its nickname begins with the letter B.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the west part of the country."
       ],
       "tags": [
         "west",
@@ -1426,20 +1570,24 @@
       ],
       "funFacts": [
         "PA is the two-letter postal code used for this state.",
-        "Harrisburg is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the northeast states."
+        "Harrisburg is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Harrisburg.",
-        "It belongs to the Northeast region of the country.",
+        "It is in the northeast region of the United States.",
+        "Its official nickname is Keystone State.",
         "Its postal abbreviation is PA.",
-        "Its nickname is Keystone State.",
-        "Map lessons group it with the Northeast states.",
-        "If a worksheet shows the code PA, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is where the Liberty Bell is found.",
+        "A strong clue is that philadelphia played a major role in U.S. history.",
+        "It is often remembered for an important piece of U.S. history.",
+        "Its capital begins with the letter H.",
+        "Its capital ends with the letter g.",
+        "Its postal abbreviation starts with P and ends with A.",
+        "Its postal abbreviation uses the letters P and A.",
+        "Its nickname begins with the letter K.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the northeast part of the country."
       ],
       "tags": [
         "northeast",
@@ -1464,20 +1612,24 @@
       ],
       "funFacts": [
         "RI is the two-letter postal code used for this state.",
-        "Providence is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the northeast states."
+        "Providence is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Providence.",
-        "It belongs to the Northeast region of the country.",
+        "It is in the northeast region of the United States.",
+        "Its official nickname is Ocean State.",
         "Its postal abbreviation is RI.",
-        "Its nickname is Ocean State.",
-        "Map lessons group it with the Northeast states.",
-        "If a worksheet shows the code RI, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is the smallest U.S. state.",
+        "A strong clue is that it has many bays, harbors, and seaside towns.",
+        "The ocean is an important part of its identity.",
+        "Its capital begins with the letter P.",
+        "Its capital ends with the letter e.",
+        "Its postal abbreviation starts with R and ends with I.",
+        "Its postal abbreviation uses the letters R and I.",
+        "Its nickname begins with the letter O.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the northeast part of the country."
       ],
       "tags": [
         "northeast",
@@ -1502,20 +1654,24 @@
       ],
       "funFacts": [
         "SC is the two-letter postal code used for this state.",
-        "Columbia is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the south states."
+        "Columbia is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Columbia.",
-        "It belongs to the South region of the country.",
+        "It is in the south region of the United States.",
+        "Its official nickname is Palmetto State.",
         "Its postal abbreviation is SC.",
-        "Its nickname is Palmetto State.",
-        "Map lessons group it with the South states.",
-        "If a worksheet shows the code SC, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state has beaches, marshes, and historic cities.",
+        "A strong clue is that palmetto trees are an important state symbol.",
+        "Coastline is part of its map story.",
+        "Its capital begins with the letter C.",
+        "Its capital ends with the letter a.",
+        "Its postal abbreviation starts with S and ends with C.",
+        "Its postal abbreviation uses the letters S and C.",
+        "Its nickname begins with the letter P.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the south part of the country."
       ],
       "tags": [
         "south",
@@ -1540,20 +1696,24 @@
       ],
       "funFacts": [
         "SD is the two-letter postal code used for this state.",
-        "Pierre is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the midwest states."
+        "Pierre is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Pierre.",
-        "It belongs to the Midwest region of the country.",
+        "It is in the midwest region of the United States.",
+        "Its official nickname is Mount Rushmore State.",
         "Its postal abbreviation is SD.",
-        "Its nickname is Mount Rushmore State.",
-        "Map lessons group it with the Midwest states.",
-        "If a worksheet shows the code SD, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that mount Rushmore is one of This state's most famous landmarks.",
+        "A strong clue is that the state has prairies and the Black Hills.",
+        "A famous landmark is one of its best clues.",
+        "Its capital begins with the letter P.",
+        "Its capital ends with the letter e.",
+        "Its postal abbreviation starts with S and ends with D.",
+        "Its postal abbreviation uses the letters S and D.",
+        "Its nickname begins with the letter M.",
+        "Its capital has 1 word.",
+        "Its nickname has 3 words.",
+        "Its region clue places it in the midwest part of the country."
       ],
       "tags": [
         "midwest",
@@ -1578,20 +1738,24 @@
       ],
       "funFacts": [
         "TN is the two-letter postal code used for this state.",
-        "Nashville is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the south states."
+        "Nashville is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Nashville.",
-        "It belongs to the South region of the country.",
+        "It is in the south region of the United States.",
+        "Its official nickname is Volunteer State.",
         "Its postal abbreviation is TN.",
-        "Its nickname is Volunteer State.",
-        "Map lessons group it with the South states.",
-        "If a worksheet shows the code TN, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is well known for country music in Nashville.",
+        "A strong clue is that the Great Smoky Mountains are partly in This state.",
+        "Music history is one of the clues often tied to it.",
+        "Its capital begins with the letter N.",
+        "Its capital ends with the letter e.",
+        "Its postal abbreviation starts with T and ends with N.",
+        "Its postal abbreviation uses the letters T and N.",
+        "Its nickname begins with the letter V.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the south part of the country."
       ],
       "tags": [
         "south",
@@ -1616,20 +1780,24 @@
       ],
       "funFacts": [
         "TX is the two-letter postal code used for this state.",
-        "Austin is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the south states."
+        "Austin is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Austin.",
-        "It belongs to the South region of the country.",
+        "It is in the south region of the United States.",
+        "Its official nickname is Lone Star State.",
         "Its postal abbreviation is TX.",
-        "Its nickname is Lone Star State.",
-        "Map lessons group it with the South states.",
-        "If a worksheet shows the code TX, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is the second-largest U.S. state by area.",
+        "A strong clue is that it has deserts, forests, beaches, and big cities.",
+        "Its large size helps it stand out on a U.S. map.",
+        "Its capital begins with the letter A.",
+        "Its capital ends with the letter n.",
+        "Its postal abbreviation starts with T and ends with X.",
+        "Its postal abbreviation uses the letters T and X.",
+        "Its nickname begins with the letter L.",
+        "Its capital has 1 word.",
+        "Its nickname has 3 words.",
+        "Its region clue places it in the south part of the country."
       ],
       "tags": [
         "south",
@@ -1654,20 +1822,24 @@
       ],
       "funFacts": [
         "UT is the two-letter postal code used for this state.",
-        "Salt Lake City is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the west states."
+        "Salt Lake City is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Salt Lake City.",
-        "It belongs to the West region of the country.",
+        "It is in the west region of the United States.",
+        "Its official nickname is Beehive State.",
         "Its postal abbreviation is UT.",
-        "Its nickname is Beehive State.",
-        "Map lessons group it with the West states.",
-        "If a worksheet shows the code UT, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is known for red rock landscapes and national parks.",
+        "A strong clue is that the Great Salt Lake is one of its famous natural features.",
+        "National parks or protected land help make it memorable.",
+        "Its capital begins with the letter S.",
+        "Its capital ends with the letter y.",
+        "Its postal abbreviation starts with U and ends with T.",
+        "Its postal abbreviation uses the letters U and T.",
+        "Its nickname begins with the letter B.",
+        "Its capital has 3 words.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the west part of the country."
       ],
       "tags": [
         "west",
@@ -1692,20 +1864,24 @@
       ],
       "funFacts": [
         "VT is the two-letter postal code used for this state.",
-        "Montpelier is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the northeast states."
+        "Montpelier is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Montpelier.",
-        "It belongs to the Northeast region of the country.",
+        "It is in the northeast region of the United States.",
+        "Its official nickname is Green Mountain State.",
         "Its postal abbreviation is VT.",
-        "Its nickname is Green Mountain State.",
-        "Map lessons group it with the Northeast states.",
-        "If a worksheet shows the code VT, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is known for maple syrup and green mountains.",
+        "A strong clue is that montpelier is the smallest U.S. state capital by population.",
+        "Mountain landscapes help identify it.",
+        "Its capital begins with the letter M.",
+        "Its capital ends with the letter r.",
+        "Its postal abbreviation starts with V and ends with T.",
+        "Its postal abbreviation uses the letters V and T.",
+        "Its nickname begins with the letter G.",
+        "Its capital has 1 word.",
+        "Its nickname has 3 words.",
+        "Its region clue places it in the northeast part of the country."
       ],
       "tags": [
         "northeast",
@@ -1730,20 +1906,24 @@
       ],
       "funFacts": [
         "VA is the two-letter postal code used for this state.",
-        "Richmond is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the south states."
+        "Richmond is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Richmond.",
-        "It belongs to the South region of the country.",
+        "It is in the south region of the United States.",
+        "Its official nickname is Old Dominion.",
         "Its postal abbreviation is VA.",
-        "Its nickname is Old Dominion.",
-        "Map lessons group it with the South states.",
-        "If a worksheet shows the code VA, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is one of the original 13 colonies.",
+        "A strong clue is that it has beaches, mountains, and important historic sites.",
+        "It is often remembered for an important piece of U.S. history.",
+        "Its capital begins with the letter R.",
+        "Its capital ends with the letter d.",
+        "Its postal abbreviation starts with V and ends with A.",
+        "Its postal abbreviation uses the letters V and A.",
+        "Its nickname begins with the letter O.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the south part of the country."
       ],
       "tags": [
         "south",
@@ -1768,20 +1948,24 @@
       ],
       "funFacts": [
         "WA is the two-letter postal code used for this state.",
-        "Olympia is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the west states."
+        "Olympia is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Olympia.",
-        "It belongs to the West region of the country.",
+        "It is in the west region of the United States.",
+        "Its official nickname is Evergreen State.",
         "Its postal abbreviation is WA.",
-        "Its nickname is Evergreen State.",
-        "Map lessons group it with the West states.",
-        "If a worksheet shows the code WA, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is known for evergreen forests and rainy weather in some areas.",
+        "A strong clue is that seattle is one of its biggest cities.",
+        "Forests are a major part of its scenery.",
+        "Its capital begins with the letter O.",
+        "Its capital ends with the letter a.",
+        "Its postal abbreviation starts with W and ends with A.",
+        "Its postal abbreviation uses the letters W and A.",
+        "Its nickname begins with the letter E.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the west part of the country."
       ],
       "tags": [
         "west",
@@ -1806,20 +1990,24 @@
       ],
       "funFacts": [
         "WV is the two-letter postal code used for this state.",
-        "Charleston is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the south states."
+        "Charleston is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Charleston.",
-        "It belongs to the South region of the country.",
+        "It is in the south region of the United States.",
+        "Its official nickname is Mountain State.",
         "Its postal abbreviation is WV.",
-        "Its nickname is Mountain State.",
-        "Map lessons group it with the South states.",
-        "If a worksheet shows the code WV, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is filled with mountains and forests.",
+        "A strong clue is that outdoor adventures like rafting are popular there.",
+        "Mountain landscapes help identify it.",
+        "Its capital begins with the letter C.",
+        "Its capital ends with the letter n.",
+        "Its postal abbreviation starts with W and ends with V.",
+        "Its postal abbreviation uses the letters W and V.",
+        "Its nickname begins with the letter M.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the south part of the country."
       ],
       "tags": [
         "south",
@@ -1844,20 +2032,24 @@
       ],
       "funFacts": [
         "WI is the two-letter postal code used for this state.",
-        "Madison is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the midwest states."
+        "Madison is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Madison.",
-        "It belongs to the Midwest region of the country.",
+        "It is in the midwest region of the United States.",
+        "Its official nickname is Badger State.",
         "Its postal abbreviation is WI.",
-        "Its nickname is Badger State.",
-        "Map lessons group it with the Midwest states.",
-        "If a worksheet shows the code WI, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state is famous for dairy farms and cheese.",
+        "A strong clue is that it borders two Great Lakes.",
+        "Dairy farms and cheese are part of what it is known for.",
+        "Its capital begins with the letter M.",
+        "Its capital ends with the letter n.",
+        "Its postal abbreviation starts with W and ends with I.",
+        "Its postal abbreviation uses the letters W and I.",
+        "Its nickname begins with the letter B.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the midwest part of the country."
       ],
       "tags": [
         "midwest",
@@ -1882,20 +2074,24 @@
       ],
       "funFacts": [
         "WY is the two-letter postal code used for this state.",
-        "Cheyenne is an important city to remember on a U.S. map.",
-        "School geography lessons often group it with the west states."
+        "Cheyenne is an important city name to remember on a U.S. map."
       ],
       "clues": [
-        "This answer is one of the 50 U.S. states.",
         "Its capital city is Cheyenne.",
-        "It belongs to the West region of the country.",
+        "It is in the west region of the United States.",
+        "Its official nickname is Equality State.",
         "Its postal abbreviation is WY.",
-        "Its nickname is Equality State.",
-        "Map lessons group it with the West states.",
-        "If a worksheet shows the code WY, this is the match.",
-        "It is a state, not a country or continent.",
-        "Mail sent there uses a two-letter postal code.",
-        "Students often match this state with a capital city on U.S. maps."
+        "A strong clue is that this state was the first state to allow women to vote.",
+        "A strong clue is that much of Yellowstone National Park is in This state.",
+        "It is often remembered for an important piece of U.S. history.",
+        "Its capital begins with the letter C.",
+        "Its capital ends with the letter e.",
+        "Its postal abbreviation starts with W and ends with Y.",
+        "Its postal abbreviation uses the letters W and Y.",
+        "Its nickname begins with the letter E.",
+        "Its capital has 1 word.",
+        "Its nickname has 2 words.",
+        "Its region clue places it in the west part of the country."
       ],
       "tags": [
         "west",

@@ -9,16 +9,79 @@ import { LearningCardItem, QuizQuestion, QuizTemplate, SkillId } from "@/lib/typ
 
 type OptionSource = { id: string; label: string };
 
-function pickOptions(correct: OptionSource, pool: OptionSource[], seed: string): OptionSource[] {
-  const uniquePool = Array.from(
+function uniqueOptionPool(correct: OptionSource, pool: OptionSource[]): OptionSource[] {
+  return Array.from(
     new Map(
       pool
         .filter((item) => item.label !== correct.label)
         .map((item) => [item.label, item]),
     ).values(),
   );
-  const distractors = shuffleBySeed(uniquePool, `${seed}:distractors`, (item) => item.label).slice(0, 3);
+}
+
+function pickOptions(
+  correct: OptionSource,
+  preferredGroups: OptionSource[][],
+  fallbackPool: OptionSource[],
+  seed: string,
+): OptionSource[] {
+  const distractors: OptionSource[] = [];
+  const seenLabels = new Set([correct.label]);
+
+  preferredGroups.forEach((group, index) => {
+    const options = shuffleBySeed(
+      uniqueOptionPool(correct, group).filter((option) => !seenLabels.has(option.label)),
+      `${seed}:preferred:${index}`,
+      (item) => item.label,
+    );
+
+    for (const option of options) {
+      if (distractors.length === 3) {
+        break;
+      }
+
+      distractors.push(option);
+      seenLabels.add(option.label);
+    }
+  });
+
+  const fallbackOptions = shuffleBySeed(
+    uniqueOptionPool(correct, fallbackPool).filter((option) => !seenLabels.has(option.label)),
+    `${seed}:fallback`,
+    (item) => item.label,
+  );
+
+  for (const option of fallbackOptions) {
+    if (distractors.length === 3) {
+      break;
+    }
+
+    distractors.push(option);
+    seenLabels.add(option.label);
+  }
+
   return shuffleBySeed([correct, ...distractors], `${seed}:options`, (item) => item.label);
+}
+
+function relatedSiblingGroups(item: LearningCardItem, siblings: LearningCardItem[]): LearningCardItem[][] {
+  const otherItems = siblings.filter((sibling) => sibling.id !== item.id);
+
+  if (item.skillId === "states") {
+    return [otherItems.filter((sibling) => sibling.attributes.region === item.attributes.region)];
+  }
+
+  if (item.skillId === "countries") {
+    return [
+      otherItems.filter((sibling) => sibling.attributes.subregion === item.attributes.subregion),
+      otherItems.filter((sibling) => sibling.attributes.continent === item.attributes.continent),
+    ];
+  }
+
+  if (item.skillId === "continents") {
+    return [otherItems.filter((sibling) => sibling.attributes.hemisphere === item.attributes.hemisphere)];
+  }
+
+  return [];
 }
 
 function buildFieldValueQuestion(
@@ -40,7 +103,22 @@ function buildFieldValueQuestion(
       .filter(Boolean)
       .map((value) => ({ id: value, label: value }));
 
-  const options = pickOptions({ id: correctLabel, label: correctLabel }, optionPool, seed);
+  const preferredGroups =
+    template.optionValues?.length
+      ? [optionPool]
+      : relatedSiblingGroups(item, siblings).map((group) =>
+          group
+            .map((sibling) => sibling.attributes[template.optionFieldKey ?? template.correctFieldKey])
+            .filter(Boolean)
+            .map((value) => ({ id: value, label: value })),
+        );
+
+  const options = pickOptions(
+    { id: correctLabel, label: correctLabel },
+    preferredGroups,
+    optionPool,
+    seed,
+  );
 
   if (options.length < 4) {
     return null;
@@ -79,6 +157,9 @@ function buildIdentifyQuestion(
     templateId: template.id,
     options: pickOptions(
       { id: item.id, label: item.name },
+      relatedSiblingGroups(item, siblings).map((group) =>
+        group.map((sibling) => ({ id: sibling.id, label: sibling.name })),
+      ),
       siblings.map((sibling) => ({ id: sibling.id, label: sibling.name })),
       `${seed}:identify`,
     ),

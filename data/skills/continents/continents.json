@@ -1,6 +1,6 @@
 {
   "skillId": "continents",
-  "version": 3,
+  "version": 4,
   "items": [
     {
       "id": "africa",
@@ -15,25 +15,25 @@
       "facts": [
         "Africa is the second-largest continent.",
         "The Sahara Desert stretches across part of northern Africa.",
-        "Algeria is the largest country there by area.",
-        "Lagos is one major city often connected with it."
+        "Algeria is the largest country on this continent by land area.",
+        "Lagos is one of the major cities learners often connect with this continent."
       ],
       "funFacts": [
         "This is one of the seven large land areas on Earth.",
         "54 is the approximate number of countries students usually learn for it.",
-        "Algeria and Lagos are useful geography names to remember."
+        "A common clue linked to it is desert."
       ],
       "clues": [
-        "This answer is one of the seven continents.",
-        "It is mostly in the Mostly Northern and Southern hemisphere.",
+        "It is the second-largest continent.",
+        "The Sahara Desert stretches across much of its north.",
         "It has about 54 countries.",
-        "Its largest country by area is Algeria.",
-        "The country clue Algeria points here.",
-        "A major city often linked to it is Lagos.",
-        "World maps show it as a very large land area.",
-        "Geography lessons group many countries inside this continent.",
-        "The city clue Lagos points here.",
-        "Students often remember it using the Mostly Northern and Southern hemisphere clue."
+        "Algeria is the largest country there by area.",
+        "Lagos is one major city often linked with it.",
+        "The Equator runs across the middle of it.",
+        "Many famous savannas and wildlife parks are there.",
+        "The Nile River is one of its best-known landmarks.",
+        "Madagascar lies just off its southeastern coast.",
+        "It spans land both north and south of the Equator."
       ],
       "tags": [
         "desert",
@@ -53,25 +53,25 @@
       "facts": [
         "Antarctica is the coldest continent on Earth.",
         "It is covered mostly by thick ice.",
-        "No countries is the largest country there by area.",
-        "No permanent cities is one major city often connected with it."
+        "No countries are located there.",
+        "It does not have permanent cities."
       ],
       "funFacts": [
         "This is one of the seven large land areas on Earth.",
-        "0 is the approximate number of countries students usually learn for it.",
-        "No countries and No permanent cities are useful geography names to remember."
+        "Scientists use research stations there instead of permanent cities.",
+        "A common clue linked to it is ice."
       ],
       "clues": [
-        "This answer is one of the seven continents.",
-        "It is mostly in the Southern hemisphere.",
-        "It has about 0 countries.",
-        "Its largest country by area is No countries.",
-        "The country clue No countries points here.",
-        "A major city often linked to it is No permanent cities.",
-        "World maps show it as a very large land area.",
-        "Geography lessons group many countries inside this continent.",
-        "The city clue No permanent cities points here.",
-        "Students often remember it using the Southern hemisphere clue."
+        "It is the coldest continent on Earth.",
+        "Most of it is covered by thick ice.",
+        "It surrounds the South Pole.",
+        "It has no countries.",
+        "It has no permanent cities.",
+        "Scientists work there in research stations.",
+        "Penguins and seals are easier to find there than people.",
+        "It is the driest and windiest continent.",
+        "It is entirely in the Southern Hemisphere.",
+        "A huge amount of Earth's ice is stored there."
       ],
       "tags": [
         "ice",
@@ -91,25 +91,25 @@
       "facts": [
         "Asia is the largest continent by area and population.",
         "Mount Everest stands on the border of Nepal and China in Asia.",
-        "China is the largest country there by area.",
-        "Tokyo is one major city often connected with it."
+        "China is the largest country on this continent by land area.",
+        "Tokyo is one of the major cities learners often connect with this continent."
       ],
       "funFacts": [
         "This is one of the seven large land areas on Earth.",
         "49 is the approximate number of countries students usually learn for it.",
-        "China and Tokyo are useful geography names to remember."
+        "A common clue linked to it is mountains."
       ],
       "clues": [
-        "This answer is one of the seven continents.",
-        "It is mostly in the Mostly Northern hemisphere.",
+        "It is the largest continent by area and population.",
+        "Mount Everest sits on its southern edge.",
         "It has about 49 countries.",
-        "Its largest country by area is China.",
-        "The country clue China points here.",
-        "A major city often linked to it is Tokyo.",
-        "World maps show it as a very large land area.",
-        "Geography lessons group many countries inside this continent.",
-        "The city clue Tokyo points here.",
-        "Students often remember it using the Mostly Northern hemisphere clue."
+        "China is the largest country there by area.",
+        "Tokyo is one major city often linked with it.",
+        "It stretches from the Middle East to the Pacific Ocean.",
+        "India, Japan, and Indonesia are all part of it.",
+        "It is mostly in the Northern Hemisphere.",
+        "Many major religions began there.",
+        "It includes deserts, rainforests, and very high mountain ranges."
       ],
       "tags": [
         "mountains",
@@ -129,25 +129,25 @@
       "facts": [
         "Europe has many countries close together.",
         "Many famous castles and old cities are in Europe.",
-        "Ukraine is the largest country there by area.",
-        "Istanbul is one major city often connected with it."
+        "Ukraine is the largest country on this continent by land area.",
+        "Istanbul is one of the major cities learners often connect with this continent."
       ],
       "funFacts": [
         "This is one of the seven large land areas on Earth.",
         "44 is the approximate number of countries students usually learn for it.",
-        "Ukraine and Istanbul are useful geography names to remember."
+        "A common clue linked to it is history."
       ],
       "clues": [
-        "This answer is one of the seven continents.",
-        "It is mostly in the Northern hemisphere.",
+        "Many countries sit close together there.",
+        "It is mostly in the Northern Hemisphere.",
         "It has about 44 countries.",
-        "Its largest country by area is Ukraine.",
-        "The country clue Ukraine points here.",
-        "A major city often linked to it is Istanbul.",
-        "World maps show it as a very large land area.",
-        "Geography lessons group many countries inside this continent.",
-        "The city clue Istanbul points here.",
-        "Students often remember it using the Northern hemisphere clue."
+        "Ukraine is the largest country there by area.",
+        "Istanbul is one major city often linked with it.",
+        "Many famous castles, cathedrals, and old capitals are there.",
+        "The Alps cross part of it.",
+        "France, Germany, Italy, and Spain are all on it.",
+        "It is often taught as the continent west of Asia.",
+        "Peninsulas and coastlines shape much of its map."
       ],
       "tags": [
         "history",
@@ -167,25 +167,25 @@
       "facts": [
         "North America includes Canada, the United States, and Mexico.",
         "It has mountains, deserts, forests, and coastlines.",
-        "Canada is the largest country there by area.",
-        "Mexico City is one major city often connected with it."
+        "Canada is the largest country on this continent by land area.",
+        "Mexico City is one of the major cities learners often connect with this continent."
       ],
       "funFacts": [
         "This is one of the seven large land areas on Earth.",
         "23 is the approximate number of countries students usually learn for it.",
-        "Canada and Mexico City are useful geography names to remember."
+        "A common clue linked to it is varied."
       ],
       "clues": [
-        "This answer is one of the seven continents.",
-        "It is mostly in the Northern hemisphere.",
+        "Canada, the United States, and Mexico are all on it.",
+        "It is mostly in the Northern Hemisphere.",
+        "It stretches from the Arctic toward the Caribbean.",
         "It has about 23 countries.",
-        "Its largest country by area is Canada.",
-        "The country clue Canada points here.",
-        "A major city often linked to it is Mexico City.",
-        "World maps show it as a very large land area.",
-        "Geography lessons group many countries inside this continent.",
-        "The city clue Mexico City points here.",
-        "Students often remember it using the Northern hemisphere clue."
+        "Canada is the largest country there by area.",
+        "Mexico City is one major city often linked with it.",
+        "The Rocky Mountains run through part of it.",
+        "The Great Lakes are one of its best-known features.",
+        "It includes Greenland and many Caribbean islands.",
+        "It connects to the next continent by a narrow land bridge in the south."
       ],
       "tags": [
         "varied",
@@ -205,25 +205,25 @@
       "facts": [
         "The Amazon Rainforest covers part of South America.",
         "The Andes are one of the longest mountain ranges in the world.",
-        "Brazil is the largest country there by area.",
-        "Sao Paulo is one major city often connected with it."
+        "Brazil is the largest country on this continent by land area.",
+        "Sao Paulo is one of the major cities learners often connect with this continent."
       ],
       "funFacts": [
         "This is one of the seven large land areas on Earth.",
         "12 is the approximate number of countries students usually learn for it.",
-        "Brazil and Sao Paulo are useful geography names to remember."
+        "A common clue linked to it is rainforest."
       ],
       "clues": [
-        "This answer is one of the seven continents.",
-        "It is mostly in the Mostly Southern hemisphere.",
+        "The Amazon Rainforest covers part of it.",
+        "The Andes Mountains run along much of its western side.",
+        "It is mostly in the Southern Hemisphere.",
         "It has about 12 countries.",
-        "Its largest country by area is Brazil.",
-        "The country clue Brazil points here.",
-        "A major city often linked to it is Sao Paulo.",
-        "World maps show it as a very large land area.",
-        "Geography lessons group many countries inside this continent.",
-        "The city clue Sao Paulo points here.",
-        "Students often remember it using the Mostly Southern hemisphere clue."
+        "Brazil is the largest country there by area.",
+        "Sao Paulo is one major city often linked with it.",
+        "The Equator crosses its northern part.",
+        "It has both Pacific and Atlantic coastlines.",
+        "It begins just south of the narrow land bridge at Panama.",
+        "Rainforest and high mountains are two of its strongest clues."
       ],
       "tags": [
         "rainforest",
@@ -243,25 +243,25 @@
       "facts": [
         "Australia is the smallest continent.",
         "It is famous for unique animals like kangaroos and koalas.",
-        "Australia is the largest country there by area.",
-        "Sydney is one major city often connected with it."
+        "Australia is the largest country on this continent by land area.",
+        "Sydney is one of the major cities learners often connect with this continent."
       ],
       "funFacts": [
         "This is one of the seven large land areas on Earth.",
         "14 is the approximate number of countries students usually learn for it.",
-        "Australia and Sydney are useful geography names to remember."
+        "A common clue linked to it is animals."
       ],
       "clues": [
-        "This answer is one of the seven continents.",
-        "It is mostly in the Southern hemisphere.",
-        "It has about 14 countries.",
-        "Its largest-country clue starts with the letter A.",
-        "Its largest-country clue matches the same first letter as the answer.",
-        "A major city often linked to it is Sydney.",
-        "World maps show it as a very large land area.",
-        "Geography lessons group many countries inside this continent.",
-        "The city clue Sydney points here.",
-        "Students often remember it using the Southern hemisphere clue."
+        "It is the smallest continent.",
+        "It is in the Southern Hemisphere.",
+        "Sydney is one major city often linked with it.",
+        "It has about 14 countries in this pack's school-style count.",
+        "Kangaroos and koalas are closely associated with it.",
+        "It is surrounded by the Indian and Pacific Oceans.",
+        "The Great Barrier Reef lies just off part of it.",
+        "It is the driest inhabited continent.",
+        "Only one country covers most of its mainland.",
+        "Many island nations in Oceania are often grouped with it in school geography."
       ],
       "tags": [
         "animals",

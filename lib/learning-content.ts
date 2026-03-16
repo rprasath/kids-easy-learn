@@ -33,11 +33,32 @@ export function pickStudyClues(
   count = 3,
   seed = item.id,
 ): string[] {
-  return shuffleBySeed(buildCluePool(item), seed, (clue) => clue).slice(0, count);
+  const cluePool = buildCluePool(item);
+  const preferredPool = cluePool.slice(0, Math.min(8, cluePool.length));
+  const overflowPool = cluePool.slice(preferredPool.length);
+  const preferred = shuffleBySeed(preferredPool, `${seed}:preferred`, (clue) => clue).slice(
+    0,
+    Math.min(count, preferredPool.length),
+  );
+
+  if (preferred.length === count) {
+    return preferred;
+  }
+
+  return [
+    ...preferred,
+    ...shuffleBySeed(overflowPool, `${seed}:overflow`, (clue) => clue).slice(
+      0,
+      count - preferred.length,
+    ),
+  ];
 }
 
 export function pickQuizClue(item: LearningCardItem, seed = item.id): string {
-  return pickStudyClues(item, 1, seed)[0] ?? "";
+  const cluePool = buildCluePool(item);
+  const quizPool = cluePool.slice(0, Math.min(6, cluePool.length));
+
+  return shuffleBySeed(quizPool, `${seed}:quiz`, (clue) => clue)[0] ?? "";
 }
 
 export function buildGuessClues(item: LearningCardItem): string[] {

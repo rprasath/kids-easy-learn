@@ -33,6 +33,10 @@ function normalizeLine(line: string): string {
   return line.trim().replace(/\s+/g, " ").toLowerCase();
 }
 
+function normalizeLetters(value: string): string {
+  return normalizeLine(value.normalize("NFKD").replace(/[\u0300-\u036f]/g, "")).replace(/[^a-z]/g, "");
+}
+
 function escapeRegExp(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
@@ -73,10 +77,29 @@ function validatePack(skill: SkillDefinition, pack: SkillContentPack) {
     );
 
     const answerMatcher = new RegExp(`\\b${escapeRegExp(item.name.toLowerCase())}\\b`, "i");
+    const answerLetters = normalizeLetters(item.name);
     item.clues.forEach((clue) => {
       assert(
-        !answerMatcher.test(clue),
+        !answerMatcher.test(clue) && !normalizeLetters(clue).includes(answerLetters),
         `Item ${item.id} in ${skill.id} has a clue that contains the answer name.`,
+      );
+    });
+
+    const bannedTemplatePhrases = [
+      "this answer is",
+      "geography lessons place it",
+      "students often remember it",
+      "map lessons group it",
+      "the landlocked clue for it is",
+      "the city clue",
+      "the country clue",
+    ];
+
+    item.clues.forEach((clue) => {
+      const normalizedClue = normalizeLine(clue);
+      assert(
+        !bannedTemplatePhrases.some((phrase) => normalizedClue.includes(phrase)),
+        `Item ${item.id} in ${skill.id} contains low-quality boilerplate clue text.`,
       );
     });
 
