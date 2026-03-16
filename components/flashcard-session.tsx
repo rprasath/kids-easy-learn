@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 
 import { useStudyChrome } from "@/components/focus-shell";
 import { TimerProgress } from "@/components/timer-progress";
+import { navigateClient } from "@/lib/client-navigation";
 import {
   buildCluePool,
   buildDescription,
@@ -23,19 +24,25 @@ type FlashcardSessionProps = {
   items: LearningCardItem[];
   selectedSkillIds: SkillId[];
   stepSeconds: number;
+  initialAutoMode: boolean;
 };
 
 const TIMER_OPTIONS = [10, 15, 20, 30, 45, 60, 120];
 const DEFAULT_VISIBLE_CLUES = 3;
 
-export function FlashcardSession({ items, selectedSkillIds, stepSeconds }: FlashcardSessionProps) {
+export function FlashcardSession({
+  items,
+  selectedSkillIds,
+  stepSeconds,
+  initialAutoMode,
+}: FlashcardSessionProps) {
   const router = useRouter();
   const { theme } = useStudyChrome();
   const viewedIdsRef = useRef(new Set<string>());
   const [sessionSeed] = useState(() => crypto.randomUUID());
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
-  const [autoMode, setAutoMode] = useState(true);
+  const [autoMode, setAutoMode] = useState(initialAutoMode);
   const [secondsPerStep, setSecondsPerStep] = useState(stepSeconds);
   const [secondsLeft, setSecondsLeft] = useState(stepSeconds);
   const [expandedItemKey, setExpandedItemKey] = useState<string | null>(null);
@@ -74,7 +81,8 @@ export function FlashcardSession({ items, selectedSkillIds, stepSeconds }: Flash
   );
 
   const exitSession = useCallback(() => {
-    router.push(
+    navigateClient(
+      router,
       `/results?mode=flashcards&skills=${stringifySkillIds(selectedSkillIds)}&viewed=${viewedIdsRef.current.size}&total=${sessionItems.length}&favorites=${favoriteIds.length}`,
     );
   }, [favoriteIds.length, router, selectedSkillIds, sessionItems.length]);

@@ -102,7 +102,7 @@ export function toggleFavorite(skillId: SkillId, itemId: string) {
   writeProgress(progress);
 }
 
-export function saveSessionSelection(skillIds: SkillId[], mode: "flashcards" | "quiz" | "map-quiz") {
+export function saveSessionSelection(skillIds: SkillId[], mode: "flashcards" | "quiz" | "map-quiz" | "map-learn") {
   if (!canUseStorage()) {
     return;
   }
@@ -118,7 +118,7 @@ export function saveSessionSelection(skillIds: SkillId[], mode: "flashcards" | "
 
 export function readSessionSelection() {
   return canUseStorage()
-    ? safeParse<{ selectedSkillIds: SkillId[]; mode: "flashcards" | "quiz" | "map-quiz" } | null>(
+    ? safeParse<{ selectedSkillIds: SkillId[]; mode: "flashcards" | "quiz" | "map-quiz" | "map-learn" } | null>(
         window.localStorage.getItem(SESSION_KEY),
         null,
       )

@@ -12,6 +12,12 @@ import { LearningCardItem } from "@/lib/types";
 
 type GeographyMapProps = {
   item: LearningCardItem;
+  interactive?: boolean;
+  mapLabel?: string;
+  onSelectFeatureId?: (featureId: string) => void;
+  selectedFeatureIds?: string[];
+  title?: string;
+  caption?: string;
 };
 
 const VIEW_WIDTH = 960;
@@ -104,18 +110,31 @@ function clampPan(baseViewBox: number[], panOffset: [number, number]): [number, 
   ];
 }
 
-export function GeographyMap({ item }: GeographyMapProps) {
+export function GeographyMap({
+  item,
+  interactive = false,
+  mapLabel,
+  onSelectFeatureId,
+  selectedFeatureIds,
+  title,
+  caption,
+}: GeographyMapProps) {
   const { theme } = useStudyChrome();
   const [zoomLevel, setZoomLevel] = useState(1);
   const [panOffset, setPanOffset] = useState<[number, number]>([0, 0]);
   const [isDragging, setIsDragging] = useState(false);
+  const [hoveredFeatureId, setHoveredFeatureId] = useState<string | null>(null);
   const dragStateRef = useRef<{
     pointerId: number;
     clientX: number;
     clientY: number;
     panOffset: [number, number];
+    moved: boolean;
   } | null>(null);
-  const featureIds = new Set(item.map?.featureIds ?? (item.map?.featureId ? [item.map.featureId] : []));
+  const dragMovedRef = useRef(false);
+  const featureIds = new Set(
+    selectedFeatureIds ?? (item.map?.featureIds ?? (item.map?.featureId ? [item.map.featureId] : [])),
+  );
   const fallbackPoint =
     item.map?.centroid && item.map.centroid.length === 2
       ? projection(item.map.centroid as [number, number])
@@ -188,12 +207,18 @@ export function GeographyMap({ item }: GeographyMapProps) {
   }
 
   function handlePointerDown(event: PointerEvent<SVGSVGElement>) {
+    if (interactive && event.target instanceof SVGPathElement) {
+      return;
+    }
+
     dragStateRef.current = {
       pointerId: event.pointerId,
       clientX: event.clientX,
       clientY: event.clientY,
       panOffset,
+      moved: false,
     };
+    dragMovedRef.current = false;
     setIsDragging(true);
     event.currentTarget.setPointerCapture(event.pointerId);
   }
@@ -206,6 +231,10 @@ export function GeographyMap({ item }: GeographyMapProps) {
     const svgRect = event.currentTarget.getBoundingClientRect();
     const deltaX = event.clientX - dragStateRef.current.clientX;
     const deltaY = event.clientY - dragStateRef.current.clientY;
+    if (Math.abs(deltaX) > 3 || Math.abs(deltaY) > 3) {
+      dragStateRef.current.moved = true;
+      dragMovedRef.current = true;
+    }
     const scaledDeltaX = -(deltaX / svgRect.width) * baseViewBox[2];
     const scaledDeltaY = -(deltaY / svgRect.height) * baseViewBox[3];
 
@@ -230,7 +259,7 @@ export function GeographyMap({ item }: GeographyMapProps) {
       <div className="mb-4 flex items-center justify-between gap-3">
         <div>
           <div className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">Map Focus</div>
-          <div className={`mt-1 text-lg font-black ${titleTone}`}>{item.name}</div>
+          <div className={`mt-1 text-lg font-black ${titleTone}`}>{title ?? item.name}</div>
         </div>
         <div className="flex items-center gap-2">
           <button
@@ -266,7 +295,7 @@ export function GeographyMap({ item }: GeographyMapProps) {
         viewBox={viewBox.join(" ")}
         className={`h-auto min-h-[26rem] w-full rounded-[1.6rem] touch-none ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}
         role="img"
-        aria-label={`Highlighted ${item.skillId === "continents" ? "continent" : "country"} map`}
+        aria-label={mapLabel ?? `Highlighted ${item.skillId === "continents" ? "continent" : "country"} map`}
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
@@ -282,15 +311,48 @@ export function GeographyMap({ item }: GeographyMapProps) {
         <path d={landPath} fill={baseFill} stroke={countryStroke} strokeWidth="0.6" />
         {countryShapes.map((shape) => {
           const isHighlighted = featureIds.has(shape.id);
+          const isHovered = hoveredFeatureId === shape.id;
+          const isClickable = interactive && shape.id !== "010";
+          const highlightScale = isHighlighted ? 1 : isHovered ? 0.82 : 0;
+          const fill = isHighlighted
+            ? highlightFill
+            : isHovered
+              ? theme === "dark"
+                ? "#304c73"
+                : "#dbeaf4"
+              : countryFill;
+          const stroke = isHighlighted ? highlightStroke : isHovered ? "#4d89b4" : countryStroke;
 
           return (
             <path
               key={shape.id}
               d={shape.d}
-              fill={isHighlighted ? highlightFill : countryFill}
-              stroke={isHighlighted ? highlightStroke : countryStroke}
-              strokeWidth={isHighlighted ? 1.6 : 0.75}
+              fill={fill}
+              stroke={stroke}
+              strokeWidth={isHighlighted ? 1.6 : isHovered ? 1.15 : 0.75}
               vectorEffect="non-scaling-stroke"
+              className={isClickable ? "cursor-pointer transition-colors" : undefined}
+              role={isClickable ? "button" : undefined}
+              aria-label={isClickable ? `Open details for ${shape.name}` : undefined}
+              data-feature-id={shape.id}
+              onMouseEnter={() => {
+                if (isClickable) {
+                  setHoveredFeatureId(shape.id);
+                }
+              }}
+              onMouseLeave={() => {
+                if (hoveredFeatureId === shape.id) {
+                  setHoveredFeatureId(null);
+                }
+              }}
+              onClick={() => {
+                if (!isClickable || dragMovedRef.current) {
+                  dragMovedRef.current = false;
+                  return;
+                }
+
+                onSelectFeatureId?.(shape.id);
+              }}
             />
           );
         })}
@@ -306,9 +368,10 @@ export function GeographyMap({ item }: GeographyMapProps) {
         ) : null}
       </svg>
       <div className={`mt-3 text-sm font-semibold ${captionTone}`}>
-        {item.skillId === "continents"
-          ? "The map zooms to the highlighted continent, and you can drag or zoom back out to the whole world."
-          : "The map auto-focuses on the highlighted country, and you can drag or zoom back out for more context."}
+        {caption ??
+          (item.skillId === "continents"
+            ? "The map zooms to the highlighted continent, and you can drag or zoom back out to the whole world."
+            : "The map auto-focuses on the highlighted country, and you can drag or zoom back out for more context.")}
       </div>
     </div>
   );

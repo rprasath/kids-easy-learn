@@ -59,17 +59,40 @@ export function parseStepSeconds(input: string | string[] | undefined): number {
   return Math.max(10, Math.min(parsed, 120));
 }
 
+export function parseAutoMode(
+  input: string | string[] | undefined,
+  fallback: boolean,
+): boolean {
+  const value = (Array.isArray(input) ? input[0] : input)?.trim().toLowerCase();
+
+  if (!value) {
+    return fallback;
+  }
+
+  if (["1", "true", "yes", "on"].includes(value)) {
+    return true;
+  }
+
+  if (["0", "false", "no", "off"].includes(value)) {
+    return false;
+  }
+
+  return fallback;
+}
+
 export function buildSessionConfig(
   searchParams: Record<string, string | string[] | undefined>,
   mode: LearningSessionConfig["mode"],
 ): LearningSessionConfig {
   const selectedSkillIds = parseSkillIds(searchParams.skills);
+  const defaultAutoMode = mode === "map-quiz" ? false : true;
 
   return {
     selectedSkillIds: selectedSkillIds.length > 0 ? selectedSkillIds : DEFAULT_SKILLS,
     mode,
     questionCount: parseQuestionCount(searchParams.count),
     stepSeconds: parseStepSeconds(searchParams.seconds),
+    autoMode: parseAutoMode(searchParams.auto, defaultAutoMode),
     shuffle: true,
   };
 }

@@ -1,5 +1,5 @@
 export type SkillId = string;
-export type SkillMode = "flashcards" | "quiz" | "map-quiz";
+export type SkillMode = "flashcards" | "quiz" | "map-quiz" | "map-learn";
 
 export type MapCoordinate = number[];
 export type MapBounds = number[];
@@ -89,6 +89,7 @@ export type LearningSessionConfig = {
   mode: SkillMode;
   questionCount: number;
   stepSeconds: number;
+  autoMode: boolean;
   shuffle: boolean;
 };
 

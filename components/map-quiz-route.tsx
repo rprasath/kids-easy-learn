@@ -28,6 +28,7 @@ export function MapQuizRoute() {
         questionCount={session.questionCount}
         selectedSkillIds={selectedSkillIds}
         stepSeconds={session.stepSeconds}
+        initialAutoMode={session.autoMode}
       />
     </FocusShell>
   );

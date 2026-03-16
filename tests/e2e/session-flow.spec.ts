@@ -5,27 +5,26 @@ test("user can launch flashcards with expandable clues and a timer bar", async (
 
   await expect(
     page.getByRole("heading", {
-      name: /what do you want to play/i,
+      name: /pick a mode, choose a skill, and begin/i,
     }),
   ).toBeVisible();
-  await expect(page.getByRole("button", { name: /select all/i })).toHaveCount(0);
-  await expect(page.getByRole("button", { name: /reset/i })).toHaveCount(0);
-  await expect(page.getByText(/choose the time, then start learning/i)).toHaveCount(0);
-  const flashcardsButton = page.getByRole("button", { name: /start flashcards/i });
-  const quizButton = page.getByRole("button", { name: /start quiz/i });
-  const [flashcardsBox, quizBox] = await Promise.all([
-    flashcardsButton.boundingBox(),
-    quizButton.boundingBox(),
-  ]);
-  expect(Math.abs((flashcardsBox?.width ?? 0) - (quizBox?.width ?? 0))).toBeLessThanOrEqual(2);
+  await expect(page.getByRole("button", { name: /choose learn/i })).toBeVisible();
+  await expect(page.getByRole("button", { name: /choose quiz/i })).toBeVisible();
+  await expect(page.getByRole("button", { name: /choose flashcards/i })).toBeVisible();
+
+  await page.getByRole("button", { name: /choose flashcards/i }).click();
+  await expect(page.getByRole("heading", { name: /choose one skill/i })).toBeVisible();
+  await page.getByRole("button", { name: /select continents/i }).click();
+  await expect(page.getByRole("heading", { name: /set your round and start/i })).toBeVisible();
   await expect(page.getByLabel(/timer/i)).toHaveValue("60");
-  await page.getByRole("button", { name: /continents/i }).click();
+  await expect(page.getByRole("checkbox")).toBeChecked();
   await page.getByLabel(/timer/i).selectOption("30");
-  await flashcardsButton.click();
+  await page.getByRole("button", { name: /start flashcards/i }).click();
 
   await expect(page).toHaveURL(/\/learn\/\?/);
   await expect(page).toHaveURL(/seconds=30/);
-  await expect(page).toHaveURL(/skills=[^&]*(,|%2C)/);
+  await expect(page).toHaveURL(/skills=continents/);
+  await expect(page).toHaveURL(/auto=1/);
   await expect
     .poll(() => page.evaluate(() => document.fullscreenElement !== null))
     .toBe(true);
@@ -53,6 +52,8 @@ test("user can launch flashcards with expandable clues and a timer bar", async (
 
 test("flashcards show summary only after exiting", async ({ page }) => {
   await page.goto("/");
+  await page.getByRole("button", { name: /choose flashcards/i }).click();
+  await page.getByRole("button", { name: /select u\.s\. states/i }).click();
   await page.getByRole("button", { name: /start flashcards/i }).click();
   await page.getByRole("button", { name: /exit flashcards/i }).click();
 
@@ -61,8 +62,10 @@ test("flashcards show summary only after exiting", async ({ page }) => {
   await expect(page.getByText(/cards viewed/i)).toBeVisible();
 });
 
-test("quiz shows a timer progress bar in auto mode", async ({ page }) => {
+test("quiz shows a timer progress bar in auto mode and home works", async ({ page }) => {
   await page.goto("/");
+  await page.getByRole("button", { name: /choose quiz/i }).click();
+  await page.getByRole("button", { name: /select u\.s\. states/i }).click();
   await expect(page.getByLabel(/timer/i)).toHaveValue("60");
   await page.getByLabel(/timer/i).selectOption("120");
   await page.getByRole("button", { name: /start quiz/i }).click();
@@ -75,42 +78,37 @@ test("quiz shows a timer progress bar in auto mode", async ({ page }) => {
   await expect(page.getByRole("button", { name: /exit full screen/i })).toBeVisible();
   await expect(page.getByRole("button", { name: /auto on/i })).toBeVisible();
   await expect(page.getByRole("progressbar", { name: /quiz timer/i })).toBeVisible();
+  await page.getByRole("button", { name: /^home$/i }).click();
+  await expect(page).toHaveURL("/");
 });
 
-test("map quiz is gated to supported skills and starts with a highlighted map", async ({ page }) => {
+test("visual map learn opens from the dashboard and supports map plus search navigation", async ({ page }) => {
   await page.goto("/");
 
-  const mapQuizButton = page.getByRole("button", { name: /start map quiz/i });
-  await expect(mapQuizButton).toBeDisabled();
-  await expect(page.getByText(/map quiz is ready for countries and continents/i)).toBeVisible();
-
-  await page.getByRole("button", { name: /u\.s\. states/i }).click();
+  await page.getByRole("button", { name: /choose learn/i }).click();
   await page.getByRole("button", { name: /select countries/i }).click();
-  await expect(mapQuizButton).toBeEnabled();
+  await page.getByRole("button", { name: /start learn/i }).click();
 
-  await mapQuizButton.click();
+  await expect(page).toHaveURL(/\/map-learn/);
+  await expect(page.getByRole("img", { name: /interactive world countries map/i })).toBeVisible();
+  await expect(page.getByPlaceholder(/search for japan, nairobi, europe, br/i)).toBeVisible();
 
-  await expect(page).toHaveURL(/\/map-quiz\/\?/);
-  await expect(page.getByText(/visual geography/i)).toBeVisible();
-  await expect(page.getByRole("img", { name: /highlighted country map/i })).toBeVisible();
-  await expect(page.getByText(/hint:/i)).toBeVisible();
-  await expect(page.getByText(/1 \/ 10/i)).toBeVisible();
+  await page.locator('[data-feature-id="004"]').click({ force: true });
+  const detailsDialog = page.getByRole("dialog", { name: /country details/i });
+  await expect(detailsDialog).toBeVisible();
+  await expect(detailsDialog.getByText(/explore afghanistan/i)).toBeVisible();
+  await detailsDialog.getByRole("button", { name: /close/i }).click();
+  await expect(detailsDialog).toHaveCount(0);
 
-  await page.getByRole("button", { name: /zoom in map/i }).click();
-  await expect(page.getByRole("button", { name: /continue/i })).toHaveCount(0);
+  await page.getByPlaceholder(/search for japan, nairobi, europe, br/i).fill("Kenya");
   await page
     .locator("section")
-    .filter({ hasText: /visual geography/i })
-    .getByRole("button")
-    .nth(0)
+    .filter({ hasText: /find a country fast/i })
+    .getByRole("button", { name: /kenya/i })
     .click();
-
-  const detailsDialog = page.getByRole("dialog", { name: /country details|continent details/i });
   await expect(detailsDialog).toBeVisible();
-  await expect(detailsDialog.getByRole("button", { name: /continue/i })).toBeVisible();
-  await page.waitForTimeout(1800);
-  await expect(detailsDialog).toBeVisible();
-  await expect(page.getByText(/1 \/ 10/i)).toBeVisible();
-  await detailsDialog.getByRole("button", { name: /continue/i }).click();
-  await expect(detailsDialog).toHaveCount(0);
+  await expect(detailsDialog.getByText(/explore kenya/i)).toBeVisible();
+  await detailsDialog.getByRole("button", { name: /close/i }).click();
+  await page.getByRole("button", { name: /^home$/i }).click();
+  await expect(page).toHaveURL("/");
 });

@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 
 import { useStudyChrome } from "@/components/focus-shell";
 import { TimerProgress } from "@/components/timer-progress";
+import { navigateClient } from "@/lib/client-navigation";
 import { saveQuizResult } from "@/lib/progress-store";
 import { buildQuizQuestions, skillLabel, skillTitle } from "@/lib/quiz";
 import { stringifySkillIds } from "@/lib/session";
@@ -15,11 +16,18 @@ type QuizSessionProps = {
   selectedSkillIds: SkillId[];
   questionCount: number;
   stepSeconds: number;
+  initialAutoMode: boolean;
 };
 
 const TIMER_OPTIONS = [15, 30, 45, 60, 120];
 
-export function QuizSession({ items, selectedSkillIds, questionCount, stepSeconds }: QuizSessionProps) {
+export function QuizSession({
+  items,
+  selectedSkillIds,
+  questionCount,
+  stepSeconds,
+  initialAutoMode,
+}: QuizSessionProps) {
   const router = useRouter();
   const { theme } = useStudyChrome();
   const [isPending, startTransition] = useTransition();
@@ -28,7 +36,7 @@ export function QuizSession({ items, selectedSkillIds, questionCount, stepSecond
   const [answers, setAnswers] = useState<QuizAnswer[]>([]);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState<number | null>(null);
   const [revealedAnswer, setRevealedAnswer] = useState<QuizAnswer | null>(null);
-  const [autoMode, setAutoMode] = useState(true);
+  const [autoMode, setAutoMode] = useState(initialAutoMode);
   const [secondsPerQuestion, setSecondsPerQuestion] = useState(stepSeconds);
   const [secondsLeft, setSecondsLeft] = useState(stepSeconds);
 
@@ -51,7 +59,8 @@ export function QuizSession({ items, selectedSkillIds, questionCount, stepSecond
       saveQuizResult(result);
 
       startTransition(() => {
-        router.push(
+        navigateClient(
+          router,
           `/results?mode=quiz&skills=${stringifySkillIds(selectedSkillIds)}&score=${score}&total=${questions.length}`,
         );
       });
@@ -138,7 +147,7 @@ export function QuizSession({ items, selectedSkillIds, questionCount, stepSecond
 
       if (event.key === "Escape") {
         event.preventDefault();
-        router.push("/");
+        navigateClient(router, "/");
       }
     }
 
@@ -226,7 +235,7 @@ export function QuizSession({ items, selectedSkillIds, questionCount, stepSecond
         <div className="flex flex-wrap items-center gap-3">
           <button
             type="button"
-            onClick={() => router.push("/")}
+            onClick={() => navigateClient(router, "/")}
             className="rounded-full bg-slate-900 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-white"
           >
             Exit Quiz

@@ -1,10 +1,12 @@
 "use client";
 
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { createContext, PropsWithChildren, useContext, useEffect, useMemo, useRef, useState } from "react";
 
+import { navigateClient } from "@/lib/client-navigation";
+
 type FocusShellProps = PropsWithChildren<{
-  mode: "flashcards" | "quiz" | "map-quiz";
+  mode: "flashcards" | "quiz" | "map-quiz" | "map-learn";
 }>;
 
 type StudyTheme = "light" | "dark";
@@ -30,6 +32,7 @@ export function useStudyChrome() {
 }
 
 export function FocusShell({ children, mode }: FocusShellProps) {
+  const router = useRouter();
   const shellRef = useRef<HTMLElement>(null);
   const [theme, setTheme] = useState<StudyTheme>(() => {
     if (typeof window === "undefined") {
@@ -61,7 +64,7 @@ export function FocusShell({ children, mode }: FocusShellProps) {
   }, []);
 
   useEffect(() => {
-    if (mode === "flashcards") {
+    if (mode === "flashcards" || mode === "map-learn") {
       return;
     }
 
@@ -118,12 +121,13 @@ export function FocusShell({ children, mode }: FocusShellProps) {
       >
         <header className={`mx-auto mb-4 flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 border-b px-1 pb-3 ${headerTone}`}>
           <div className="flex items-center gap-3">
-            <Link
-              href="/"
+            <button
+              type="button"
+              onClick={() => navigateClient(router, "/")}
               className={`rounded-full border px-4 py-2 text-xs font-black uppercase tracking-[0.18em] ${ghostButton}`}
             >
               Home
-            </Link>
+            </button>
             <div className={`text-xs font-black uppercase tracking-[0.22em] ${subtleTone}`}>{mode}</div>
           </div>
 

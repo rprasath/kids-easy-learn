@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { buildSessionConfig, parseQuestionCount, parseSkillIds } from "@/lib/session";
+import { buildSessionConfig, parseAutoMode, parseQuestionCount, parseSkillIds } from "@/lib/session";
 
 describe("session helpers", () => {
   it("deduplicates and filters skills", () => {
@@ -19,6 +19,7 @@ describe("session helpers", () => {
       mode: "quiz",
       questionCount: 10,
       stepSeconds: 60,
+      autoMode: true,
       shuffle: true,
     });
   });
@@ -29,7 +30,14 @@ describe("session helpers", () => {
       mode: "map-quiz",
       questionCount: 10,
       stepSeconds: 60,
+      autoMode: false,
       shuffle: true,
     });
+  });
+
+  it("parses auto mode safely", () => {
+    expect(parseAutoMode("0", true)).toBe(false);
+    expect(parseAutoMode("true", false)).toBe(true);
+    expect(parseAutoMode(undefined, true)).toBe(true);
   });
 });

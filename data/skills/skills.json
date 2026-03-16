@@ -181,7 +181,8 @@
     "supportedModes": [
       "flashcards",
       "quiz",
-      "map-quiz"
+      "map-quiz",
+      "map-learn"
     ],
     "contentFile": "countries/countries.json",
     "status": "active",

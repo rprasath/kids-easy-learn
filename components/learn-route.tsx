@@ -25,6 +25,7 @@ export function LearnRoute() {
         items={items}
         selectedSkillIds={session.selectedSkillIds}
         stepSeconds={session.stepSeconds}
+        initialAutoMode={session.autoMode}
       />
     </FocusShell>
   );

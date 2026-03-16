@@ -26,6 +26,7 @@ export function QuizRoute() {
         questionCount={session.questionCount}
         selectedSkillIds={session.selectedSkillIds}
         stepSeconds={session.stepSeconds}
+        initialAutoMode={session.autoMode}
       />
     </FocusShell>
   );

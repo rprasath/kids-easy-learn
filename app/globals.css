@@ -42,6 +42,23 @@ a {
 }
 
 button,
+[role="button"],
+a[href],
+summary,
+select,
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+}
+
+button:disabled,
+[role="button"][aria-disabled="true"],
+select:disabled,
+input:disabled {
+  cursor: not-allowed;
+}
+
+button,
 input {
   font: inherit;
 }

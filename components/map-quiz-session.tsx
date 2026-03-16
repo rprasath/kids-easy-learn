@@ -1,23 +1,24 @@
 "use client";
 
-import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 
 import { GeographyMap } from "@/components/geography-map";
+import { MapItemDetailsDialog } from "@/components/map-item-details-dialog";
 import { TimerProgress } from "@/components/timer-progress";
-import { buildDescription, buildFunFacts, getDisplayFieldLines, getItemBadge } from "@/lib/learning-content";
+import { navigateClient } from "@/lib/client-navigation";
 import { buildMapQuizQuestions } from "@/lib/map-quiz";
 import { saveQuizResult } from "@/lib/progress-store";
+import { skillTitle } from "@/lib/quiz";
 import { stringifySkillIds } from "@/lib/session";
 import { LearningCardItem, QuizAnswer, SkillId } from "@/lib/types";
-import { skillTitle } from "@/lib/quiz";
 
 type MapQuizSessionProps = {
   items: LearningCardItem[];
   selectedSkillIds: SkillId[];
   questionCount: number;
   stepSeconds: number;
+  initialAutoMode: boolean;
 };
 
 export function MapQuizSession({
@@ -25,6 +26,7 @@ export function MapQuizSession({
   selectedSkillIds,
   questionCount,
   stepSeconds,
+  initialAutoMode,
 }: MapQuizSessionProps) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
@@ -34,7 +36,7 @@ export function MapQuizSession({
   const [selectedOptionIndex, setSelectedOptionIndex] = useState<number | null>(null);
   const [revealedAnswer, setRevealedAnswer] = useState<QuizAnswer | null>(null);
   const [revealedAnswersSnapshot, setRevealedAnswersSnapshot] = useState<QuizAnswer[] | null>(null);
-  const [autoMode, setAutoMode] = useState(false);
+  const [autoMode, setAutoMode] = useState(initialAutoMode);
   const [secondsLeft, setSecondsLeft] = useState(stepSeconds);
 
   const questions = useMemo(
@@ -57,7 +59,8 @@ export function MapQuizSession({
       saveQuizResult(result);
 
       startTransition(() => {
-        router.push(
+        navigateClient(
+          router,
           `/results?mode=map-quiz&skills=${stringifySkillIds(selectedSkillIds)}&score=${score}&total=${questions.length}`,
         );
       });
@@ -96,8 +99,8 @@ export function MapQuizSession({
         isCorrect: optionId === question.correctOptionId,
       };
 
-      setRevealedAnswer(answer);
       const nextAnswers = [...answers, answer];
+      setRevealedAnswer(answer);
       setAnswers(nextAnswers);
       setRevealedAnswersSnapshot(nextAnswers);
     },
@@ -136,7 +139,9 @@ export function MapQuizSession({
       if (event.key === "ArrowLeft") {
         event.preventDefault();
         setSelectedOptionIndex((current) =>
-          current === null ? question.options.length - 1 : (current - 1 + question.options.length) % question.options.length,
+          current === null
+            ? question.options.length - 1
+            : (current - 1 + question.options.length) % question.options.length,
         );
       }
 
@@ -147,7 +152,7 @@ export function MapQuizSession({
 
       if (event.key === "Escape") {
         event.preventDefault();
-        router.push("/");
+        navigateClient(router, "/");
       }
     }
 
@@ -185,6 +190,12 @@ export function MapQuizSession({
     );
   }
 
+  const currentItem = items.find((item) => item.id === question.itemId && item.skillId === question.skillId);
+
+  if (!currentItem) {
+    return null;
+  }
+
   function optionClass(optionId: string, index: number): string {
     if (revealedAnswer) {
       if (optionId === question.correctOptionId) {
@@ -203,29 +214,20 @@ export function MapQuizSession({
     return "border-white/80 bg-white text-slate-900";
   }
 
-  const currentItem = items.find((item) => item.id === question.itemId && item.skillId === question.skillId);
-  const displayFields = currentItem ? getDisplayFieldLines(currentItem).slice(0, 6) : [];
-  const description = currentItem ? buildDescription(currentItem) : "";
-  const funFacts = currentItem ? buildFunFacts(currentItem).slice(0, 3) : [];
-  const badge = currentItem ? getItemBadge(currentItem) : "";
-
-  if (!currentItem) {
-    return null;
-  }
-
   return (
     <div className="mx-auto flex min-h-[calc(100vh-6rem)] w-full max-w-7xl flex-col">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-[1.6rem] bg-white/70 px-4 py-3 paper-shadow backdrop-blur">
         <div className="flex flex-wrap items-center gap-3">
-          <Link
-            href="/"
+          <button
+            type="button"
+            onClick={() => navigateClient(router, "/")}
             className="rounded-full bg-white px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-slate-900"
           >
             Home
-          </Link>
+          </button>
           <button
             type="button"
-            onClick={() => router.push("/")}
+            onClick={() => navigateClient(router, "/")}
             className="rounded-full bg-slate-900 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-white"
           >
             Exit Map Quiz
@@ -296,100 +298,14 @@ export function MapQuizSession({
       </div>
 
       {revealedAnswer ? (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/45 px-4 py-6 backdrop-blur-sm">
-          <div className="flex min-h-full items-start justify-center sm:items-center">
-          <div
-            role="dialog"
-            aria-modal="true"
-            aria-label={currentItem.skillId === "countries" ? "Country details" : "Continent details"}
-            className="my-auto flex max-h-[calc(100vh-3rem)] w-full max-w-4xl flex-col overflow-hidden rounded-[2rem] bg-white shadow-[0_30px_80px_rgba(15,23,42,0.28)]"
-          >
-            <div className="border-b border-slate-200 bg-gradient-to-r from-amber-50 via-white to-emerald-50 px-5 py-5">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <div
-                    className={`text-lg font-black ${
-                      revealedAnswer.isCorrect ? "text-emerald-700" : "text-rose-700"
-                    }`}
-                  >
-                    {revealedAnswer.isCorrect ? `Yes, that is ${currentItem.name}.` : `This one was ${currentItem.name}.`}
-                  </div>
-                  <div className="mt-3 text-xs font-black uppercase tracking-[0.18em] text-slate-500">
-                    {currentItem.skillId === "countries" ? "Country Details" : "Continent Details"}
-                  </div>
-                  <h3 className="mt-1 text-2xl font-black text-slate-900">{currentItem.name}</h3>
-                  {description ? (
-                    <p className="mt-2 max-w-2xl text-sm font-semibold leading-6 text-slate-600">
-                      {description}
-                    </p>
-                  ) : null}
-                </div>
-                <div className="flex items-center gap-3">
-                  {badge ? (
-                    <div className="rounded-full bg-white px-4 py-2 text-2xl shadow-sm">{badge}</div>
-                  ) : null}
-                  <button
-                    type="button"
-                    onClick={closeDetails}
-                    className="rounded-full bg-slate-900 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-white"
-                  >
-                    Continue
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="min-h-0 flex-1 overflow-y-auto px-5 py-5 overscroll-contain">
-              {displayFields.length > 0 ? (
-                <div className="grid gap-3 border-b border-slate-200 pb-5 sm:grid-cols-2">
-                  {displayFields.map((field) => (
-                    <div key={field.label} className="rounded-[1rem] bg-slate-50 px-3 py-3">
-                      <div className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-500">
-                        {field.label}
-                      </div>
-                      <div className="mt-1 text-sm font-bold text-slate-900">{field.value}</div>
-                    </div>
-                  ))}
-                </div>
-              ) : null}
-
-              <div className="grid gap-4 pt-5 lg:grid-cols-[1.05fr_0.95fr]">
-                <div>
-                  <div className="text-xs font-black uppercase tracking-[0.18em] text-slate-500">
-                    Quick Facts
-                  </div>
-                  <div className="mt-3 grid gap-2">
-                    {question.revealFacts.map((fact) => (
-                      <div
-                        key={fact}
-                        className="rounded-[1.1rem] bg-slate-50 px-3 py-2 text-sm font-semibold text-slate-700"
-                      >
-                        {fact}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <div className="text-xs font-black uppercase tracking-[0.18em] text-slate-500">
-                    Learn More
-                  </div>
-                  <div className="mt-3 grid gap-2">
-                    {[...currentItem.facts.slice(0, 3), ...funFacts].slice(0, 4).map((fact) => (
-                      <div
-                        key={fact}
-                        className="rounded-[1.1rem] bg-white px-3 py-2 text-sm font-semibold text-slate-700 ring-1 ring-slate-200"
-                      >
-                        {fact}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
+        <MapItemDetailsDialog
+          item={currentItem}
+          onClose={closeDetails}
+          actionLabel="Continue"
+          eyebrow={currentItem.skillId === "countries" ? "Country Details" : "Continent Details"}
+          headline={revealedAnswer.isCorrect ? `Yes, that is ${currentItem.name}.` : `This one was ${currentItem.name}.`}
+          tone={revealedAnswer.isCorrect ? "success" : "error"}
+        />
       ) : null}
     </div>
   );
